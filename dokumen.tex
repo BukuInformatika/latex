@@ -1,0 +1,706 @@
+\textbf{Pengertian Latex}\par
+\vspace{12pt}
+TEX merupakan perangkat lunak pengolah dokumen yang terutama ditujukan menghasilkan dokumen yang berisi simbol-simbol matematik. TEX diciptakan oleh Donald E. Knuth (Mei1977) sebaga ibahasa pembentuk dokumen (document formatting language). LaTeX adalah sistem typesetting yang 
+dapat digunakan untuk membuat artikel, buku, surat, dan publikasi lain berkualitas tinggi. LaTeX berbasiskan pada TeX, bahasa typesetting aras bawah yang didesain oleh Donald E. Knuth. LaTeX tidak bekerja seperti pengolah kata WYSIWYG(what you see is what you get), jenis persiapan dokumen yang sudah banyak dipakai oleh banyak orang. Dengan LaTeX, Anda tidak harus perduli dengan pemformatan dokumen, hanya tentang penulisan dokumen.\par 
+\vspace{12pt}
+
+Perangkat lunak TEX memiliki kemampuan yang baik untuk mengolah dokumen-dokumen yang berkualitas tinggi. Kelemahannya, perintah perintahnya sulit digunakan untuk menuliskan dokumen terstruktur yang terdiri dari unsure unsure bab, sub-bab, paragraph, table dan gambar bernomor, dsb.\par 
+\vspace{12pt}
+
+Versi LATEX yang sudah baku ini memiliki beberapa kekuatan, diantaranya:
+
+\begin{itemize}
+\item Standard yang sangat baik untuk menyiapkan tulisan teks,formula 
+teknis, dan tabel-tabel
+\item Kemudahan penggunaan oleh penulis naskah.
+\item Portabilitas dokumen pada berbagai platform
+\item Adaptabilitas terhadap banyak bahasa (multilingual support)
+\item Ketersediaan secara meluas dan bebas
+\end{itemize}
+\hspace{0,5in}Sebuah dokumen LATEX memiliki struktur yang dicirikan dengan blok yang diapit oleh pasangan perintah $\setminus$begin dan $\setminus$end. 
+Untuk menyatakan jenis dokumen yang akan diolah, setiap dokumen harus dimulai dengan perintah:\par \vspace{12pt} $\setminus$documentclass\{\ldots \}\par \vspace{12pt}
+
+Membuat dokumen dengan latex sangat sederhana. Anda bisa memulai membuat dokumen latex dengan mengetikan kode latex lalu ditambah dengan konten yang sederhana yaitu teks. Latex menggunakan kode-kode perintah yang terkontrol yang nantinya akan menentukan seperti apa hasil akhir dari dokumen yang anda buat. Setelah andamengetikan kode-kode perintah latex, maka compiler dari editor latex dapat mengkompilasinya menjadi file .pdf. \par \vspace{12pt} 
+
+\textbf{Kelas Dokumen}\par
+\vspace{12pt}
+Jenis dokumen yang akan diolah ditentukan oleh perintah pertama dalam bentuk: \par \vspace{12pt} $\setminus$documentclass$[$option$]$\{class\}\par \vspace{12pt}
+
+Dalam perintah diatas,"\,class"dapat diganti oleh article, report, book,atau slides untuk menuliskan artikel,laporan,buku,atau transparansi untuk seminar. Sedangkan pada bagian"\,option" dapat dituliskan satu 
+atau beberapa pilihan berikut:10pt, 11pt, 12pt untuk menyatakan ukuran font utama yang digunakan didalam dokumen a4paper, letterpaper menyatakan ukuran kertas yang digunakan titlepage, notitlepage untuk menyatakan apakah halaman judul akan dibuat terpisah dari badan dokumen atau tidak twocolumn untuk menampilkan dokumen dalam bentuk dua kolom twoside, oneside untuk menyatakan apakah dokumen akan dicetak pada satu 
+sisi atau dua sisi dari kertas. contoh dasar menggunakan kode perintah dalam latex yaitu:\par \vspace{12pt}
+
+$\setminus$documentclass\{article\}\par \vspace{12pt}
+
+$\setminus$begin\{document\}\par \vspace{12pt}
+
+Hello World!\par \vspace{12pt}
+
+$\setminus$end\{document\}\par \vspace{12pt}
+
+Kode diatas jika di compile maka akan muncul tulisan "\,Hello World!" 
+dalam bentuk file .pdf.\par \vspace{12pt}
+
+\textbf{Perintah-Perintah LATEX}
+
+\newcounter{numberedCntB}
+\begin{enumerate}
+\item \textbf{Spasi dalam Latex}
+\setcounter{numberedCntB}{\theenumi}
+\end{enumerate}
+Ada perintah khusus untuk membuat spasi dengan panjang tertentu baik secara horizontal maupun vertikal, yaitu :
+
+\begin{itemize}
+\item Jika ingin membuat jarak dengan panjang tertentu antara 2 baris, dapat menggunakan tanda ' $\setminus$$\setminus$ ' di akhir baris. Dan juga dapat menentukan sendiri panjang baris kosong dengan menggunakan perintah seperti contoh berikut ini :
+\end{itemize}
+\hspace{0,2in}baris 1 $\setminus$$\setminus$
+
+$\setminus$vspace\{2cm\}
+
+baris 2 $\setminus$$\setminus$
+
+\par \vspace{12pt}
+
+Dengan perintah ini, Latex akan mengosongkan baris-baris sepanjang 2 cm. Tanpa menggunakan perintah ini untuk membuat spasi dalam teks dokumen, Latex akan tetap menganggapnya 1 spasi.
+
+\begin{itemize}
+\item Jika ingin membuat spasi sejauh beberapa centimeter antara 2 kata dibutuhkan perintah sebagai berikut :
+\end{itemize}
+\hspace{0,5in}kata 1 $\setminus$hspace\{2cm\} kata 2\par \vspace{12pt}
+
+Dengan perintah ini, Latex akan membuat spasi sejauh 2 centimeter.
+
+Jadi, secara umum aturan yang dapat dipakai adalah akhiri paragraf dengan tanda ' $\setminus$$\setminus$ ' dan berikan 1 baris kosong antara tiap-tiap paragraf dan 1 spasi kosong antara masing-masing kata.
+
+\begin{enumerate}
+\setcounter{enumi}{\thenumberedCntB}
+\item \textbf{Alignment dalam Latex}
+\setcounter{numberedCntB}{\theenumi}
+\end{enumerate}
+\hspace{0,5in}Alignment/perataan baris pada Latex adalah rata kiri, rata kanan, atau rata tengah. Semua dokumen dalam Latex secara default diatur memiliki perataan justified (rata kanan kiri).
+
+\begin{itemize}
+\item Jika ingin mengatur dokumen rata kiri digunakan perintah sebagai berikut :
+\end{itemize}
+\hspace{0,5in}$\setminus$begin\{raggedright\}
+
+\hspace{0,5in}isi dokumen yang diatur dengan rata kiri
+
+\hspace{0,5in}$\setminus$end\{raggedright\}
+
+\begin{itemize}
+\item Jika ingin mengatur dokumen rata kanan digunakan perintah sebagai berikut :
+\end{itemize}
+\hspace{0,5in}$\setminus$begin\{raggedleft\}
+
+\hspace{0,5in}isi dokumen yang diatur dengan rata kanan
+
+\hspace{0,5in}$\setminus$end\{raggedleft\}
+
+\begin{itemize}
+\item Jika ingin mengatur dokumen rata tengah digunakan perintah sebagai berikut :
+\end{itemize}
+\hspace{0,5in}$\setminus$begin\{center\}
+
+\hspace{0,5in}isi dokumen yang diatur dengan rata tengah
+
+\hspace{0,5in}$\setminus$end\{center\}
+
+\begin{enumerate}
+\setcounter{enumi}{\thenumberedCntB}
+\item \textbf{Bahasa dalam Latex}
+\setcounter{numberedCntB}{\theenumi}
+\end{enumerate}
+\hspace{0,5in}Latex dapat menggunakan tulisan mengikuti aturan ejaan yang dimiliki bahasa tertentu. Kemampuan ini diatur oleh babel package. Mengubah peraturan bahasa dengan menggunakan babel akan secara otomatis mengubah nama-nama dari unit struktur dokumen (misalnya Abstract, Chapter, Index) 
+menjadi terjemahannya.\par \vspace{12pt}
+
+Perintah yang mengatur latex untuk menggunakan babel bahasa Indonesia seperti berikut :
+
+$\setminus$dokumenclass \{a4paper, 12pt\}\{report\}\par \vspace{12pt}
+
+$\setminus$usepage$[$bahasa$]$\{babel\}\par \vspace{12pt}
+
+$\setminus$begin\{document\}\par \vspace{12pt}
+
+. . . . . . . . . . . . . . . . . . . . .
+
+. . . . . . . . . . . . . . . . . . . . .
+\par \vspace{12pt}
+$\setminus$end\{document\}
+
+\begin{enumerate}
+\setcounter{enumi}{\thenumberedCntB}
+\item \textbf{Keterangan dalam Latex}
+\setcounter{numberedCntB}{\theenumi}
+\end{enumerate}
+\hspace{0,5in}Jika ingin menambahkan keterangan pada file yang tidak ingin tercetak, caranya dengan menambahkan tanda \% diawal setiap baaris keterangan. Contoh :\par \vspace{12pt}
+
+$\setminus$dokumenclass \{a4paper, 12pt\}\{report\}\par \vspace{12pt}
+
+$\setminus$usepage$[$bahasa$]$\{babel\}\par \vspace{12pt}
+
+$\setminus$begin\{document\}\par \vspace{12pt}
+
+ini baris keterangan, baris ini tidak akan tercetak dalam file 
+keluaran
+
+. . . . . . . . . . . . . . . . . . . . .\par \vspace{12pt}
+
+$\setminus$end\{document\}
+
+\begin{enumerate}
+\setcounter{enumi}{\thenumberedCntB}
+\item \textbf{Font dalam Latex}
+\setcounter{numberedCntB}{\theenumi}
+\end{enumerate}
+Ada 3 jenis fonts dalam Latex :
+
+\begin{itemize}
+\item Roman. Cara menggunakannya seperti dibawah ini :
+\end{itemize}
+\hspace{0,5in}\{$\setminus$rmfamily teks yang ingin diformat \}
+
+\begin{itemize}
+\item Sans serif. Cara menggunakannya seperti dibawah ini :
+\end{itemize}
+\hspace{0,5in}\{$\setminus$sffamily teks yang ingin diformat \}
+
+\begin{itemize}
+\item Typewriter. Cara menggunakannya seperti dibawah ini :
+\end{itemize}
+\hspace{0,5in}\{$\setminus$ttfamily teks yang ingin diformat \}\par \vspace{12pt}
+
+
+
+Ada 4 bentuk font dalam Latex :
+
+\begin{itemize}
+\item Italic. Cara mengaturnya sebagai berikut :
+\end{itemize}
+\hspace{0,5in}\{$\setminus$itshape teks yang ingin diformat \}
+
+\begin{itemize}
+\item Slanted. Cara mengaturnya sebagai berikut :
+\end{itemize}
+\hspace{0,5in}\{$\setminus$slshape teks yang ingin diformat \}
+
+\begin{itemize}
+\item Vertical. Cara mengaturnya sebagai berikut :
+\end{itemize}
+\hspace{0,5in}\{$\setminus$upshape teks yang ingin diformat \}
+
+\begin{itemize}
+\item SMALL CAPS. Cara mengaturnya sebagai berikut :
+\end{itemize}
+\hspace{0,5in}\{$\setminus$scshape teks yang ingin diformat \}
+\par \vspace{12pt}
+
+
+Ukuran Font
+
+Ada beberapa macam ukuran font dalam Latex. Untuk menggunakan 
+ukuran-ukuran itu caranya sebagai berikut :
+
+\begin{itemize}
+\item Tiny
+\end{itemize}
+\hspace{0,5in}\{$\setminus$tiny teks yang ingin diformat \}
+
+\begin{itemize}
+\item Scriptsize
+\end{itemize}
+\hspace{0,5in}\{$\setminus$scriptsize teks yang ingin diformat \}
+
+\begin{itemize}
+\item Footnotesize
+\end{itemize}
+\hspace{0,5in}\{$\setminus$footnotesize teks yang ingin diformat \}
+
+\begin{itemize}
+\item Small
+\end{itemize}
+\hspace{0,5in}\{$\setminus$small teks yang ingin diformat \}
+
+\begin{itemize}
+\item Normal
+\end{itemize}
+\hspace{0,5in}\{$\setminus$normalsize teks yang ingin diformat \}
+
+\begin{itemize}
+\item Large
+\end{itemize}
+\hspace{0,5in}\{$\setminus$large teks yang ingin diformat \}
+
+\begin{itemize}
+\item Larger
+\end{itemize}
+\hspace{0,5in}\{$\setminus$Large teks yang ingin diformat \}
+
+\begin{itemize}
+\item Largest
+\end{itemize}
+\hspace{0,5in}\{$\setminus$LARGE teks yang ingin diformat \}
+
+\begin{itemize}
+\item Huge
+\end{itemize}
+\hspace{0,5in}\{$\setminus$huge teks yang ingin diformat \}
+
+\begin{itemize}
+\item Huger
+\end{itemize}
+\hspace{0,5in}\{$\setminus$Huge teks yang ingin diformat \}
+
+\begin{enumerate}
+\setcounter{enumi}{\thenumberedCntB}
+\item \textbf{Struktur Dasar Sebuah Dokumen Latex}
+\setcounter{numberedCntB}{\theenumi}
+\end{enumerate}
+\textbf{Document Class}\par \vspace{12pt}
+
+Document class dalam Latex berguna untuk menentukan layout halaman, jenis heading, dan bebagai perintah dan environment yang digunakan untuk mengatur style dokumen. Cara mendeklarasikannya sebagai berikut :\par \vspace{12pt}
+
+$\setminus$dokumentclass \{class\}\par \vspace{12pt}
+
+Ada beberapa jenis document class yang bisa dipakai dalam sebuah dokumen Latex, yaitu :
+
+\begin{itemize}
+\item report : dapat digunakan untuk membuat laporan (report) baik dalam bidang bisnis, teknik, hukum, akademis, atau ilmu pengetahuan.
+\item article : dapat digunakan untuk membuat paper, artikel sebuah jurnal atau majalah, review, paper untuk konferensi, atau catatan riset.
+\item book : dapat digunakan untuk mebuat buku dan thesis.
+\item letter : dapat digunakan untuk membuat surat.
+\end{itemize}
+\hspace{0,5in}Biasanya kelas 'article' adalah yang paling sering digunakan untuk sembarang jenis dokumen.\par \vspace{12pt}
+
+
+
+\textbf{Document Class Option}\par \vspace{12pt}
+
+Merupakan pilihan yang tersedia pada kelas dokumen yang bisa ditentukan sendiri isinya. Opsi pada suatu kelas dokumen dituliskan sebagai berikut :\par \vspace{12pt}
+
+$\setminus$dokumentclass $[$option1, option2$]$\{class\}
+\par \vspace{12pt}
+
+
+Default opsi yang digunakan oleh Latex sebagai berikut :
+
+\begin{itemize}
+\item Ukuran kertas yang digunakan adalah A4.
+\item Ukuran font yang digunakan adalah 10pt untuk semua kelas dokumen.
+\item Layout halaman yang digunakan adalah two-sided printing khusus untuk kelas book dan report; dan one-sided printing khusus untuk kelas article dan letter.
+\item Halaman judul yang terpisah dibagian awal dokumen khusus untuk kelas book dan report.
+\end{itemize}
+Opsi diatas dapat dimodifikasikan sebagai berikut :
+
+\begin{itemize}
+\item Ukuran kertas. Dapat ditentukan sendiri ukuran kertasnya. Cara 
+penulisannya :
+\end{itemize}
+\hspace{0,5in}$\setminus$documentclass $[$ a3paper $]$ \{class\}
+
+\hspace{0,5in}atau
+
+\hspace{0,5in}$\setminus$documentclass $[$ letterpaper $]$ \{class\}
+
+\begin{itemize}
+\item Ukuran font. Dapat memilih ukuran 10pt, 11pt, atau 12pt. Cara penulisannya :
+\end{itemize}
+\hspace{0,5in}$\setminus$documentclass $[$ a4paper, 11pt $]$ \{class\}\par \vspace{12pt}
+
+Setelah menentukan ukuran font yang dipakai, semua font yang ada dalam dokumen akan diatur sesuai dengan ukuran yang ditentukan.\par \vspace{12pt}
+
+Layout halaman. Dapat ditentukan dengan pilihan berikut :\par \vspace{12pt}
+
+\begin{itemize}
+\item oneside : jika ingin layout one-sided printing saat menggunakan kelas book dan report.
+\item twoside : jika ingin layout two-sided printing saat menggunakan kelas article.
+\item titlepage : jika ingin kelas article untuk memiliki halaman judul yang terpisah dibagian awal dokumen.
+\item draft : berguna untuk mengatur Latex supaya menandai 
+masalah-masalah yang timbul seperti masalah pemenggalan kata ( 
+pemenggalan kata tidak tepat ) atau masalah perataan tulisan ( ada baris tertentu melebihi batas kanan dokumen ).
+\end{itemize}
+
+
+
+
+\textbf{Paket-Paket dalam Latex}\par \vspace{12pt}
+
+Merupakan fungsi-fungsi yang dipakai untuk menambah kemampuan Latex melakukan pengaturan dokumen. Cara menggunakan paket yang sudah tersedia/terintegrasi di dalam Latex sebagai berikut :
+\par \vspace{12pt}
+$\setminus$documentclass \{class\}\par \vspace{12pt}
+
+$\setminus$usepackage $[$ option $]$ \{nama paket\}\par \vspace{12pt}
+
+$\setminus$begin\{document\}\par \vspace{12pt}
+
+. . . . . . . . . . . . . . . . . .
+
+. . . . . . . . . . . . . . . . . .
+\par \vspace{12pt}
+$\setminus$end\{document\}\par \vspace{12pt}
+
+Beberapa paket yang tersedia dalam Latex sebagai berikut :
+
+\begin{itemize}
+\item graphicx : dapat menghasilkan gambar grafis dan juga membuat Latex mampu menampilkan gambar yang kita sertakan dalam dokumen.
+\item hyperref : dapat menghasilkan dokumen yang memiliki dynamic link ke alamat tertentu.
+\item babel : dapat mengenali format bahasa yang digunakan.
+\item color : dapat menghasilkan teks dokumen yang memiliki warna sesuai warna yang ditentukan.
+\item makeidx : dapat menghasilkan indeks dari dokumen yang dibuat.
+\end{itemize}
+\textbf{Document Environment}\par \vspace{12pt}
+
+Merupakan bagian dalam sebuah dokumen Latex dimana isi sebenarnya dari dokumen itu sendiri ditempatkan.
+\par \vspace{12pt}
+$\setminus$documentclass \{class\}\par \vspace{12pt}
+
+$\setminus$begin\{document\}\par \vspace{12pt}
+
+. . . . . . . . . . . . . . . . . .
+
+. . . . . . . . . . . . . . . . . .\par \vspace{12pt}
+
+$\setminus$end\{document\}\par \vspace{12pt}
+
+Struktur $\setminus$begin . . . . $\setminus$end inilah yang disebut dengan environment. Environment membatasi bagian teks yang akan diatur dengan aturan tertentu.\par \vspace{12pt}
+
+\textbf{Penulisan Judul}\par \vspace{12pt}
+
+Judul dalam sebuah dokumen Latex diletakan pada awal document 
+environment. Cara penulisannya sebagai berikut :\par \vspace{12pt}
+
+$\setminus$documentclass $[$ a4paper, 12pt $]$ \{report\}\par \vspace{12pt}
+
+$\setminus$begin\{document\}\par \vspace{12pt}
+
+$\setminus$title\{Judul Dokumen\}\par \vspace{12pt}
+
+$\setminus$autor\{Nama Penulis\}\par \vspace{12pt}
+
+$\setminus$date\{Tanggal Pembuatan\}\par \vspace{12pt}
+
+$\setminus$maketitle\par \vspace{12pt}
+
+. . . . . . . . . . . . . . . . . .
+
+. . . . . . . . . . . . . . . . . .\par \vspace{12pt}
+
+$\setminus$end\{document\}\par \vspace{12pt}
+
+
+
+\textbf{Abstrak}\par \vspace{12pt}
+
+Pada dokumen kelas article dan report umumnya memiliki 
+abstrak/ringkasan. Latex memiliki cara khusus untuk menuliskan abstrak. Penulisannya sebagai berikut :\par \vspace{12pt}
+
+$\setminus$documentclass $[$ a4paper, 12pt $]$ \{report\}\par \vspace{12pt}
+
+$\setminus$begin\{document\}\par \vspace{12pt}
+
+$\setminus$title\{Judul Dokumen\}\par \vspace{12pt}
+
+$\setminus$autor\{Nama Penulis\}\par \vspace{12pt}
+
+$\setminus$date\{Tanggal Pembuatan\}\par \vspace{12pt}
+
+$\setminus$maketitle\par \vspace{12pt}
+
+$\setminus$begin\{abstract\}\par \vspace{12pt}
+
+isi abstrak\par \vspace{12pt}
+
+$\setminus$end\{abstract\}\par \vspace{12pt}
+
+. . . . . . . . . . . . . . . . . .\par \vspace{12pt}
+
+$\setminus$end\{document\}\par \vspace{12pt}
+
+Jika ingin mengubah judul abstrak digunakan perintah sebelum 
+$\setminus$begin\{abstract\} :
+
+$\setminus$renewcommand \{$\setminus$abstractname\}\{Ringkasan Laporan\}\par \vspace{12pt}
+
+Contoh diatas dapat mengganti judul abstrak menjadi "\, Ringkasan Laporan "\,.\par \vspace{12pt}
+
+\textbf{Daftar Berurut}\par \vspace{12pt}
+
+Ada 3 cara penulisan daftar berurut, yaitu :
+
+Daftar dengan penomoran dengan menggunakan simbol (Bulleted List), contoh :
+
+Mobil\par \vspace{12pt}
+
+Montor\par \vspace{12pt}
+
+Sepeda\par \vspace{12pt}
+
+Bus\par \vspace{12pt}
+
+Cara penulisannya dalam Latex sebagai berikut :\par \vspace{12pt}
+
+$\setminus$begin\{itemize\}\par \vspace{12pt}
+
+$\setminus$item . . . .\par \vspace{12pt}
+
+$\setminus$item . . . .\par \vspace{12pt}
+
+$\setminus$item . . . .\par \vspace{12pt}
+
+$\setminus$item . . . .\par \vspace{12pt}
+
+. . . . .
+
+. . . . .\par \vspace{12pt}
+
+$\setminus$end\{itemize\}\par \vspace{12pt}
+
+
+
+\textbf{Daftar Isi}\par \vspace{12pt}
+
+Untuk menampilkan daftar isi dapat menggunakan perintah :\par \vspace{12pt}
+
+$\setminus$tableofcontents\par \vspace{12pt}
+
+Perintah ini diletakan pada bagian dimana daftar isi tersebut 
+ditempatkan. Biasanya daftar isi ditempatkan setelah abstrak/kata pengantar.
+
+Untuk menampilkan daftar gambar dapat menggunakan perintah :\par \vspace{12pt}
+
+$\setminus$listoffigures\par \vspace{12pt}
+
+Untuk menampilkan daftar tabel dapat menggunakan perintah :\par \vspace{12pt}
+
+$\setminus$listoftables
+\par \vspace{12pt}
+Latex menghasilkan file berekstensi *.toc untuk daftar isi, daftar gambar, dan daftar tabel. Jika daftar isi, daftar gambar dan daftar tabel tidak menampilkan keseluruhan struktur dokumen dengan benar, dapat diatur seendiri isinya dengan perintah berikut ini :\par \vspace{12pt}
+
+$\setminus$addcontensline\{toc\}\{struktur\}\{teks yang ingin 
+ditampilkan pada daftar isi\}\par \vspace{12pt}
+
+Struktur dapat diisi dengan chapter, section, subsection, dll, 
+tergantung dengan bagian dokumen yang ingin dimasukkan dalam daftar isi. Dengan perintah diatas, Latex akan menghasilkan baris baru dalam daftar isi dan akan secara otomatis menentukan nomor halaman bagian tersebut.\par \vspace{12pt}
+
+\textbf{Gambar}\par \vspace{12pt}
+
+Agar Latex mendapatkan gambar dalam dokumen, maka perlu mendeklarasikan penggunaan paket graphicx pada bagian preambel. Cara mendeklarasikannya adalah :\par \vspace{12pt}
+
+$\setminus$usepackage\{graphicx\}\par \vspace{12pt}
+
+Untuk menempatkan sebuah gambar dalam dokumen Latex, dapat dengan cara berikut :
+
+$\setminus$begin\{figure\}$[$htbp$]$
+\par \vspace{12pt}
+$\setminus$caption\{Nama Gambar\}
+\par \vspace{12pt}
+$\setminus$begin\{center\}
+\par \vspace{12pt}
+
+$\setminus$includegraphicx$[$width=2cm,height=3cm$\setminus$columnwidth$]$\{nama file gambar\}
+\par \vspace{12pt}
+$\setminus$end\{center\}
+\par \vspace{12pt}
+$\setminus$end\{figure\}
+\par \vspace{12pt}
+
+
+Ada beberapa hal yang perlu diketahui dalam format perintah diatas :
+
+\begin{itemize}
+\item Panjang dan lebar dari gambar yang akan ditampilkan dapat ditentukan sesuai keinginan. Isi dari width dapat diisi dengan lebar gambar dan isi dari height dapat diisi dengan tinggi gambar itu; 
+keduanya harus dilengkapi dengan dimensi dari ukuran panjang yang digunakan.
+\item File gambar yang ingin dimasukkan dalam dokumen, harus diletakkan pada direktori yang sama dengan direktori file dokumen (*.tex).
+\end{itemize}
+
+\begin{itemize}
+\item Pengaturan posisi gambar dapat diatur sesuai dengan 2 hal :
+\begin{itemize}
+\item Perataan terhadap tepi dokumen : dengan mengubah 
+$\backslash$begin\{center\} dan juga $\backslash$end\{center\} dapat menentukan posisi gambar terhadap tepi dokumen.
+\item Huruf-huruf pada $\backslash$begin\{figure\}$[$htbp$]$ berfungsi sebagai pengatur posisi gambar pada suatu halaman.
+\begin{itemize}
+\item h : tabel diletakan persis ditempat perintah tersebut dituliskan pada dokumen.
+\item t : tabel diletakan dibagian atas halaman.
+\item b : tabel diletakan dibagian bawah halaman.
+\item p : tabel diletakan pada sebuah halaman khusus yang hanya memuat tabel itu saja.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+Saat menggunakan h, Latex akan otomatis menempatkan gambar dihalaman baru jika tidak ada cukup ruang untuk gambar tersebut ditempat perintah gambar dituliskan.\par \vspace{12pt}
+
+Format gambar standar Latex adalah *.eps. Tetapi gambar dengan format *.jpg juga bisa digunakan.\par \vspace{12pt}
+
+\textbf{Daftar Pustaka}\par \vspace{12pt}
+
+Untuk menampilkan daftar pustaka pada akhir sebuah dokumen Latex menggunakan format perintah sebagai berikut :\par \vspace{12pt}
+
+$\setminus$begin \{thebibliography\}\{99\}
+\par \vspace{12pt}
+$\setminus$bibitem \{label untuk referensi\}\{keterangan pustaka yang digunakan\}
+\par \vspace{12pt}
+. . . . . . . . . . . . .
+
+. . . . . . . . . . . . .
+\par \vspace{12pt}
+$\setminus$end \{thebibliography\}
+\par \vspace{12pt}
+
+
+Beberapa hal yang perlu diketahui dalam perintah diatas :
+
+\begin{itemize}
+\item Angka 99 memberitahukan Latex bahwa penomoran maksimal Daftar pustaka adalah 99.
+\item Label untuk referensi diisikan keyword yang akan digunakan saat membuat rujukan ke pustaka yang bersangkutan.
+\item Keterangan pustaka diisi informasi mengenai : penulis, judul pustaka, edisi, penerbit, kota penerbit, dan tahun penerbit.
+\end{itemize}
+
+
+\textbf{Notasi Matematika dalam Latex}\par \vspace{12pt}
+
+\textbf{Penulisan Notasi Matematika dalam Paragraf}\par \vspace{12pt}
+
+Untuk menyisipkan notasi matematika dalam suatu kalimat/paragraf menggunakan perintah berikut ini :
+\par \vspace{12pt}
+$\setminus$begin\{math\} . . . . . $\setminus$end\{math\} atau
+\par \vspace{12pt}
+\$ . . . . . . . . . \$
+\par \vspace{12pt}
+
+
+Titik-titik tersebut diisi dengan notasi matematika yang disisipkan.\par \vspace{12pt}
+
+\textbf{Paragraf Khusus Matematika}
+\par \vspace{12pt}
+Untuk menuliskan notasi matematika yang panjang, dapat memillih untuk menuliskannya dalam paragraf baru. Perintahnya :
+\par \vspace{12pt}
+$\setminus$begin\{displaymath\}
+\par \vspace{12pt}
+. . . . . . . .
+\par \vspace{12pt}
+$\setminus$end\{displaymath\}
+\par \vspace{12pt}
+
+
+Titik-titik tersebut diisi dengan notasi matematika yang disisipkan.
+\par \vspace{12pt}
+\textbf{Font dalam Matematika}
+\par \vspace{12pt}
+Ada beberapa perintah yang digunakan untuk mengubah jenis font yang dipakai dalam notasi matematika, seperti berikut ini :
+\par \vspace{12pt}
+Perintah \$$\setminus$mathrm\{x y z\}\$ 
+akan menghasilkan :
+
+xyz
+\par \vspace{12pt}
+Perintah \$$\setminus$mathsf\{x y z\}\$ 
+akan menghasilkan :
+
+xyz
+\par \vspace{12pt}
+Perintah \$$\setminus$mathtt\{x y z\}\$ 
+akan menghasilkan :
+
+xyz
+\par \vspace{12pt}
+Perintah \$$\setminus$mathit\{x y z\}\$ 
+akan menghasilkan :
+
+xyz\par \vspace{12pt}
+
+
+
+Perintah \$$\setminus$mathbf\{x y z\}\$ 
+akan menghasilkan :
+
+xyz
+\par \vspace{12pt}
+Perintah \$$\setminus$mathcal\{x y z\}\$ 
+akan menghasilkan :
+
+xyz
+\par \vspace{12pt}
+Untuk menuliskan font matematika dalam bentuk superscripts dan 
+subscripts digunakan aturan beikut ini :\par \vspace{12pt}
+
+Superscripts, cara penulisannya dengan perintah $\setminus$sp\{ . . . 
+\} atau dengan tanda \^{}.
+\par \vspace{12pt}
+Subscripts, cara penulisannya dengan perintah $\setminus$sb\{ . . . \} 
+atau dengan tanda \_.
+\par \vspace{12pt}
+Contoh :
+\par \vspace{12pt}
+$\setminus$begin\{displaymath\}
+\par \vspace{12pt}
+
+y=x$\setminus$sb\{1\}$\setminus$sp\{2\}+x$\setminus$sb\{2\}$\setminus$sp\{2\}
+\par \vspace{12pt}
+$\setminus$end\{displaymath\}
+\par \vspace{12pt}
+
+
+\textbf{Penulisan Pecahan}
+\par \vspace{12pt}
+Untuk menghasilkan notasi pecahan dengan format perintah sebagai berikut:\par \vspace{12pt}
+
+$\setminus$frac\{numerator\}\{denominator\}
+\par \vspace{12pt}
+Contoh :
+\par \vspace{12pt}
+$\setminus$begin\{displaymath\}
+\par \vspace{12pt}
+$\setminus$frac\{a+2b\}\{a-1\}
+\par \vspace{12pt}
+$\setminus$end\{displaymath\}
+\par \vspace{12pt}
+
+
+\textbf{Penulisan Array dan Matriks}
+\par \vspace{12pt}
+Sebuah array/matriks dituliskan dalam environment tabular sama seperti cara pembuatan tabel. Perintahnya sebagai berikut :
+\par \vspace{12pt}
+$\setminus$begin\{displaymath\}
+\par \vspace{12pt}
+$\setminus$left (
+\par \vspace{12pt}
+$\setminus$begin\{array\}\{rrr\}
+\par \vspace{12pt}
+0 \& 45 \& 23 $\setminus$$\setminus$
+\par \vspace{12pt}
+34 \& -93 \& 68 $\setminus$end\{array\}
+\par \vspace{12pt}
+$\setminus$right )
+\par \vspace{12pt}
+$\setminus$end\{displaymath\}
+\par \vspace{12pt}
+
+
+Beberapa hal yang perlu diketahui dari format perintah itu :
+
+\begin{itemize}
+\item Sama seperti penulisan tabel, huruf r dibagian belakang 
+$\setminus$begin\{array\}\{rrr\} fungsinya menentukan posisi dari masing-masing komponen matriks tersebut. Dalam hal ini komponen masing-masing matriks dibuat menjadi rata kanan.
+\item Tanda kurung yang digunakan adalah tanda kurung kurawal. Bagian kurung buka dan tutup didefinisikan masing-masing.
+\end{itemize}
+
+
+\textbf{Penulisan Vektor}\par \vspace{12pt}
+
+Penulisan vektor dalam Latex menggunakan perintah berikut ini :
+\par \vspace{12pt}
+$\setminus$begin\{displaymath\}
+\par \vspace{12pt}
+$\setminus$vac\{variabel\}
+\par \vspace{12pt}
+$\setminus$end\{displaymath\}
+\par \vspace{12pt}
+Contoh :
+\par \vspace{12pt}
+$\setminus$begin\{displaymath\}
+\par \vspace{12pt}
+$\setminus$vac\{a\}
+\par \vspace{12pt}
+$\setminus$end\{displaymath\}
+\par \vspace{12pt}
+
