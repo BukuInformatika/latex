@@ -9,19 +9,18 @@ Bagaimana~persamaan typeset di  Sebuah Latex file sumber dari manual ini. \par
 \noindent 
 \vspace{12pt}
 \noindent 
-\begin{itemize}
-\item dot $  \_  $emacs : perintah untuk disertakan dalam file preferensi Emacs (.emacs) \par
+ dot $  \_  $emacs : perintah untuk disertakan dalam file preferensi Emacs (.emacs) \par
 \noindent 
-\item IEEEtrantools.sty [2015/08/26 V1.5 oleh Michael Shell]: paket yang dibutuhkan untuk IEEEeqnarray-lingkungan Hidup. \par
+ IEEEtrantools.sty [2015/08/26 V1.5 oleh Michael Shell]: paket yang dibutuhkan untuk IEEEeqnarray-lingkungan Hidup. \par
 \noindent 
-\item IEEEtran.cls [2015/08/26 V1.8b oleh Michael Shell]: Latex dalam format IEEE. \par
+ IEEEtran.cls [2015/08/26 V1.8b oleh Michael Shell]: Latex dalam format IEEE. \par
 \noindent 
-\item IEEEtran $  \_  $HOWTO.pdf [2015/08]: manual resmi dari IEEEtran-kelas. Bagian tentang IEEEeqnarray ditemukan di Appendix F. Perhatikan itu IEEEtran.cls dan IEEEtrantools.sty disediakan secara otomatis oleh siapapun up-to-date.\end{itemize}
+ IEEEtran $  \_  $HOWTO.pdf [2015/08]: manual resmi dari IEEEtran-kelas. Bagian tentang IEEEeqnarray dadjustwidthukan di Appendix F. Perhatikan itu IEEEtran.cls dan IEEEtrantools.sty disediakan secara otomatis oleh siapapun up-to-date.\
  \par
 \noindent 
 \vspace{12pt}
 \noindent 
- \hspace*{0.5in} Struktur dokumen ini adalah sebagai berikut. Kami memperkenalkan persamaan yang paling dasar di Bagian 2; Bagian 3 kemudian menjelaskan beberapa kemungkinan reaksi pertama ketika sebuah persamaan terlalu panjang Bagian terpenting dari manual ini tercantum dalam Bagian 4 dan 5: disana kita perkenalkan yang bertenaga IEEEeqnarray lingkungan yang harus digunakan masuk apapun bukan meluruskan atau eqnarray.Dalam Bagian 6 beberapa masalah yang lebih maju dan solusi yang mungkin dibahas, dan Bagian 7 berisi beberapa petunjuk dan trik tentang editor Emacs. Akhirnya, Bagian 8 membuat beberapa saran tentang beberapa simbol matematika khusus yang tidak dapat dengan mudah ditemukan di Latex. \par
+ \hspace*{0.5in} Struktur dokumen ini adalah sebagai berikut. Kami memperkenalkan persamaan yang paling dasar di Bagian 2; Bagian 3 kemudian menjelaskan beberapa kemungkinan reaksi pertama ketika sebuah persamaan terlalu panjang Bagian terpenting dari manual ini tercantum dalam Bagian 4 dan 5: disana kita perkenalkan yang bertenaga IEEEeqnarray lingkungan yang harus digunakan masuk apapun bukan meluruskan atau eqnarray.Dalam Bagian 6 beberapa masalah yang lebih maju dan solusi yang mungkin dibahas, dan Bagian 7 berisi beberapa petunjuk dan trik tentang editor Emacs. Akhirnya, Bagian 8 membuat beberapa saran tentang beberapa simbol matematika khusus yang tidak dapat dengan mudah dadjustwidthukan di Latex. \par
 \noindent 
 perintah akan diatur masuk font mesin tik .RHS berdiri untuk sisi kanan, yaitu, semua istilah di sebelah kanan tanda persamaan (atau ketidaks etaraan).Demikian pula,LHS berdiri untuk sisi kiri, yaitu, semua istilah di sebelah kiri tanda persamaan.Untuk menyederhanakan bahasa kita, kita biasanya akan membicarakannya persamaan. Jelas, typesetting tidak berubah jika sebuah ekspresi sebenarnya adalah ketidaksetaraan. Dokumen ini dilengkapi dengan beberapa file tambahan yang mungkin bisa membantu. \par
 \noindent 
@@ -60,12 +59,11 @@ a = b + c \par
 \noindent 
 Semua kemungkinan lain untuk typesetting persamaan sederhana memiliki kelemahan: \par
 \noindent 
-\begin{itemize}
-\item  $ \bullet $Itu tampilan matematis lingkungan tidak menawarkan penomoran persamaan. Untuk menambahkan atau re-pindahkan "*" dipersamaan lingkungan jauh lebih fleksibel.\end{itemize}
+  $ \bullet $Itu tampilan matematis lingkungan tidak menawarkan penomoran persamaan. Untuk menambahkan atau re-pindahkan "*" dipersamaan lingkungan jauh lebih fleksibel.
  \par
 \noindent 
-\begin{itemize}
-\item Perintah seperti  $  \$  $ $  \$  $ ...  $  \$  $ $  \$  $ , $  \setminus  $ [...  $  \setminus  $], dll, memiliki kelemahan tambahan itu kode sumbernya sangat mudah dibaca. Bahkan,  $  \$  $ $  \$  $ ...  $  \$  $ $  \$  $ salah: Jarak vertikal setelah persamaan terlalu besar dalam situasi tertentu. \par
+
+ Perintah seperti  $  \$  $ $  \$  $ ...  $  \$  $ $  \$  $ , $  \setminus  $ [...  $  \setminus  $], dll, memiliki kelemahan tambahan itu kode sumbernya sangat mudah dibaca. Bahkan,  $  \$  $ $  \$  $ ...  $  \$  $ $  \$  $ salah: Jarak vertikal setelah persamaan terlalu besar dalam situasi tertentu. \par
 \vspace{12pt}
 \noindent 
 \textbf{Persamaan Tunggal yang Terlalu Panjang: multline} \par
@@ -74,14 +72,14 @@ Semua kemungkinan lain untuk typesetting persamaan sederhana memiliki kelemahan:
  \hspace*{0.5in} Jika sebuah persamaan terlalu panjang, kita harus membungkusnya entah bagaimana. Sayangnya, dibungkus equa-Tions biasanya kurang mudah dibaca daripada yang tidak terbungkus. Untuk meningkatkan keterbacaan, Kita harus mengikuti peraturan tertentu tentang bagaimana melakukan pembungkus: \par
 \noindent 
 
-\item Secara umum, seseorang harus selalu membungkus sebuah persamaan \par
+ Secara umum, seseorang harus selalu membungkus sebuah persamaan \par
 \noindent 
-\item Sebelum tanda kesetaraan atau seorang operator \par
+ Sebelum tanda kesetaraan atau seorang operator \par
 \noindent 
-\item Bungkus sebelum tanda kesetaraan lebih baik dibungkus sebelum operator. \par
+ Bungkus sebelum tanda kesetaraan lebih baik dibungkus sebelum operator. \par
 Bungkus sebelum operator plus atau minus lebih baik dibungkus sebelum aperkalian-operator \par
 \noindent 
-\item Jenis bungkus lainnya harus dihindari jika memungkinkan.
+ Jenis bungkus lainnya harus dihindari jika memungkinkan.
  \par
 \vspace{12pt}
 \vspace{12pt}
@@ -419,7 +417,7 @@ a  $  \&  $ =  $  \&  $ b + c  $  \setminus  $ $  \setminus  $ \par
 \noindent 
 Itu eqnarray -lingkungan Hidup, 5 Namun, memiliki beberapa kelemahan yang sangat parah: \par
 \noindent 
-\item Ruang di sekitar tanda-tanda kesetaraan terlalu besar. Terutama, memang begitu tidak itu sama seperti di multline – dan persamaan lingkungan: \par
+ Ruang di sekitar tanda-tanda kesetaraan terlalu besar. Terutama, memang begitu tidak itu sama seperti di multline – dan persamaan lingkungan: \par
 \vspace{12pt}
 \noindent 
  $  \setminus  $begin $  \{  $eqnarray $  \}  $ \par
@@ -553,9 +551,9 @@ Ada tiga isu lagi yang belum disebutkan sejauh ini, tapi itu mungkin penyebabnya
 \noindent 
 multline, dan IEEEeqnarray, digunakan secara intermixedly: \par
 \noindent 
-\item multline memungkinkan sebuah persamaan dimulai dari atas halaman, sementara persamaan dan IEEEeqnarray cobalah untuk meletakkan garis teks terlebih dahulu, sebelum persamaan dimulai. Bahkan, jarak sebelum dan sesudah lingkungan tidak persis sama persamaan,multline, dan IEEEeqnarray. \par
+ multline memungkinkan sebuah persamaan dimulai dari atas halaman, sementara persamaan dan IEEEeqnarray cobalah untuk meletakkan garis teks terlebih dahulu, sebelum persamaan dimulai. Bahkan, jarak sebelum dan sesudah lingkungan tidak persis sama persamaan,multline, dan IEEEeqnarray. \par
 \noindent 
-\item  $ \bullet $persamaan menggunakan mekanisme otomatis untuk memindahkan nomor persamaan keBaris berikutnya jika ungkapannya terlalu panjang. Sementara ini nyaman, terkadang nomor persamaan dipaksa ke baris berikutnya, meski masih ada cukup ruang tersedia di telepon: \par
+  $ \bullet $persamaan menggunakan mekanisme otomatis untuk memindahkan nomor persamaan keBaris berikutnya jika ungkapannya terlalu panjang. Sementara ini nyaman, terkadang nomor persamaan dipaksa ke baris berikutnya, meski masih ada cukup ruang tersedia di telepon: \par
 \vspace{20pt}
 \vspace{20pt}
 \noindent 
