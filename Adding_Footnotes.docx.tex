@@ -1,0 +1,384 @@
+
+\sloppy
+
+
+{\fontsize{14pt}{14pt}\selectfont Adding Footnotes}
+
+
+\noindent 1.1 Pertama tama penjelasan catatan kaki terlebih dahulu\par
+
+Penjelasan tentang catatan kaki dan fungsinya\par
+
+
+Yang dimaksud dengan catatan kaki adalah daftar keterangan khusus yang ditulis pada bagian paling bawah disetiap lembaran akhir bab karya ilmiah (makalah, skripsi, tesis dll). Atau catatan kaki merupakan keterangan refrensi yang ditempatkan pada kaki tulisan atau teks karya ilmiah.\par
+
+Berikut ini beberapa fungsi dari catatan kaki yang diantaranya seperti:\par
+
+
+
+\noindent Catatan kaki berfungsi untuk memberikan keterangan dan penjelasan tentang sumber dari kutipan penyusunan daftar bacaan pada karya ilmiah supaya dapat dimengerti oleh pembaca.\par
+
+
+\noindent untuk menghargai sumber kutipan yang dikutip, supaya pembaca karya ilmiah mengetahui sumber kutipan yang digunakan\par
+
+
+\noindent Dan untuk menunjukan refrensi lain supaya pembaca karya ilmiah dapat mengetahui ulasan yang lebih jelas mengenai istilah yang digunakan\par
+
+
+\noindent Cara penulisan catatan kaki\par
+
+
+\noindent Bagaimana cara menulis catatan kaki?\par
+
+Dalam penulisannya, catatan kaki memiliki aturan-aturan yang perlu diperhatikan. Hal-hal tersebut diterapkan supaya dapat dimengerti oleh para pembaca karya ilmiah. Dalam menulis catatan kaki ada beberapa hal yang perlu diperhatikan, yang diantaranya:\par
+
+\begin{itemize}
+	\item Penulisannya dipisahkan oleh garis yang panjangnya 14 karakter dari margin sebelah kiri dan berjarak 4 spasi dari tulisan atau teks.\par
+
+	\item Diketik atau ditulis dengan satu spasi.\par
+
+	\item Harus diberikan nomer.\par
+
+	\item Nomer pada catatan kaki diketik dengan jarak 6 karakter dari margin sebelah kiri.\par
+
+	\item Kalau catatan kakinya lebih dari satu baris, maka pada baris yang kedua maupun selanjutnya dimulai seperti margin teks yang biasanya tepat pada margin bagian sebelah kiri.\par
+
+	\item Kalau catatan kakinya lebih dari satu maka jarak antar catatan kaki dengan catatan kaki yang lainnya sama seperti jarak spasi pada teks.\par
+
+	\item Catatan kaki harus ditulis pada halaman yang sama, jika terlalu panjang lebih baik potong teksnya daripada memotong catatan kaki.\par
+
+	\item Berjarak 3 centimeter dengan margin bagian bawah, seperti halnya pada aturan teks.\par
+
+	\item Jika nama pengarang dua sampai tiga orang, maka harus ditulis semuanya. Sedangkan jika nama pengarangnya lebih dari tiga orang maka tulis saja nama pengarang yang pertama lalu dibelakangnya ditulis et.al., atau dkk.\par
+
+	\item Nama pengarang harus ditulis sesuai nama aslinya, pangkat dan gelar tidak perlu ditulis.\par
+
+	\item Judul buku atau sumber harus diberi garis bawah, jika diketik dengan komputer maka harus dicetak miring.\par
+
+1.2 Footnotes Merupakan catatan kaki dalam penulisan pada latex \par
+
+Berikut adalah contoh code latex:\par
+
+Coding pembuatan catatan kaki\par
+
+$documentclass$ \{ $article$ \} \par
+
+$begin$ \{ $document$ \} \par
+
+$title$ \{ $google$ \} \par
+
+Penjelasan syntax yang tadi di pakai adalah sevagai berikut :\par
+
+$Documenclass$ \{ $article$ \} \par
+
+	\item Untuk menentukan jenis halaman (kita menggunakan article)\par
+
+$begin$ \{ $document$ \} \par
+
+	\item Untuk memulai document\par
+
+$title$ \{ $google$ \} \par
+
+	\item Untuk membuat judul teks, yaitu ‘google’\par
+
+$maketitle$\par
+
+-Untuk menampilkan judul\par
+
+$footnote$ \{ $teks$ \} \par
+
+	\item Untuk membuat catatan kaki tersebut\par
+
+$end$ \{ $document$ \} \par
+	\item Untuk mengakhiri document\par
+
+Coding yang akan digunakan sebagai berikut :\par
+
+Documentclass \{ $article$ \} \par
+
+Begin \{ $document$ \} \par
+
+$end$ \{ $document$ \} \par
+
+Penjelasan syntax yang tadi di gunakan berikut penjelasan nya:\par
+
+$documenclass$ \{ $article$ \} \par
+
+	\item Untuk menentukan jenis halaman\par
+
+$begin$ \{ $document$ \} \par
+
+	\item Untuk memulai dokumen\par
+
+$flushleft$\par
+
+	\item Untuk penulisan rata kiri\par
+
+$\$$\par
+
+	\item Untuk syarat penulisan rumus (di awal dan di akhir)\par
+
+$ \string^ $\par
+
+	\item Untuk penulisan pangkat atau superscript\par
+
+$ \_ $\par
+
+	\item Untuk penulisan index atau subscript\par
+
+$frac$\par
+
+	\item Untuk menuliskan pecahan\par
+
+$pm$\par
+
+-Untuk penulisan plus minus\par
+
+$sqrt$\par
+
+	\item Untuk penulisan akar\par
+
+$alpha$\par
+
+	\item Untuk menuliskan symbol alpa
+\end{itemize}\par
+
+Jadi xxx itu adalah penulisan kata-kata sendiri jadi isi sendiri agar tidak ditiru atau di modif sembarangan\par
+
+
+\noindent 1.3 Penjelasan tentang footnote atau pembuatan catatan kaki\par
+
+Verbatim berfungsi untuk membuat kalimat atau karakter yang di tulis\par
+
+Table berfungsi membuat table\par
+
+
+4.6.1 pembuatan list dan item pembuatan daftar berurutan untuk membuat daftar yang berurutan\par
+
+
+Jadi penulisan yang tepat yaitu menggunakan\par
+
+
+Documentclass[12pt,a4paper,oneside,bahasa,dvips]$ \{ $book$ \} $ atau begin$ \{ $document$ \} $ halo, jadi penjelasan nya kita akan membuat dokumen dengan ukuran kertas a4, selanjutnya buku tersebut akan ditampilkan kedalam bahasa Indonesia, dan daftar tersebut akan di susun secara otomatis pada awal dokumen\par
+
+
+
+\noindent 1.4 Hal penting untuk mengatur dokumen atau margin\par
+
+keterangan yang akan di terangkan berupa\par
+
+
+
+\noindent documentclass\par
+
+\begin{itemize}
+	\item tadi yang menentukan dokumen apa yang akan anda buat\par
+
+12pt\par
+
+	\item Ukuran huruf\par
+
+A4paper\par
+
+	\item Jenis\par
+
+Titlepage\par
+
+	\item Judul terpisah dengan isi\par
+
+Notitlepage\par
+
+	\item Judul tidak terpisah dengan isi\par
+
+Oneside\par
+
+	\item Satu sisi\par
+
+Twocolomn\par
+
+	\item Tampilan dokumen\par
+
+Bahasa\par
+
+	\item Bahasa Indonesia
+\end{itemize}\par
+
+
+\noindent 1.5 Setelah melakuka itu kita bisa membuat sebuah title\par
+
+
+\noindent $title$ \{ a \} \par
+
+
+\noindent maketitle\par
+
+\begin{itemize}
+	\item Jadi yang di dalam kurung itu isi sesuia yang di inginkan kalian\par
+
+1.6 Membuat author\par
+
+	\item Letakan kode nya diantara title dan maketitle lalu isi dalam kurung tersebut nama pengarang\par
+
+$author$ \{ a \} \par
+
+	\item Jadi sebenernya author juga berfungsi dengan enter\par
+
+1.7 Cara membuat judul\par
+
+part \{ l \} \par
+
+section\{ l \} \par
+
+subsection \{ l \} \par
+
+	\item Dalam kurung isi dengan judul yang di buat\par
+
+1.8 Penomoran dokumen\par
+
+begin \{ enumerate \} \par
+
+item\par
+
+item\par
+
+item\par
+
+$end$ \{ enumerate \} \par
+
+1.9 Bila ingin menambahkan footnote bisa ditambahkan code nya\par
+
+footnote \{ l \} \par
+
+	\item Contoh lain dari footnote adalah\par
+
+$footnote$ \{ $…$ \} \par
+
+	\item Kurung tersebut bisa di isi dan di sesuaikan dengan keinginan masing masing\par
+
+$documentclass$ \{ $article$ \} \par
+
+$begin$ \{ $document$ \} \par
+
+Bla bla bla.$footnote$ \{ $ini footnote.$ \} \par
+
+$end$ \{ $document$ \} \par
+
+Maka hasil nya akan bla bla bla ada pangkatnya di atas kata kata blabla bla tersebut\par
+
+Ini adalah penulisan dan penjelasan catatn kaki tujuan nya agar pembaca mengetahui fungsi dari catatan kaki dalam pembuatan karya ilmiah\par
+
+2.1 Kesalahan dalam penulisan catatan kaki meurut kaidah EYD\par
+
+Eveline Siregar dan Hartini Nara, Teori Belajar Dan Pembelajaran, (Bogor:Ghalia Indonesia, 2010)hal 4\par
+
+Perbaikan nya seperti ini\par
+
+Eveline Siregar dan Hartini Nara, Teori Belajar Dan Pembelajaran (bogor: Ghalia Indonesia. 2010),hlm.4.\par
+
+Kesalahan:\par
+
+Taniredja, Tukiran, Efi, dan Sri, Metode-metode pembelajaran inovatif (Bandung:Alfabeta.2011)hal 23\par
+
+Perbaikan nya seperti ini\par
+
+TAniredja, Tukiran ,Efi, dan Sri, Metode-metode pembelajaran inovatif\par
+
+(Bandung:Alfabeta,2011), hlm 23.\par
+
+Jadi pengertian catatan kaki adalah keterangan-keterangan atas teks/naskah/tulisna yang ditempatkan pada kaki halaman tulisan yang bersangkutan\par
+
+(keraf, 2004:218)\par
+
+2.2 Tujuan nya adalah\par
+
+Catatan kaki tidak hanya sebagai bukti bahwa tulisan kita berasal dari buku lain melainkan ada banyak tujuannya antara lain:\par
+
+	\item Pembuktian menunjukan tempat/sumber bahwa yang disebutkan pada tulisan telah dibuktikan orang lain.\par
+
+	\item Memberi apresiasi penghargaan, rasa terima kasih pada orang yang telah dikutipnya\par
+
+	\item Menyampaikan keterangan tambahan memperkuat uraian di luar persoaalan dalam teks, biasanya berupa: inti cerita, informasi tambahan
+\end{itemize}\par
+
+
+\noindent Merujuk bagian lain dalam tulisan dalam tulisan referensi melihat bagian lain dalam tulisannya, biasanya dengan singkatan-singkatan tertentu\par
+
+
+\noindent Contoh lain yang bisa kita lihat adalah\par
+
+
+\noindent Cara penulisan atau pencantuman nama\par
+
+\begin{itemize}
+	\item pengarang (tanpa dibalik)\par
+
+Judul(dicetak miring atau jika ditulis tangan digaris bawah)\par
+
+Data publikasi (meliputi kota terbit kemudian titik dua (:) kemudian penerbit koma (,) tahun terbit\par
+
+Nomor halaman\par
+
+2.3 Atau bisa disebut juga keterangan atas teks karangan yang di tempatkan pada kaki halaman karangan yang bersangkutan (Gorys Keraf, 1994:193). Catatan kaki dapat berupa rujukan bahan penulisan yang dijadikan sumber dan dapat pula berupa keterangan tambahan.\par
+
+Fungsinya berupa\par
+
+	\item Catatan kaki yang berupa referensi\par
+
+	\item Fungsi akademis\par
+
+	\item Memberikan dukungan argumentasi atau pembuktian\par
+
+	\item Pembuktian(rujukan) kutipan naskah\par
+
+	\item Memperluas makna informasi bahasan dalam naskah\par
+
+	\item Kebenerana fakta\par
+
+	\item Kualitas karangan\par
+
+	\item Penilaian sumber data\par
+
+	\item Pembedaan data pusaka dan keterangan tambahan\par
+
+	\item Mencegah pengulangan data pustaka\par
+
+	\item Memudahkan peninjauan penggunaan referensi\par
+
+	\item Penyunting data pustaka\par
+
+	\item Menunjukan kualitas kecerdasan akademis penulisan\par
+
+	\item Etika atau moral\par
+
+	\item Pengakuan dan penghargaan kepada penulis\par
+
+	\item Kualitas ilmiah\par
+
+	\item Kecermatan lebih akurat\par
+
+	\item Intelektual bukan plagiat\par
+
+	\item Kesantunan akademis penulisan\par
+
+	\item Tempat catatan kaki\par
+
+	\item Uraian pada halaman yang sama pada bagian bawah digunakan dalam skripsi dan lain lain\par
+
+	\item Uraian catatan bab terakhir untuk karangan popular\par
+
+	\item Penempatan catatan kaki harus konsisten. Misalnya, penempatan catatan kaki pada kaki halaman pertama. Penempatan ini dilakukan seterusnya dengan cara yang sama sampai dengan halaman terakhir.
+\end{itemize}\par
+
+
+\noindent 2.4  Penulisan catatan kaki\par
+
+\begin{itemize}
+	\item Dipisah tiga sepasi dari naskah yang sama\par
+
+	\item Antaracatatan kaki dipisahkan dengan satu spasi\par
+
+	\item Diketik sejajar dengan margin
+\end{itemize}\par
+
+
+\noindent Itu adalah cara tips untuk mengetahui catatan kaki dan bagaimana penerapan pada latex tersebut maka ikuti langkah diatas maka akan kalian ketahui hasilnya selain itu pembelajaran diatas didapatkan di halaman internet untuk pemahaman lebih jelasnya bisa buka halaman cara penulisan bahasaindonesia di browser pembaca terimakasih\par
