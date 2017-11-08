@@ -3,15 +3,15 @@ untuk membuat buku yang "\,cantik" , khususnya yang terdiri atas formula-formula
 
 \hspace{0,3in}Biasanya Latex digunakan untuk mengetik dokumen yang berisi formula-formula matematis. Jenis dokumen yang dihasilkan dapat berupa artikel, buku, tesis, disertasi, hingga surat bisnis maupun surat pribadi. Berbeda dengan MS Word atau Libre Office, dokumen hasil dari Latex dapat berbeda antara input dengan output. Misalnya di MS Word kita mengetik "\,\$a\$" maka yang muncul di dokumen hasil adalah "\,\$a\$", sedangkan dengan input yang sama, Latex memberikan output a. Karena ide dari Latex adalah membiarkan penulis menulis dokumen dan menyerahkan desain dokumen ke "\,document designer", maka hasil dari dokumen Latex lebih "\,cantik".\par \vspace{12pt}
 
-\textbf{Instalasi LaTeX}\par \vspace{8pt}
+\section{Instalasi LaTeX}\par \vspace{8pt}
 
 Ada banyak editor untuk latex dan tidak semua editor sesuai dengan setiap pengguna. Semua itu tergantung pada selera masing-masing. Karena alasan ini, akan saya tunjukan bagaimana dasar-dasar latex berjalan. Banyak pengguna memilih MikTeX untuk Windows karena MikTeX sudah mempunyai semuanya yang diperlukan untuk menjalankan program latex. 
 \par \vspace{12pt}
-\textbf{Linux}
+\subsection{Linux}
 \par \vspace{8pt}
 Jika menggunakan linux, maka Anda bisa menggunakan paket texlive di beberapa repository. Setelah itu Anda bisa menggunakan berbagai macam text editor dan menjalankan file dengan format .tex dengan perintah pdflatex.
 \par \vspace{12pt}
-\textbf{Windows}
+\subsection{Windows}
 \par \vspace{12pt}
 Langkah pertama untuk pengguna windows yaitu :
 
@@ -175,7 +175,9 @@ EFI = environment gambar (figure)
 \begin{itemize}
 \item OS: Linux, Windows1 (XP, Vista, 7)
 \item LIsensi: GNU GPL 2
-\item Bahasa: bg, bs, ca, cs, da, de, el, en\_GB, eo, es, et, fi, fr, ga, gl, hi, hne, hu, it, ja, kk, lt, mai, ms, nb, nds, nl, nn, pl, pt, pt\_BR, ro, ru, sk, sv, tr, ug, uk, zh\_CN, zh\_TW
+\item Bahasa: 
+\begin{verbatim}bg, bs, ca, cs, da, de, el, en\_GB, eo, es, et, fi, fr, ga, gl, hi, hne, hu, it, ja, kk, lt, mai, ms, nb, nds, nl, nn, pl, pt, pt\_BR, ro, ru, sk, sv, tr, ug, uk, zh\_CN, zh\_TW
+\end{verbatim}
 \item Unicode: Ya
 \item RTL/bidi: Ya
 \item \% !TEX directives: Tidak2
@@ -194,27 +196,35 @@ EFI = environment gambar (figure)
 
 
 \item \textbf{TeXstudio - texstudio}
-\begin{itemize}
-\item OS: Windows XP/Vista/7, OS X, Linux, FreeBSD
-\item Lisensi: GPL v2
-\item Bahasa: cs, de, en, es, fr, hu, ja, pt\_BR, zh\_CN
-\item Unicode: Ya
-\item RTL/bidi: ?
-\item \% !TeX directives: Ya
-\item Syntax Highlighting: Ya, bisa dikustomisasi
-\item Code Completion: Ya, bisa dikustomisasi dan auto-customized
-\item Code Folding: Ya
-\item Spell Checking: Ya
-\item SyncTeX: Ya
-\item Built-in Output Viewer: Ya, mendukung PDF
-\item Project Management: Ya
-\item Saya merekomendasikan TeXstudio sebagai fork yang menarik dari Texmaker yang saya rasa lebih nyaman dan bisa dikustomisasi.
-\item Berikut ini screenshot TeXStudio.
-\end{itemize}
+
+\begin{table}[ht]
+	\caption{Instalasi Paket}
+	\centering
+	\begin{tabular}{cccc}
+		\hline
+		No&Keterangan&\\
+		\hline
+		.1&OS: Windows XP/Vista/7, OS X, Linux, FreeBSD&\\
+		.2&Lisensi: GPL v2&\\
+		.3&Bahasa: cs, de, en, es, fr, hu, ja, pt\_BR, zh\_CN&\\
+		.4&Unicode: Ya&\\
+		.5&RTL/bidi: ?&\\
+		.6&TeX directives: Ya&\\
+		.7&Syntax Highlighting: Ya, bisa dikustomisasi&\\
+		.8&Code Completion: Ya, bisa dikustomisasi dan auto-customized&\\
+		.9&Unicode: Ya&\\
+		.10&Code Folding: Ya&\\
+		.11&Spell Checking: Ya&\\
+		.12&SyncTeX: Ya&\\
+		.13&Built-in Output Viewer: Ya, mendukung PDF&\\
+		.14&Project Management: Ya&\\
+		.15&Saya merekomendasikan TeXstudio sebagai fork yang menarik dari Texmaker yang saya rasa lebih nyaman dan bisa dikustomisasi.&\\
+		\hline
+	\end{tabular}
+\end{table}
 \includegraphics[width=15.23cm,height=10.79cm]{gambar/image7.jpg}
 
 Fitur-fitur lainnya:
-
 \begin{itemize}
 \item cross-platform
 \item dukungan penulisan (incremental search, folding, navigasi, auto-completion, custom macros)
