@@ -1,4 +1,4 @@
-\textbf{Pengertian Latex}\par
+\section {Pengertian Latex}\par
 \vspace{12pt}
 TEX merupakan perangkat lunak pengolah dokumen yang terutama ditujukan menghasilkan dokumen yang berisi simbol-simbol matematik. TEX diciptakan oleh Donald E. Knuth (Mei1977) sebaga ibahasa pembentuk dokumen (document formatting language). LaTeX adalah sistem typesetting yang 
 dapat digunakan untuk membuat artikel, buku, surat, dan publikasi lain berkualitas tinggi. LaTeX berbasiskan pada TeX, bahasa typesetting aras bawah yang didesain oleh Donald E. Knuth. LaTeX tidak bekerja seperti pengolah kata WYSIWYG(what you see is what you get), jenis persiapan dokumen yang sudah banyak dipakai oleh banyak orang. Dengan LaTeX, Anda tidak harus perduli dengan pemformatan dokumen, hanya tentang penulisan dokumen.\par 
@@ -22,7 +22,22 @@ Untuk menyatakan jenis dokumen yang akan diolah, setiap dokumen harus dimulai de
 
 Membuat dokumen dengan latex sangat sederhana. Anda bisa memulai membuat dokumen latex dengan mengetikan kode latex lalu ditambah dengan konten yang sederhana yaitu teks. Latex menggunakan kode-kode perintah yang terkontrol yang nantinya akan menentukan seperti apa hasil akhir dari dokumen yang anda buat. Setelah andamengetikan kode-kode perintah latex, maka compiler dari editor latex dapat mengkompilasinya menjadi file .pdf. \par \vspace{12pt} 
 
-\textbf{Kelas Dokumen}\par
+
+\begin{table}[ht]
+	\caption{Instalasi Paket}
+	\centering
+	\begin{tabular}{cccc}
+		\hline
+		No&Kelebihan&Kekurangan&\\
+		\hline
+		.1&Cocok untuk programmer&tidak user friendly seperti ms word&\\
+		.2&Filenya relatif kecil&Harus hafal command&\\
+		.3&Hasil tampilan dokumen profesional& Cocok untuk data skala besar&\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsection {Kelas Dokumen}\par
 \vspace{12pt}
 Jenis dokumen yang akan diolah ditentukan oleh perintah pertama dalam bentuk: \par \vspace{12pt} $\setminus$documentclass$[$option$]$\{class\}\par \vspace{12pt}
 
@@ -256,7 +271,7 @@ ukuran-ukuran itu caranya sebagai berikut :
 \item \textbf{Struktur Dasar Sebuah Dokumen Latex}
 \setcounter{numberedCntB}{\theenumi}
 \end{enumerate}
-\textbf{Document Class}\par \vspace{12pt}
+\subsection {Document Class}\par \vspace{12pt}
 
 Document class dalam Latex berguna untuk menentukan layout halaman, jenis heading, dan bebagai perintah dan environment yang digunakan untuk mengatur style dokumen. Cara mendeklarasikannya sebagai berikut :\par \vspace{12pt}
 
@@ -364,7 +379,7 @@ $\setminus$end\{document\}\par \vspace{12pt}
 
 Struktur $\setminus$begin . . . . $\setminus$end inilah yang disebut dengan environment. Environment membatasi bagian teks yang akan diatur dengan aturan tertentu.\par \vspace{12pt}
 
-\textbf{Penulisan Judul}\par \vspace{12pt}
+\subsection {Penulisan Judul}\par \vspace{12pt}
 
 Judul dalam sebuah dokumen Latex diletakan pada awal document 
 environment. Cara penulisannya sebagai berikut :\par \vspace{12pt}
@@ -389,7 +404,7 @@ $\setminus$end\{document\}\par \vspace{12pt}
 
 
 
-\textbf{Abstrak}\par \vspace{12pt}
+\subsection {Abstrak}\par \vspace{12pt}
 
 Pada dokumen kelas article dan report umumnya memiliki 
 abstrak/ringkasan. Latex memiliki cara khusus untuk menuliskan abstrak. Penulisannya sebagai berikut :\par \vspace{12pt}
@@ -423,7 +438,7 @@ $\setminus$renewcommand \{$\setminus$abstractname\}\{Ringkasan Laporan\}\par \vs
 
 Contoh diatas dapat mengganti judul abstrak menjadi "\, Ringkasan Laporan "\,.\par \vspace{12pt}
 
-\textbf{Daftar Berurut}\par \vspace{12pt}
+\subsection {Daftar Berurut}\par \vspace{12pt}
 
 Ada 3 cara penulisan daftar berurut, yaitu :
 
@@ -457,7 +472,7 @@ $\setminus$end\{itemize\}\par \vspace{12pt}
 
 
 
-\textbf{Daftar Isi}\par \vspace{12pt}
+\subsection {Daftar Isi}\par \vspace{12pt}
 
 Untuk menampilkan daftar isi dapat menggunakan perintah :\par \vspace{12pt}
 
@@ -531,7 +546,7 @@ Saat menggunakan h, Latex akan otomatis menempatkan gambar dihalaman baru jika t
 
 Format gambar standar Latex adalah *.eps. Tetapi gambar dengan format *.jpg juga bisa digunakan.\par \vspace{12pt}
 
-\textbf{Daftar Pustaka}\par \vspace{12pt}
+\subsection {Daftar Pustaka}\par \vspace{12pt}
 
 Untuk menampilkan daftar pustaka pada akhir sebuah dokumen Latex menggunakan format perintah sebagai berikut :\par \vspace{12pt}
 
@@ -640,7 +655,7 @@ $\setminus$end\{displaymath\}
 \par \vspace{12pt}
 
 
-\textbf{Penulisan Pecahan}
+\subsection {Penulisan Pecahan}
 \par \vspace{12pt}
 Untuk menghasilkan notasi pecahan dengan format perintah sebagai berikut:\par \vspace{12pt}
 
@@ -688,6 +703,7 @@ $\setminus$begin\{array\}\{rrr\} fungsinya menentukan posisi dari masing-masing 
 \textbf{Penulisan Vektor}\par \vspace{12pt}
 
 Penulisan vektor dalam Latex menggunakan perintah berikut ini :
+\begin{verbatim}
 \par \vspace{12pt}
 $\setminus$begin\{displaymath\}
 \par \vspace{12pt}
@@ -703,4 +719,5 @@ $\setminus$vac\{a\}
 \par \vspace{12pt}
 $\setminus$end\{displaymath\}
 \par \vspace{12pt}
+\end{verbatim}
 
