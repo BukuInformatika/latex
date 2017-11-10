@@ -1,0 +1,336 @@
+
+\sloppy
+
+\noindent \begin{center}
+	Create Tables With Latex
+\end{center}
+
+\noindent 1.1 Tips membuat table pada latex\par
+
+
+\noindent documentclass[10] \{ $article$ \} \par
+
+\begin{itemize}
+	\item Jadi class dokumen ini menggunaka kertas ukuran font 10 dan jenis dokumen nya itu artikel\par
+
+begin \{ $document$ \} \par
+
+	\item Memulai penulisan document\par
+
+begintitle\{ $table$ \} \par
+
+	\item Memulai untuk menggunakan table\par
+
+	\item Karena di dokumen ini membutuhkan table
+\end{itemize}\par
+\begin{itemize}
+	\item Jadi fungsi tabular itu untuk membuat kolom
+\end{itemize}\par
+
+\begin{itemize}
+	\item Tanda $ \vert $ itu untuk membuat garis kolomnya yang bisa kita tentukan sendiri\par
+
+	\item Dan tanda l itu adalah left
+\end{itemize}\par
+
+
+\noindent Kesimpulan nya semua tulisan berada dikolom itu menggunakan rata kiri\par
+
+
+\noindent hline\par
+
+\begin{itemize}
+	\item Fungsi ini adalah membuat garis sesuai dengan lebar kolom yang kita buat\par
+
+	\item Hline ini juga berfungsi sebagai menentukan berapa baris yang kita mau
+\end{itemize}\par
+\begin{itemize}
+	\item Memasuki baris pertama yang di sebut attribute\par
+
+	\item Attribute ini adalah nama,npm,kelas,jurusan dan semester\par
+
+	\item Textbf ini berfungsi sebagaimembuat tulisan menjadi tebal atau bold\par
+
+	\item Tanda $\&$ ini berguna untuk memisahkan kolom satu dan kolom lain nya
+\end{itemize}\par
+
+
+\noindent hline\par
+
+\begin{itemize}
+	\item Berfungsi untuk membuat garis sesuai dengan lebar kolom yang kita buat\par
+
+Garis pertama sudah di buat lalu buat garis kedua\par
+
+Berarti kita masuk baris kedua\par
+
+Faisal akbar ramadhan$\&$1144010$\&$3DTID4$\&$TI$\&$7\par
+
+Dibaris kedua ini tulisan faisal satu kolom dengan nama dan 3dtid4 satu kolom dengan attribute kelas, 1144010 ini berada di kolom npm, ti berada di kolom jurusan dan terakhir 7 adalah kolom untuk semester\par
+
+Selanjutnya isi table dengan cara yang sama dan isi table ini merupakan langkah berikutnya\par
+
+end \{ $tabular$ \} \par
+
+	\item Fungsinya untuk mengakhiri penggunaan tabular
+\end{itemize}\par
+
+
+\noindent Karena sebelumnya kita telah menggunakan begin \{ $tabular$ \} \par
+
+
+\noindent Maka harus diakhiri dengan end \{ $tabular$ \} \par
+
+
+\noindent caption \{ $contoh table 1$ \} \par
+
+
+\noindent Untuk menambahkan keterangan dibawah table seperti contoh sebelumnya\par
+
+Contoh yang kita buat adalah contoh table 1\par
+
+
+\noindent end \{ table \} \par
+
+\begin{itemize}
+	\item Fungsinya untuk mengakhiri penggunaan table\par
+
+Karena kita sebelumnya telah menggunakan begin \{ table \} \par
+
+Maka harus diakhiri dengan end \{ table \} \par
+
+end \{ document \} \par
+
+	\item Fungsinya untuk mengakhiri dokumen tersebut 
+\end{itemize}\par
+
+
+\noindent Karena sebelumnya kita telah membuat begin$ \{ $document$ \} $\par
+
+
+\noindent Maka diakhiri dengan end$ \{ $document$ \} $\par
+
+Setelah coding di tulis dengan tepat dan akurat setelah selesai jika pembaca ingin mengetahui hasil pembuatan table ini tinggal run di program tetapi projek ini sebelum dirun kita harus save nya terlebih dahulu sehingga bisa di jalan kan \par
+
+Setelah di pastikan projek disave lalu klik run build tersebut yang ada di atas file projek yang di buat\par
+
+Setelah run kita tunggu hasil dari pembuatan table tersebut maka akan keluar output yang sesuai anda buat \par
+
+Nama, npm, kelas dll telah sesuai tidak dengan nama yang telah di inputkan cek terlebih dahulu hasil output apabila ada kesalahan maka edit di codingan yang saat pembbuatan table nama pengisian nya seperti faisal akbar di ganti menjadi dimas rakasakti atau bebas apa yang anda ingin kan.\par
+
+
+\noindent 1.2 Apabila menginginkan table di buku yang anda buat masukan code tersebut tetapi dengan syarat jangan ada yang salah karena latex sensitive\par
+
+
+\noindent newpage\par
+
+\begin{itemize}
+	\item Untuk baris baru\par
+
+begin \{ $table$ \} [h]\par
+
+	\item Letak table nya ada bottom, top, dsb\par
+
+begin \{ $center$ \} \par
+
+
+	\item C itu center\par
+
+	\item R itu right\par
+
+	\item L itu left
+\end{itemize}\par
+
+
+\noindent hline\par
+
+\begin{itemize}
+	
+	\item Ada beberapa perintah yang sering di gunakan karena wajib untuk table\par
+
+L\par
+
+	\item Merupakan left kolom\par
+
+R\par
+
+	\item Merupakan right kolom\par
+
+C\par
+
+	\item Merupakan center kolom\par
+
+P\par
+
+	\item Paraghraph kolom dengan lebar yang diinginkan\par
+
+$ \vert $\par
+
+	\item Garis vertical\par
+
+$ \vert $$ \vert $\par
+
+Berarti dua garis vertical\par
+
+Setiap baris diakhiri dengan symbol \par
+
+Untuk memisahkan kolom menggunakan $\&$\par
+
+Garis vertical serebar table menggunakan perintah hline\par
+
+Menyisipkan kode $ \vert $ pada kolom\par
+
+	\item Sedangkan horizontal menggunakan perintah cline\par
+
+H\par
+
+	\item Table diletakan persis di tempat perintah tsb dituliskan\par
+
+T\par
+
+	\item Table dituliskan di bagian atas halaman\par
+
+B\par
+
+	\item Table diletakan di bagian bawah halaman\par 
+
+\end{itemize}
+P\par
+
+1.3 Table diletakan pada halaman khusus yang hanya memuat table itu sendiri\par
+
+begin \{ table \} [htbp]\par
+begin \{ center \} \par
+caption \{ Contoh 1 \} \par
+
+begin \{ tabular \} \par
+
+hline\par
+
+ Nama $\&$ Negara $\&$ Club\par
+
+hline\par
+
+  Ronaldo $\&$ Brazil $\&$ Real Madrid \par
+
+  Lionel Messi $\&$ Argentina $\&$ Barcelona\par
+
+hline\par
+
+end \{ tabular \} \par
+
+end \{ center \} \par
+
+end \{ table \} \par
+
+end \{ document \} \par
+
+2.1 Berikut adalah pengantar cara penulisan dengan benar menurut para ahli\par
+
+Agar pembaca tujuan nya mengetahui tujuan pembuatan table pada karya ilmiah atau buku dan lain lain\par
+\begin{itemize}
+	\item Teknik menulis karya ilmiah seperti laporan penelitian dosen, buku, dan artikel jurnal ilmiah dapat disertai dengan tabel dan gambar. Tabel berguna untuk menyajikan data secara ringkas dalam bentuk matriks. Demikian juga gambar, yang dapat berupa foto, peta, bagan alir, sebenarnya juga merupakan data dalam bentuk visual.\par
+
+	\item Tabel dan gambar, kalau digunakan dengan benar, selain berguna untuk menyajikan data, juga menjadikan karya ilmiah tampil lebih menarik. Hanya saja tentu ada catatannya, keduanya ditampilkan sesuai dengan persyaratan pencantuman tabel dan gambar dalam karya ilmiah.\par
+
+	\item Sayangnya, banyak dosen dan mahasiswa mencantumkan tabel dan gambar apa adanya. Akibatnya, bukan menjadikan buku atau karya ilmiah menjadi lebih mudah dimengerti, lebih menarik, tetapi justru sebaliknya. Jangan sampai tabel dan gambar sulit dimengerti sehingga membingungkan. Bisa jadi tabel dan gambar yang tampil sekenanya justru menjadikan tampilan buku berantakan. Kemampuan menyajikan tabel penting dalam teknik menulis buku atau karya ilmiah\par
+
+	\item Menampilkan tabel dan gambar dalam buku, perlu terlebih dahulu memperhatikan gaya penulisan ilmiah yang akan digunakan. Bila akan menggunakan gaya penulisan APA, maka perlu diikuti aturan pencantuman tabel dan pencantuman gambar menurut gaya tersebut. Beberapa ketentuan yang perlu diperhatikan antara lain, ukuran tabel dan gambar tidak boleh melewati batas tepi halaman.\par
+
+	\item Tabel dan gambar harus disertai dengan judul yang masing-masing didahului dengan tulisan ‘Tabel x’ dan ‘Gambar x’, di mana x merupakan nomor urut. Judul ditulis dengan hanya huruf awal kata pertama dan huruf awal kata-kata benda nama diri yang ditulis kapital (bukan huruf awal setiap kata) dan bukan menggunakan huruf tebal atau miring.\par
+
+	\item Setiap tabel atau gambar harus dirujuk dalam teks tulisan sebagaimana merujuk pustaka dengan mencantumkan Tabel x atau Gambar x. Tabel harus diberi kepala kolom dan kepala baris yang jelas dengan cara penulisan sebagaimana penulisan judul tabel. Bila isi tabel merupakan hasil pengukuran maka satuan dicantumkan sebagai bagian dari judul kolom.
+\end{itemize}\par
+
+
+\noindent 2.2 Aturan Aturan pembuatan table\par
+
+Dalam sebuah table biasana terdiri dari beberapa baris dan beberapa kolom.\par
+
+Dalam hal ini, untuk membuat sebuah table yang benar diperlukan aturan-aturan sebagai berikut:\par
+
+
+
+\noindent Judul table\par
+
+
+\noindent Dalam judul table harus diperhatikan hal-hal sebagai berikut:\par
+
+\begin{itemize}
+	\item harus ditulis ditengah tengah bagian teratas\par
+
+	\item diberi nomor agar lebih mudah dalam pencarian table biasanya nomor itu meliputi bab berapa materi itu sedang di bahas dan nomor urut table itu sendiri.
+\end{itemize}\par
+
+
+\noindent Contoh daftar 1(2) artinya table itu membahas materi bab1 dan urutan table ke dua yang di bahas\par
+
+\begin{itemize}
+	\item ditulis dengan huruf besar semua\par
+
+	\item Ditulis secara singkat dan jelas meliputi: masalah apa, dimana masalah itu terjadi, kapan masalah itu terjadi dan satuan dari objek yang di permasalahkan\par
+
+	\item Ditulis dalam berupa baris dengan tiap barisnya menggambarkan sebuah kalimat yang lengkap\par
+
+	\item Sebaliknya tiap baris jangan dilakukan pemisahan kata
+\end{itemize}\par
+
+
+\noindent Contoh:\par
+
+
+\noindent Daftar 1(1)\par
+
+
+\noindent BERAT BADAN MAHASISWA PROGRAM S-1 PENDIDIKAN GURU SEKOLAH DASAR DICATAT DALAM KG\par
+
+
+\noindent Judul baris\par
+
+\begin{itemize}
+	\item Ditulis secara singkat dan jelas \par
+
+	\item Dapat ditulis dalam beberapa baris\par
+
+	\item Sebaliknya jangan dilakukan pemisahan bagian kata
+\end{itemize}\par
+
+
+\noindent Judul kolom\par
+
+\begin{itemize}
+	\item Ditulis secara singkat dan jelas\par
+
+	\item Dapat ditulis dalam beberapa baris\par
+
+	\item Sebaliknya jangan dilakukan pemisahan bagian kata
+\end{itemize}\par
+
+Disebelah kiri bawah table biasanya terdapat bagian untuk menuliskan catatan yang diberikan atau bisa juga kata sumber yang menjelaskan dari mana data itu dikutif. Jika kata sumber itu tidak ada ini berarti bahwa pemakai data itu sendiri yang mengumpulkan datanya bisa berupa data fiktif atau data yang benar benar hasil penelitiannya\par
+
+
+\noindent 2.3 Jika ada data mengenai waktu, maka waktu hendaknya di susun berurutan\par
+
+
+\noindent Contoh\par
+
+Senin, selasa dan seterusnya\par
+
+2000, 2001 dan seterusnya\par
+
+Januari, febuari dan seterusnya\par
+
+
+
+\noindent 2.4 Jika ada data mengenai kategori maka kategori disusun menurut kebiasaan\par
+
+
+\noindent Contoh\par
+
+Laki-laki dahulu kemudian perempuan\par
+
+Besar dulu setelah itu kecil\par
+
+Untung dahulu baru rugi \par
+
+Bagus dulu setelah itu jelek\par
