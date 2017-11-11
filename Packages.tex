@@ -1,20 +1,13 @@
-~~ LaTeX memiliki banyak fungsi secara default. Untuk mengimpor paket di LaTeX, tambahkan petunjuk  $ \_ $  usepackage ke pembukaan dokumen:\par
+\section{Package Explained}
+\hspace{0.50in} LaTeX memiliki banyak fungsi secara default. Untuk mengimpor paket di LaTeX, tambahkan petunjuk  $ \_ $  usepackage ke pembukaan dokumen:\par
 
 \noindent  $ \_ $ documentclass $ \{ $ article $ \} $ \par
-\noindent 
-
-\vspace{12pt}
 \noindent  $ \_ $ usepackage $ \{ $ PACKAGENAME $ \} $ \par
-\noindent 
-
-\vspace{12pt}
 \noindent  $ \_ $ begin $ \{ $ document $ \} $ \par
 
-\noindent ...\par
 \vspace{12pt}
-Saat menggunakan Linux atau Mac, kebanyakan paket sudah terinstal secara default dan biasanya tidak perlu menginstalnya. Jika Ubuntu menginstal texlive-full dari package manager akan menyediakan semua paket yang tersedia. Bundel MiKTeX di Windows, akan mendownload paket jika dimasukkannya ke dokumen.\par
-
-Untuk mengatur matematika, LaTeX menawarkan (antara lain) lingkungan yang disebut persamaan. Segala sesuatu di dalam lingkungan ini akan dicetak dalam mode matematika, lingkungan tata letak khusus untuk matematika. LaTeX juga menangani nomor persamaan:\par
+\hspace{0.50in} Saat menggunakan Linux atau Mac, kebanyakan paket sudah terinstal secara default dan biasanya tidak perlu menginstalnya. Jika Ubuntu menginstal texlive-full dari package manager akan menyediakan semua paket yang tersedia. Bundel MiKTeX di Windows, akan mendownload paket jika dimasukkannya ke dokumen.\par
+\hspace{0.50in} Untuk mengatur matematika, LaTeX menawarkan (antara lain) lingkungan yang disebut persamaan. Segala sesuatu di dalam lingkungan ini akan dicetak dalam mode matematika, lingkungan tata letak khusus untuk matematika. LaTeX juga menangani nomor persamaan:\par
 
 {\fontsize{10pt}{10pt}\selectfont  $ \_ $ documentclass $ \{ $ article $ \} $ }\par
 
@@ -30,36 +23,29 @@ Untuk mengatur matematika, LaTeX menawarkan (antara lain) lingkungan yang disebu
 ~~\noindent Hal ini akan menghasilkan output sebagai berikut: f (x) = x2 (1)\par
 
 \vspace{12pt}
-Penomoran otomatis adalah fitur yang berguna, namun terkadang perlu untuk menghapus perhitungan tambahan :\par
+\hspace{0.50in} Penomoran otomatis adalah fitur yang berguna, namun terkadang perlu untuk menghapus perhitungan tambahan \ref{paket}:
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=0.70\textwidth]{gambar/paket}}
+	\caption{paket}
+	\label{paket}
+\end{figure}
 
-{\fontsize{10pt}{10pt}\selectfont  $ \_ $ documentclass $ \{ $ article $ \} $ }\par
-
-{\fontsize{10pt}{10pt}\selectfont  $ \_ $ usepackage $ \{ $ amsmath $ \} $ }\par
-
-{\fontsize{10pt}{10pt}\selectfont  $ \_ $ begin $ \{ $ document $ \} $ }\par
-
-{\fontsize{10pt}{10pt}\selectfont  $ \_ $ begin $ \{ $ equation* $ \} $ }\par
-
-{\fontsize{10pt}{10pt}\selectfont ~ f(x) = x $ \string^ $ 2}\par
-
-{\fontsize{10pt}{10pt}\selectfont  $ \_ $ end $ \{ $ equation* $ \} $ }\par
+\hspace{0.50in}Hasil :
+\begin{equation}
+f(x) = x^2
+\end{equation}
 
 \vspace{12pt}
-~~~~ Sekarang didapat output yang sama seperti sebelumnya, hanya nomor persamaan yang dihapus: f (x) = x2.\par
-~~~~ LaTeX adalah paket makro yang banyak digunakan untuk TeX, menyediakan banyak perintah pemformatan dokumen dasar yang diperluas oleh berbagai paket. Ini adalah pengembangan Leslie Lamport's LaTeX 2.09, dan menggantikan sistem yang lebih tua pada bulan Juni 1994. Distribusi dasar di katalogkan secara terpisah, di basis lateks selain dari sejumlah besar paket kontribusi dan dokumentasi pihak ketiga (di tempat lain pada arsip), distribusinya meliputi: \par
+\hspace{0.50in} Sekarang didapat output yang sama seperti sebelumnya, hanya nomor persamaan yang dihapus: f (x) = x2.\par
+\hspace{0.50in} LaTeX adalah paket makro yang banyak digunakan untuk TeX, menyediakan banyak perintah pemformatan dokumen dasar yang diperluas oleh berbagai paket. Ini adalah pengembangan Leslie Lamport's LaTeX 2.09, dan menggantikan sistem yang lebih tua pada bulan Juni 1994. Distribusi dasar di katalogkan secara terpisah, di basis lateks selain dari sejumlah besar paket kontribusi dan dokumentasi pihak ketiga (di tempat lain pada arsip), distribusinya meliputi: Sekumpulan paket yang dibutuhkan, yang mana penulis LaTeX berhak untuk berasumsi akan hadir pada sistem yang menjalankan LaTeX. Seperangkat dokumentasi minimal yang merinci perbedaan dari versi 'lama' LaTeX di bidang perintah pengguna, pemilihan dan kontrol font, penulisan kelas dan paket, pengkodean font, opsi konfigurasi dan modifikasi LaTeX \par
 
-- Sekumpulan paket yang dibutuhkan, yang mana penulis LaTeX berhak untuk berasumsi akan hadir pada sistem yang menjalankan LaTeX \par
-
-- Seperangkat dokumentasi minimal yang merinci perbedaan dari versi 'lama' LaTeX di bidang perintah pengguna, pemilihan dan kontrol font, penulisan kelas dan paket, pengkodean font, opsi konfigurasi dan modifikasi LaTeX \par
-
-\vspace{12pt}
-\noindent \textbf{7.1 Daftar Kode Sumber}\par
-\noindent ~~~~~ Dengan menggunakan daftar paket dapat menambahkan teks yang tidak diformat seperti yang akan dilakukan dengan  $ \_ $  begin  $ \{ $ verbatim $ \} $  namun tujuan utamanya adalah memasukkan kode sumber dari bahasa pemrograman apa pun ke dalam dokumen. Jika ingin memasukkan pseudocode atau algoritma, mungkin menemukan Algoritma dan Pseudocode berguna juga. Untuk menggunakan paket tersebut, memerlukan: 
+\subsection{Daftar Kode Sumber}\par
+\hspace{0.50in} Dengan menggunakan daftar paket dapat menambahkan teks yang tidak diformat seperti yang akan dilakukan dengan  $ \_ $  begin  $ \{ $ verbatim $ \} $  namun tujuan utamanya adalah memasukkan kode sumber dari bahasa pemrograman apa pun ke dalam dokumen. Jika ingin memasukkan pseudocode atau algoritma, mungkin menemukan Algoritma dan Pseudocode berguna juga. Untuk menggunakan paket tersebut, memerlukan: 
 
 $ \_ $  usepackage  $ \{ $ listings $ \} $
 
 \vspace{12pt}
-~~~~ Paket daftar mendukung penyorotan semua bahasa yang paling umum dan sangat mudah disesuaikan. Jika hanya ingin menulis kode dalam dokumen, paket tersebut menyediakan lingkungan lstlisting: \par
+\hspace{0.50in}Paket daftar mendukung penyorotan semua bahasa yang paling umum dan sangat mudah disesuaikan. Jika hanya ingin menulis kode dalam dokumen, paket tersebut menyediakan lingkungan lstlisting: \par
 $ \_ $  begin  $ \{ $ lstlisting $ \} $ \par
 
 Letakkan kode anda disini  \par 
@@ -67,16 +53,16 @@ Letakkan kode anda disini  \par
 $ \_ $ end  $ \{ $ lstlisting $ \} $ \par
  
 \vspace{12pt}
-~~~~~~ Kemungkinan lain, itu sangat berguna jika membuat program pada beberapa file dan masih mengeditnya, adalah dengan mengimpor kode dari sumbernya sendiri. Dengan cara ini, jika memodifikasi sumbernya,  hanya perlu mengkompilasi ulang kode LaTeX dan dokumen akan diperbarui. Perintahnya adalah: \par
+\hspace{0.50in} Kemungkinan lain, itu sangat berguna jika membuat program pada beberapa file dan masih mengeditnya, adalah dengan mengimpor kode dari sumbernya sendiri. Dengan cara ini, jika memodifikasi sumbernya,  hanya perlu mengkompilasi ulang kode LaTeX dan dokumen akan diperbarui. Perintahnya adalah: \par
 $ \_ $  lstinputlisting  $ \{ $ source $ \_ $ filename.py $ \} $ \par
 
 \vspace{12pt}
-~~~~~ Dalam contoh ada sumber Python, tap bisa memasukkan file apapun tapi harus menulis nama file lengkap. Ini akan dianggap teks biasa dan akan disorot sesuai setting, itu berarti tidak mengenali bahasa pemrograman dengan sendirinya. Bisa menentukan bahasa sementara menyertakan file dengan perintah berikut: \par
+\hspace{0.50in} Dalam contoh ada sumber Python, tap bisa memasukkan file apapun tapi harus menulis nama file lengkap. Ini akan dianggap teks biasa dan akan disorot sesuai setting, itu berarti tidak mengenali bahasa pemrograman dengan sendirinya. Bisa menentukan bahasa sementara menyertakan file dengan perintah berikut: \par
 
  $ \_ $  lstinputlisting [language = Python]  $ \{ $ source $ \_ $ filename.py $ \} $ \par
 
 \vspace{12pt}
-\noindent ~~~~~~~ Ini sangat berguna jika yakin file tersebut tidak akan berubah (setidaknya sebelum baris yang ditentukan). Menghilangkan parameter firstline atau lastline itu berarti semuanya sesuai atau dimulai dari titik ini. Ini adalah contoh dasar untuk beberapa kode Pascal:\par
+\hspace{0.50in} Ini sangat berguna jika yakin file tersebut tidak akan berubah (setidaknya sebelum baris yang ditentukan). Menghilangkan parameter firstline atau lastline itu berarti semuanya sesuai atau dimulai dari titik ini. Ini adalah contoh dasar untuk beberapa kode Pascal:\par
 
 
 \noindent  $ \_ $ documentclass $ \{ $ article $ \} $ \par
@@ -120,8 +106,8 @@ $ \_ $  lstinputlisting  $ \{ $ source $ \_ $ filename.py $ \} $ \par
 \noindent  $ \_ $ end $ \{ $ document $ \} $ \par
 
 
-\noindent ~~~~~ Memodifikasi beberapa parameter yang akan mempengaruhi bagaimana kode ditampilkan. Menempatkan kode berikut di manapun dalam dokumen (tidak masalah apakah sebelum atau sesudah  $ \_ $  begin  $ \{ $ document $ \} $ ). \par
- ~~~~~ Paket ini memungkinkan menentukan gaya, yaitu profil yang menentukan satu set pengaturan. \par
+\hspace{0.50in} Memodifikasi beberapa parameter yang akan mempengaruhi bagaimana kode ditampilkan. Menempatkan kode berikut di manapun dalam dokumen (tidak masalah apakah sebelum atau sesudah  $ \_ $  begin  $ \{ $ document $ \} $ ). \par
+\hspace{0.50in} Paket ini memungkinkan menentukan gaya, yaitu profil yang menentukan satu set pengaturan. \par
  $ \_ $ lstdefinestyle $ \{ $ customc $ \} $  $ \{ $ \par
 
 {\fontsize{10pt}{10pt}\selectfont ~ belowcaptionskip=1 $ \_ $ baselineskip,}\par
@@ -167,7 +153,7 @@ $ \_ $  lstinputlisting  $ \{ $ source $ \_ $ filename.py $ \} $ \par
 {\fontsize{10pt}{10pt}\selectfont  $ \_ $ lstset $ \{ $ escapechar=@,style=customc $ \} $ }\par
 
 \vspace{12pt}
-\noindent ~~~ Dalam contoh hanya menetapkan dua pilihan secara global yaitu gaya default dan karakter escape. Pemakaian:\par
+\hspace{0.50in} Dalam contoh hanya menetapkan dua pilihan secara global yaitu gaya default dan karakter escape. Pemakaian:\par
 
 {\fontsize{10pt}{10pt}\selectfont  $ \_ $ begin $ \{ $ lstlisting $ \} $ }\par
 
@@ -208,7 +194,7 @@ $ \_ $  lstinputlisting  $ \{ $ source $ \_ $ filename.py $ \} $ \par
 {\fontsize{10pt}{10pt}\selectfont  $ \_ $ lstinputlisting[caption=Scheduler, style=customc] $ \{ $ hello.c $ \} $ }\par
 
 \vspace{12pt}
-\noindent ~~~~~~ Jika memiliki banyak file sumber yang ingin disertakan, mungkin mendapati diri melakukan hal yang sama berulang-ulang. 
+\hspace{0.50in} Jika memiliki banyak file sumber yang ingin disertakan, mungkin mendapati diri melakukan hal yang sama berulang-ulang. 
 
 $ \_ $  newcommand  $ \{ $  $ \_ $  includecode $ \} $  [2] [c]  $ \{ $  $ \_ $  lstinputlisting [caption =  $\#$  2, escapechar =, style = custom  $\#$  1]  $ \{ $  $\#$  2 $ \} $  <! ----> $ \} $  $\%$  ... 
 
@@ -221,7 +207,7 @@ $\%$  ...
 $ \_ $  lstlistoflistings
 
 \vspace{12pt}
-~~~~~~ Membuat satu perintah untuk memudahkan penyertaan kode sumber. Semua daftar akan memiliki nama  sebagai caption tidak perlu menuliskan nama file dua kali kepada makro. Akhirnya semua daftar dengan perintah ini dari daftar paket. Dapat memiliki caption mewah (atau judul) untuk cantuman menggunakan paket teks. Berikut adalah contoh untuk daftar:\par
+\hspace{0.50in} Membuat satu perintah untuk memudahkan penyertaan kode sumber. Semua daftar akan memiliki nama  sebagai caption tidak perlu menuliskan nama file dua kali kepada makro. Akhirnya semua daftar dengan perintah ini dari daftar paket. Dapat memiliki caption mewah (atau judul) untuk cantuman menggunakan paket teks. Berikut adalah contoh untuk daftar:\par
 
 {\fontsize{10pt}{10pt}\selectfont  $ \_ $ usepackage $ \{ $ caption $ \} $ }\par
 
@@ -244,57 +230,65 @@ $ \_ $  lstlistoflistings
 {\fontsize{10pt}{10pt}\selectfont  $ \_ $ lstinputlisting[caption=My caption] $ \{ $ sourcefile.lang $ \} $ }\par
 
 \vspace{12pt}
-\noindent ~~~~ Dicetak adalah alternatif untuk daftar yang telah menjadi populer. Menggunakan Python eksternal perpustakaan Pygments untuk menyoroti kode, yang pada November 2014 menawarkan lebih dari 300 bahasa dan format teks yang didukung.
+\hspace{0.50in} Dicetak adalah alternatif untuk daftar yang telah menjadi populer. Menggunakan Python eksternal perpustakaan Pygments untuk menyoroti kode, yang pada November 2014 menawarkan lebih dari 300 bahasa dan format teks yang didukung. Karena paket bergantung pada kode Python eksternal, penyiapan memerlukan beberapa langkah lebih banyak daripada paket LaTeX biasa, jadi mohon lihat repo GitHub dan manualnya.\par
 
-~~~~~~ Karena paket bergantung pada kode Python eksternal, penyiapan memerlukan beberapa langkah lebih banyak daripada paket LaTeX biasa, jadi mohon lihat repo GitHub dan manualnya.\par
+\subsection {Memasang Paket Ekstra}\par
+\hspace{0.50in} Add-on fitur untuk LaTeX dikenal sebagai paket. Puluhan ini sudah terinstal dengan LaTeX dan dapat segera digunakan dalam dokumen. Harus disimpan di subdirektori texmf / tex / lateks dinamai setiap paket. Nama direktori "texmf" adalah singkatan dari "TEX and METAFONT". Untuk mengetahui paket apa saja yang tersedia dan apa yang dilakukan, harus menggunakan halaman pencarian CTAN yang mencakup tautan ke katalog komprehensif Graham Williams.\par
 
-\vspace{12pt}
-\noindent \textbf{7.2 Memasang Paket Ekstra}\par
-Add-on fitur untuk LaTeX dikenal sebagai paket. Puluhan ini sudah terinstal dengan LaTeX dan dapat segera digunakan dalam dokumen. Harus disimpan di subdirektori texmf / tex / lateks dinamai setiap paket. Nama direktori "texmf" adalah singkatan dari "TEX and METAFONT". Untuk mengetahui paket apa saja yang tersedia dan apa yang dilakukan, harus menggunakan halaman pencarian CTAN yang mencakup tautan ke katalog komprehensif Graham Williams.\par
+\hspace{0.50in} Paket adalah file atau kumpulan file yang berisi perintah dan pemrograman LaTeX tambahan yang menambahkan fitur styling baru atau memodifikasi yang sudah ada. Ada dua jenis file utama: file kelas dengan ekstensi .cls, dan file gaya dengan ekstensi .sty. Ketika mencoba untuk mengeset dokumen yang memerlukan paket yang tidak diinstal pada sistem, LaTeX akan memperingatkan dengan pesan kesalahan bahwa itu hilang. Mendownload update ke paket yang sudah dimiliki. Tidak ada batasan jumlah paket yang bisadi instal di komputer. Namun ada batasan yang dapat dikonfigurasi untuk nomor yang dapat digunakan di dalam dokumen LaTeX mana pun pada saat yang bersamaan, walaupun tergantung seberapa besar setiap paketnya. Dalam prakteknya tidak ada masalah dalam memiliki bahkan beberapa lusin paket yang aktif.\par
 
-Paket adalah file atau kumpulan file yang berisi perintah dan pemrograman LaTeX tambahan yang menambahkan fitur styling baru atau memodifikasi yang sudah ada. Ada dua jenis file utama: file kelas dengan ekstensi .cls, dan file gaya dengan ekstensi .sty. Ketika mencoba untuk mengeset dokumen yang memerlukan paket yang tidak diinstal pada sistem, LaTeX akan memperingatkan dengan pesan kesalahan bahwa itu hilang. Mendownload update ke paket yang sudah dimiliki. Tidak ada batasan jumlah paket yang bisadi instal di komputer. Namun ada batasan yang dapat dikonfigurasi untuk nomor yang dapat digunakan di dalam dokumen LaTeX mana pun pada saat yang bersamaan, walaupun tergantung seberapa besar setiap paketnya. Dalam prakteknya tidak ada masalah dalam memiliki bahkan beberapa lusin paket yang aktif.\par
+\hspace{0.50in} Kebanyakan instalasi LaTeX hadir dengan serangkaian paket gaya pra-instal yang besar, sehingga dapat menggunakan manajer paket distribusi TeX atau yang ada di sistem untuk mengelolanya. Tempat utama untuk mencari paket gaya di Internet adalah CTAN. Setelah mengidentifikasi paket yang dibutuhkan yang tidak ada dalam distribusi, gunakan indeks pada server CTAN untuk menemukan paket yang dibutuhkan dan direktori tempat downloadnya. Cara memasang paket extra :\par
+\begin{enumerate}
+\item Instalasi otomatis\par
 
-Kebanyakan instalasi LaTeX hadir dengan serangkaian paket gaya pra-instal yang besar, sehingga dapat menggunakan manajer paket distribusi TeX atau yang ada di sistem untuk mengelolanya. Tempat utama untuk mencari paket gaya di Internet adalah CTAN. Setelah mengidentifikasi paket yang dibutuhkan yang tidak ada dalam distribusi, gunakan indeks pada server CTAN untuk menemukan paket yang dibutuhkan dan direktori tempat downloadnya. Cara memasang paket extra :\par
+\hspace{0.50in} Jika pada sistem operasi dengan manajer paket atau pohon portage, dapat sering menemukan paket di repositori. \par
 
-\noindent 1. Instalasi otomatis\par
+\hspace{0.50in} Dengan MikTeX ada manajer paket yang memungkinkan memilih paket yang diinginkan secara individu. Sebagai fitur yang mudah digunakan, pada kompilasi sebuah file yang membutuhkan paket yang tidak terinstal, MikTeX secara otomatis akan meminta untuk menginstal yang hilang.
 
-Jika pada sistem operasi dengan manajer paket atau pohon portage, dapat sering menemukan paket di repositori. \par
-
-Dengan MikTeX ada manajer paket yang memungkinkan memilih paket yang diinginkan secara individu. Sebagai fitur yang mudah digunakan, pada kompilasi sebuah file yang membutuhkan paket yang tidak terinstal, MikTeX secara otomatis akan meminta untuk menginstal yang hilang.
-
-~~~ Dengan TeX Live, biasanya ada distribusi yang dikemas dalam beberapa paket besar. Untuk menginstal sesuatu yang berhubungan dengan internasionalisasi, memungkin harus menginstal paket seperti texlive-lang. Dengan TeX Live terpasang secara manual, gunakan tlmgr untuk mengelola paket secara terpisah :
-
+\hspace{0.50in} Dengan TeX Live, biasanya ada distribusi yang dikemas dalam beberapa paket besar. Untuk menginstal sesuatu yang berhubungan dengan internasionalisasi, memungkin harus menginstal paket seperti texlive-lang. Dengan TeX Live terpasang secara manual, gunakan tlmgr untuk mengelola paket secara terpisah :
+\begin{verbatim}
 tlmgr install <package1> <package2> ... \par
 
 tlmgr hapus <package1> <package2> ...\par
+\end{verbatim}
 
-\vspace{12pt}
-\noindent 2. Instalasi manual\par
-Yang perlu dicari biasanya ada dua file, yang diakhiri dengan .dtx dan .ins. Yang pertama adalah file DOCTeX yaitu menggabungkan program paket dan dokumentasinya dalam satu file. Yang kedua adalah rutin instalasi (jauh lebih kecil). Harus mendownload kedua file tersebut. Jika kedua file itu tidak ada, itu berarti satu dari dua hal:     Paket itu adalah bagian dari paket yang jauh lebih besar yang seharusnya tidak diperbarui kecuali mengubah versi LaTeX dari LaTeX atau paket itu yang lebih tua atau sederhana yang ditulis oleh seorang penulis yang tidak menggunakan file .dtx.Download file paket ke direktori sementara. Akan ada readme.txt dengan deskripsi singkat tentang paketnya.  Ada lima langkah untuk menginstal paket LaTeX. Diantaranya :
+\item Instalasi manual\par
+\hspace{0.50in} Yang perlu dicari biasanya ada dua file, yang diakhiri dengan .dtx dan .ins. Yang pertama adalah file DOCTeX yaitu menggabungkan program paket dan dokumentasinya dalam satu file. Yang kedua adalah rutin instalasi (jauh lebih kecil). Harus mendownload kedua file tersebut. Jika kedua file itu tidak ada, itu berarti satu dari dua hal:     Paket itu adalah bagian dari paket yang jauh lebih besar yang seharusnya tidak diperbarui kecuali mengubah versi LaTeX dari LaTeX atau paket itu yang lebih tua atau sederhana yang ditulis oleh seorang penulis yang tidak menggunakan file .dtx.Download file paket ke direktori sementara. Akan ada readme.txt dengan deskripsi singkat tentang paketnya.  Ada lima langkah untuk menginstal paket LaTeX. Diantaranya :
 
+\vspace{50pt}
 \noindent a. Ekstrak file\par
-Jalankan LaTeX pada file .ins. Buka file di editor dan mengolahnya seolah-olah itu adalah dokumen LaTeX atau ketik lateks diikuti oleh nama file .ins di jendela perintah di direktori. Ini akan mengekstrak semua file yang dibutuhkan dari berkas .dtx. Catat atau cetak nama file yang dibuat jika ada banyak file tersebut (baca file log jika ingin melihat namanya lagi). \par
+\hspace{0.50in}Jalankan LaTeX pada file .ins. Buka file di editor dan mengolahnya seolah-olah itu adalah dokumen LaTeX atau ketik lateks diikuti oleh nama file .ins di jendela perintah di direktori. Ini akan mengekstrak semua file yang dibutuhkan dari berkas .dtx. Catat atau cetak nama file yang dibuat jika ada banyak file tersebut (baca file log jika ingin melihat namanya lagi). \par
 
-\vspace{8pt}
+\vspace{10pt}
 \noindent b. Buat dokumentasi \par
-Jalankan LaTeX pada file .dtx. Membuat file dokumentasi yang menjelaskan paketnya dan cara menggunakannya. Jika lebih suka membuat PDF maka jalankan pdfLaTeX sebagai gantinya. Jika membuat .idx juga, itu berarti dokumen itu berisi indeks juga. Jika indeks dibuat dengan benar, ikuti langkah-langkah di bagian pengindeksan. Jalankan perintah berikut sebagai gantinya: \par
+\hspace{0.50in} Jalankan LaTeX pada file .dtx. Membuat file dokumentasi yang menjelaskan paketnya dan cara menggunakannya. Jika lebih suka membuat PDF maka jalankan pdfLaTeX sebagai gantinya. Jika membuat .idx juga, itu berarti dokumen itu berisi indeks juga. Jika indeks dibuat dengan benar, ikuti langkah-langkah di bagian pengindeksan. Jalankan perintah berikut sebagai gantinya: \par
 
 makeindex -s gglo.ist -o name.gls name.glo \par
 
-\vspace{40pt}
+\vspace{10pt}
 \noindent c. Instal file\par
-Sementara dokumentasi sedang mencetak, memindahkan atau menyalin file paket dari direktori sementara ke tempat yang tepat di pohon direktori instalasi TeX lokal\par
+\hspace{0.50in}Sementara dokumentasi sedang mencetak, memindahkan atau menyalin file paket dari direktori sementara ke tempat yang tepat di pohon direktori instalasi TeX lokal\par
 
-Paket yang dipasang dengan tangan harus selalu ditempatkan di pohon direktori lokal, bukan di pohon direktori yang berisi semua paket pra-instal. Hal ini dilakukan untuk mencegah paket baru secara tidak sengaja menimpa file dalam direktori utama TeX dan meghindari file yang baru diinstal yang ditimpa saat memperbarui versi TeX berikutnya.\par
+\hspace{0.50in} Paket yang dipasang dengan tangan harus selalu ditempatkan di pohon direktori lokal, bukan di pohon direktori yang berisi semua paket pra-instal. Hal ini dilakukan untuk mencegah paket baru secara tidak sengaja menimpa file dalam direktori utama TeX dan meghindari file yang baru diinstal yang ditimpa saat memperbarui versi TeX berikutnya.\par
 
-Untuk TDS (Struktur Direktori TeX) - sistem yang sesuai, pohon direktori instalasi lokal adalah folder dan subfoldernya. Folder terluar mungkin bisa disebut texmf-local / or texmf /. Lokasinya tergantung pada sistem :        
+\hspace{0.50in}Untuk TDS (Struktur Direktori TeX) - sistem yang sesuai, pohon direktori instalasi lokal adalah folder dan subfoldernya. Folder terluar mungkin bisa disebut texmf-local / or texmf /. Lokasinya tergantung pada sistem :        
 
 MacTeX: Pengguna / nama pengguna / Perpustakaan / texmf/. \par     
 Sistem tipe Unix: Biasanya  $ \sim $  / texmf /. \par       
 MikTeX: Pohon direktori lokal \par
 
 \vspace{8pt}
-Jika instalasi TeX sudah tua atau tidak sesuai dengan Struktur Direktori TeX (TDS). Untuk sistem yang sesuai dengan TDS, tempat yang tepat untuk berkas LaTeX .sty adalah subdirektori texmf / tex / lateks yang sesuai.\par
+\hspace{0.50in}Jika instalasi TeX sudah tua atau tidak sesuai dengan Struktur Direktori TeX (TDS). Untuk sistem yang sesuai dengan TDS, tempat yang tepat untuk berkas LaTeX .sty adalah subdirektori texmf / tex / lateks yang sesuai.\par
+
+\vspace{8pt}
+\noindent d. Update index  \par
+\hspace{0.50in} Jalankan program TeX indexer untuk mengupdate database paket. Program ini hadir dengan setiap versi modern TeX dan memiliki berbagai nama tergantung pada distribusi LaTeX yang digunakan. Sebagai berikut :\par
+
+teTeX, TeX Live, fpTeX: texhash \par
+web2c: mktexlsr \par
+MacTeX: MacTeX muncul untuk melakukan ini \par
+MikTeX: initexmf --update-fndb (atau gunakan GUI)
+MiKTeX 2.7 atau yang lebih baru, diinstal pada Windows XP melalui Windows 7 \par
 
 \begin{table}[ht]
 	\caption{Instalasi Paket}
@@ -326,44 +320,31 @@ Jika instalasi TeX sudah tua atau tidak sesuai dengan Struktur Direktori TeX (TD
 	\end{tabular}
 \end{table}
 
-\vspace{8pt}
-\noindent d. Update index  \par
-Jalankan program TeX indexer untuk mengupdate database paket. Program ini hadir dengan setiap versi modern TeX dan memiliki berbagai nama tergantung pada distribusi LaTeX yang digunakan. Sebagai berikut :\par
-
-teTeX, TeX Live, fpTeX: texhash \par
-web2c: mktexlsr \par
-MacTeX: MacTeX muncul untuk melakukan ini \par
-MikTeX: initexmf --update-fndb (atau gunakan GUI)
-MiKTeX 2.7 atau yang lebih baru, diinstal pada Windows XP melalui Windows 7 \par
-
 \vspace{12pt} \par 
 \noindent e. Memperbarui peta \par
-Jika paket menginstal font TrueType atau Type 1, perlu memperbarui file pemetaan font dan memperbarui indeks. Pengarang paket harus menyertakan file .map untuk font. Program update peta biasanya beberapa varian pada updmap, tergantung pada distribusi: \par 
-TeX Live dan MacTeX: updmap --enable Map = mapfile.map (jika Anda menginstal file di pohon pribadi) atau peta updmap-sys --enable = mapfile.map (jika Anda menginstal file dalam direktori sistem) \par
+\hspace{0.50in} Jika paket menginstal font TrueType atau Type 1, perlu memperbarui file pemetaan font dan memperbarui indeks. Pengarang paket harus menyertakan file .map untuk font. Program update peta biasanya beberapa varian pada updmap, tergantung pada distribusi: 
+\begin{itemize}
+\item TeX Live dan MacTeX: updmap --enable Map = mapfile.map (jika Anda menginstal file di pohon pribadi) atau peta updmap-sys --enable = mapfile.map (jika Anda menginstal file dalam direktori sistem) \par
 
-MikTeX: Jalankan initexmf --edit-config-file updmap, tambahkan baris "Map mapfile.map ke file yang terbuka, lalu jalankan initexmf --mkmaps. \par
+\item MikTeX: Jalankan initexmf --edit-config-file updmap, tambahkan baris "Map mapfile.map ke file yang terbuka, lalu jalankan initexmf --mkmaps. \par
+\end{itemize}
 
 \vspace{12pt}
-Alasan proses ini belum otomatis banyak adalah masih ada ribuan instalasi yang tidak sesuai dengan TDS, seperti sistem Unix bersama lama dan beberapa sistem Microsoft Windows, jadi tidak ada cara untuk program instalasi menebak dimana letakkan arsipnya. Ada juga sistem di mana pemilik, pengguna, atau pemasang telah memilih untuk tidak mengikuti struktur direktori TDS yang disarankan, atau tidak dapat melakukannya karena alasan politis atau keamanan (seperti sistem bersama yang pengguna tidak dapat menulis ke direktori yang dilindungi). Alasan untuk memiliki direktori texmf-local (disebut texmf.local pada beberapa sistem) adalah menyediakan tempat untuk modifikasi lokal atau pembaruan pribadi, terutama jika pengguna sistem bersama atau dikelola (Unix, Linux, VMS, Windows NT / 2000 / XP, dll.) Di mana pengguna mungkin tidak memiliki akses tulis ke pohon direktori instalasi TeX utama. Instalasi harus dikonfigurasi untuk mencari di direktori ini terlebih dahulu, semua instalasi TeX modern harus melakukan ini jika tidak bisa mengedit texmf / web2c / texmf.cnf sendiri.\par
+\hspace{0.50in} Alasan proses ini belum otomatis banyak adalah masih ada ribuan instalasi yang tidak sesuai dengan TDS, seperti sistem Unix bersama lama dan beberapa sistem Microsoft Windows, jadi tidak ada cara untuk program instalasi menebak dimana letakkan arsipnya. Ada juga sistem di mana pemilik, pengguna, atau pemasang telah memilih untuk tidak mengikuti struktur direktori TDS yang disarankan, atau tidak dapat melakukannya karena alasan politis atau keamanan (seperti sistem bersama yang pengguna tidak dapat menulis ke direktori yang dilindungi). Alasan untuk memiliki direktori texmf-local (disebut texmf.local pada beberapa sistem) adalah menyediakan tempat untuk modifikasi lokal atau pembaruan pribadi, terutama jika pengguna sistem bersama atau dikelola (Unix, Linux, VMS, Windows NT / 2000 / XP, dll.) Di mana pengguna mungkin tidak memiliki akses tulis ke pohon direktori instalasi TeX utama. Instalasi harus dikonfigurasi untuk mencari di direktori ini terlebih dahulu, semua instalasi TeX modern harus melakukan ini jika tidak bisa mengedit texmf / web2c / texmf.cnf sendiri.\par
 
 \vspace{12pt}
-\noindent 3. Memeriksa status paket\par
-Cara universal untuk memeriksa apakah file yang tersedia untuk kompiler TeX adalah tool command-line kpsewhich.\par 
-
+\item Memeriksa status paket\par
+\hspace{0.50in} Cara universal untuk memeriksa apakah file yang tersedia untuk kompiler TeX adalah tool command-line kpsewhich :\par 
 $\$$  kpsewhich tikz \par
 /usr/local/texlive/2012/texmf-dist/tex/plain/pgf/frontendlayer/tikz.tex \par
-
-\vspace{12pt}
-~~~~~~ kpsewhich sebenarnya akan mencari file saja, bukan untuk paket. Ini mengembalikan path ke file. Untuk detail lebih lanjut tentang paket tertentu gunakan tool baris perintah tlmgr (TeX Live): \par
+\hspace{0.50in} kpsewhich sebenarnya akan mencari file saja, bukan untuk paket. Ini mengembalikan path ke file. Untuk detail lebih lanjut tentang paket tertentu gunakan tool baris perintah tlmgr (TeX Live): \par
 tlmgr info (paket)\par
-
-\vspace{12pt}
-~~~ Alat tlmgr memiliki lebih banyak pilihan. Untuk berkonsultasi dengan dokumentasi: \par
+\hspace{0.50in} Alat tlmgr memiliki lebih banyak pilihan. Untuk berkonsultasi dengan dokumentasi: \par
 tlmgr bantuan\par
 
 \vspace{12pt}
-\noindent 4. Dokumentasi paket \par
-Untuk mengetahui apa perintah yang diberikan paket (dan bagaimana cara menggunakannya), perlu membaca dokumentasi. Di subdirektori texmf / doc dari instalasi harus ada direktori yang berisi file .dvi, satu untuk setiap paket yang diinstal. Lokasi ini khusus untuk distribusi, namun biasanya ditemukan:\par
+\item Dokumentasi paket \par
+\hspace{0.50in} Untuk mengetahui apa perintah yang diberikan paket (dan bagaimana cara menggunakannya), perlu membaca dokumentasi. Di subdirektori texmf / doc dari instalasi harus ada direktori yang berisi file .dvi, satu untuk setiap paket yang diinstal. Lokasi ini khusus untuk distribusi, namun biasanya ditemukan:\par
 
 \begin{table}[ht]
 	\caption{Dokumentasi Paket}
@@ -379,12 +360,12 @@ Untuk mengetahui apa perintah yang diberikan paket (dan bagaimana cara menggunak
 	\end{tabular}
 \end{table}
 
-Umumnya sebagian besar paket ada di subdirektori lateks, walaupun paket lainnya (seperti paket BibTeX dan font) terdapat di subdirektori lain di doc. Direktori dokumentasi memiliki nama paket yang sama, umumnya memiliki satu atau lebih dokumen yang relevan dalam berbagai format (dvi, txt, pdf, dll.). Dokumen umumnya memiliki nama yang sama dengan paketnya, namun ada pengecualian (misalnya, dokumentasi untuk amsmath ditemukan di latex / amsmath / amsdoc.dvi). Jika prosedur instalasi belum menginstal dokumentasi, file DVI semuanya dapat didownload dari CTAN. Sebelum menggunakan paket, harus membaca dokumentasi dengan seksama, terutama subseksi yang biasa disebut User Interface, yang menjelaskan perintah yang tersedia dalam paket. Membuka dokumentasi paket terinstal dengan perintah texdoc: \par
+\hspace{0.50in} Umumnya sebagian besar paket ada di subdirektori lateks, walaupun paket lainnya (seperti paket BibTeX dan font) terdapat di subdirektori lain di doc. Direktori dokumentasi memiliki nama paket yang sama, umumnya memiliki satu atau lebih dokumen yang relevan dalam berbagai format (dvi, txt, pdf, dll.). Dokumen umumnya memiliki nama yang sama dengan paketnya, namun ada pengecualian (misalnya, dokumentasi untuk amsmath ditemukan di latex / amsmath / amsdoc.dvi). Jika prosedur instalasi belum menginstal dokumentasi, file DVI semuanya dapat didownload dari CTAN. Sebelum menggunakan paket, harus membaca dokumentasi dengan seksama, terutama subseksi yang biasa disebut User Interface, yang menjelaskan perintah yang tersedia dalam paket. Membuka dokumentasi paket terinstal dengan perintah texdoc: \par
 texdoc (package-name)\par
+\end{enumerate}
 
-\vspace{12pt}
-\noindent \textbf{7.3 Referensi Paket}\par
-Ini adalah daftar paket berguna yang tidak lengkap dapat digunakan untuk berbagai jenis dokumen yang berbeda. Setiap paket memiliki deskripsi singkat bila tersedia ada tautan ke bagian yang menjelaskan paket tersebut secara rinci. Semua (kecuali dinyatakan) harus disertakan dalam distribusi LaTeX sebagai package $ \_ $ name.sty. Lihat dokumentasi paket tunggal, seperti yang dijelaskan dalam Menginstal Paket Ekstra :\par
+\subsection {Referensi Paket}\par
+\hspace{0.50in} Ini adalah daftar paket berguna yang tidak lengkap dapat digunakan untuk berbagai jenis dokumen yang berbeda. Setiap paket memiliki deskripsi singkat bila tersedia ada tautan ke bagian yang menjelaskan paket tersebut secara rinci. Semua (kecuali dinyatakan) harus disertakan dalam distribusi LaTeX sebagai package $ \_ $ name.sty. 
 
 \begin{table}[ht]
 	\caption{Referensi Paket}
@@ -453,4 +434,3 @@ Ini adalah daftar paket berguna yang tidak lengkap dapat digunakan untuk berbaga
 		\hline
 	\end{tabular}
 \end{table} \par
-
