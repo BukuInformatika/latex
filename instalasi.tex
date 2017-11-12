@@ -25,7 +25,12 @@ ada akan diinstal meskipun belum tentu kita pakai. Sehingga instalasi Texlive le
 \setcounter{numberedCntC}{\theenumi}
 \end{enumerate}
 
-\includegraphics[width=13.54cm,height=9.78cm]{gambar/image1.jpg}
+\ref{image1.jpg}:
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=13.54cm,height=9.78cm]{gambar/image1.jpg}}
+\caption{Texmaker}
+\label{image1.jpg}
+\end{figure}
 
 \begin{enumerate}
 \setcounter{enumi}{\thenumberedCntC}
@@ -99,8 +104,11 @@ table-generate-source dan table-recognize-* untuk membuat tabel-tabel dengan mud
 \includegraphics[width=15.57cm,height=10.66cm]{gambar/image4.jpg}
 \end{figure}
 
-Anda dapat melakukan word/command completion melalui $<$C-P$>$ dan $<$C-N$>$, untuk memilih saran sebelumnya atau sesudahnya.
-\par \vspace{12pt}
+Anda dapat melakukan word/command completion melalui 
+\begin{equation}
+<C-P> dan <C-N>, 
+\end{equation}untuk memilih saran sebelumnya atau sesudahnya.
+
 Ada versi Vim dengan menu-menu grafis, yang bernama gVim. Jika ia digunakan dengan Latex-suite, maka banyak perintah TeX ditampilkan di menubar untuk mempercepat penyuntingan.
 \par \vspace{12pt}
 \textbf{Fitur-Fitur}
