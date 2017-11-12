@@ -1,9 +1,14 @@
 \section {Pengertian Latex}\par
-\includegraphics[width=10cm,height=7cm]{gambar/latex.jpg}\par
+
 \vspace{12pt}
-TEX merupakan perangkat lunak pengolah dokumen yang terutama ditujukan menghasilkan dokumen yang berisi simbol-simbol matematik. TEX diciptakan oleh Donald E. Knuth (Mei1977) sebaga ibahasa pembentuk dokumen (document formatting language). LaTeX adalah sistem typesetting yang 
-dapat digunakan untuk membuat artikel, buku, surat, dan publikasi lain berkualitas tinggi. LaTeX berbasiskan pada TeX, bahasa typesetting aras bawah yang didesain oleh Donald E. Knuth. LaTeX tidak bekerja seperti pengolah kata WYSIWYG(what you see is what you get), jenis persiapan dokumen yang sudah banyak dipakai oleh banyak orang. Dengan LaTeX, Anda tidak harus perduli dengan pemformatan dokumen, hanya tentang penulisan dokumen.\par 
-\vspace{12pt}
+TEX merupakan perangkat lunak pengolah dokumen yang terutama ditujukan menghasilkan dokumen yang berisi simbol-simbol matematik. TEX diciptakan oleh Donald E. Knuth (Mei1977) sebaga ibahasa pembentuk dokumen (document formatting language). LaTeX adalah sistem typesetting yang dapat digunakan untuk membuat artikel, buku, surat, dan publikasi lain berkualitas tinggi. LaTeX berbasiskan pada TeX, bahasa typesetting aras bawah yang didesain oleh Donald E. Knuth. LaTeX tidak bekerja seperti pengolah kata WYSIWYG(what you see is what you get), jenis persiapan dokumen yang sudah banyak dipakai oleh banyak orang. Dengan LaTeX, Anda tidak harus perduli dengan pemformatan dokumen, hanya tentang penulisan dokumen.
+
+\ref{latex.jpg}:
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=10cm,height=7cm]{gambar/latex.jpg}}
+	\caption{Latex}
+	\label{latex.jpg}
+\end{figure}
 
 Perangkat lunak TEX memiliki kemampuan yang baik untuk mengolah dokumen-dokumen yang berkualitas tinggi. Kelemahannya, perintah perintahnya sulit digunakan untuk menuliskan dokumen terstruktur yang terdiri dari unsure unsure bab, sub-bab, paragraph, table dan gambar bernomor, dsb.\par 
 \vspace{12pt}
@@ -663,13 +668,9 @@ Untuk menghasilkan notasi pecahan dengan format perintah sebagai berikut:\par \v
 $\setminus$frac\{numerator\}\{denominator\}
 \par \vspace{12pt}
 Contoh :
-\par \vspace{12pt}
-$\setminus$begin\{displaymath\}
-\par \vspace{12pt}
-$\setminus$frac\{a+2b\}\{a-1\}
-\par \vspace{12pt}
-$\setminus$end\{displaymath\}
-\par \vspace{12pt}
+\begin{equation}
+frac\{a+2b\}\{a-1\}
+\end{equation}
 
 
 \textbf{Penulisan Array dan Matriks}
