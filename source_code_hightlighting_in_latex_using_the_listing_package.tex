@@ -1,5 +1,11 @@
 \sloppy
-Daftar Sumber Kode LaTeX / Source\par
+\section{Daftar Sumber Kode LaTeX / Source}
+
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=0.50\textwidth]{gambar/contoh1}}
+	\caption{Contoh Source code}
+	\label{contoh}
+\end{figure}
 
 Menggunakan paket daftar \par
 
@@ -82,18 +88,16 @@ Ditetapkan sebagai dialek bahasa lain\par
 Pengaturan \par
 
 Anda dapat memodifikasi beberapa parameter yang akan mempengaruhi bagaimana kode ditampilkan. Anda dapat menempatkan kode berikut di manapun dalam dokumen (tidak masalah apakah sebelum atau sesudah $\textbackslash$begin $ \{ $ document $ \} $ ), ubahlah sesuai kebutuhan Anda. Maknanya dijelaskan di samping garis mana saja.\par
+\begin{verbatim}
+ \ usepackage { listings }
+\ usepackage { color }
+\ definecolor { mygreen } { rgb } { 0,0.6,0 }
+\ definecolor { mygray } { rgb } { 0.5.0.5.0.5 }
+\ definecolor { mymauve } { rgb } { 0.58,0,0.82 }
+\ lstset { %
 
- $\textbackslash$ usepackage $ \{ $ listings $ \} $\par
+\end{verbatim}
 
- $\textbackslash$ usepackage $ \{ $ color $ \} $\par
-
- $\textbackslash$ definecolor $ \{ $ mygreen $ \} $ $ \{ $ rgb $ \} $ $ \{ $ 0,0.6,0 $ \} $\par
-
- $\textbackslash$ definecolor $ \{ $ mygray $ \} $ $ \{ $ rgb $ \} $ $ \{ $ 0.5.0.5.0.5 $ \} $\par
-
- $\textbackslash$ definecolor $ \{ $ mymauve $ \} $ $ \{ $ rgb $ \} $ $ \{ $ 0.58,0,0.82 $ \} $\par
-
- $\textbackslash$ lstset $ \{ $ $\%$\par
 
 ~~ backgroundcolor = $\textbackslash$ color $ \{ $ white~$ \} $~, $\%$ pilih warna latar belakang;  Anda harus menambahkan $\textbackslash$ usepackage $ \{ $color$ \} $ or $\textbackslash$ usepackage $ \{ $xcolor$ \} $;  harus datang sebagai argumen terakhir\par
 
@@ -161,53 +165,34 @@ Paket ini memungkinkan Anda menentukan gaya, yaitu profil yang menentukan satu
 
 Contoh\par
 
- $\textbackslash$ lstdefinestyle $ \{ $ customc $ \} $ $ \{ $\par
+\begin{enumerate}
+	\item lstdefinestyle  customc 
+	\item belowcaptionskip = 1 \ baselineskip ,
+	\item	breaklines = true,
+	\item	frame = L,
+	\item	xleftmargin = \ parindent ,
+	\item	bahasa = C,
+	\item	showstringspaces = false,
+	\item	basicstyle = \ footnotesize \ ttfamily ,
+	\item	keywordstyle = \ bfseries \ color  green! 40! black  ,
+	\item	commentstyle = \ itshape \ color  ungu! 40! hitam  ,
+	\item	identifierstyle = \ color  blue  ,
+	\item	stringstyle = \ color  orange  ,
+	 \item   lstdefinestyle  customasm 
+	\item	belowcaptionskip = 1 \ baselineskip ,
+	\item	frame = L,
+	\item	xleftmargin = \ parindent ,
+	\item	bahasa = [x86masm] Assembler,
+	\item	basicstyle = \ footnotesize \ ttfamily ,
+	\item	commentstyle = \ itshape \ color  ungu! 40! hitam  ,
+	 \item   lstset  escapechar = @, style = customc 
+\end{enumerate}
 
-~~ belowcaptionskip = 1 $\textbackslash$ baselineskip ,\par
 
-~~ breaklines = true,\par
-
-~~ frame = L,\par
-
-~~ xleftmargin = $\textbackslash$ parindent ,\par
-
-~~ bahasa = C,\par
-
-~~ showstringspaces = false,\par
-
-~~ basicstyle = $\textbackslash$ footnotesize $\textbackslash$ ttfamily ,\par
-
-~~ keywordstyle = $\textbackslash$ bfseries $\textbackslash$ color $ \{ $ green! 40! black $ \} $ ,\par
-
-~~ commentstyle = $\textbackslash$ itshape $\textbackslash$ color $ \{ $ ungu! 40! hitam $ \} $ ,\par
-
-~~ identifierstyle = $\textbackslash$ color $ \{ $ blue $ \} $ ,\par
-
-~~ stringstyle = $\textbackslash$ color $ \{ $ orange $ \} $ ,\par
-
- $ \} $\par
-
- $\textbackslash$ lstdefinestyle $ \{ $ customasm $ \} $ $ \{ $\par
-
-~~ belowcaptionskip = 1 $\textbackslash$ baselineskip ,\par
-
-~~ frame = L,\par
-
-~~ xleftmargin = $\textbackslash$ parindent ,\par
-
-~~ bahasa = [x86masm] Assembler,\par
-
-~~ basicstyle = $\textbackslash$ footnotesize $\textbackslash$ ttfamily ,\par
-
-~~ commentstyle = $\textbackslash$ itshape $\textbackslash$ color $ \{ $ ungu! 40! hitam $ \} $ ,\par
-
- $ \} $\par
-
- $\textbackslash$ lstset $ \{ $ escapechar = @, style = customc $ \} $\par
 
 Dalam contoh kita, kita hanya menetapkan dua pilihan secara global: gaya default dan karakter escape. Pemakaian:\par
 
- $\textbackslash$ begin $ \{ $ lstlisting $ \} $\par
+ $\setminus$ begin $ \{ $ lstlisting $ \} $\par
 
  $\#$include <stdio.h>\par
 
@@ -444,3 +429,39 @@ Anda dapat memiliki caption mewah (atau judul) untuk cantuman Anda menggunakan p
  $\%$ ...\par
 
  $\textbackslash$ lstinputlisting [caption = My caption] $ \{ $ sourcefile.lang $ \} $\par
+ 
+ \noindent
+ Dalam contoh kita, kita hanya menetapkan dua pilihan secara global: gaya default dan karakter escape. Pemakaian: \par
+ 
+ \begin{verbatim}
+\ begin { lstlisting }
+#include <stdio.h>
+#define N 10
+/ * Blokir
+* komentar * /
+
+int main ()
+{
+int i ;
+
+// Baris komentar
+menempatkan ( "Halo dunia!" );
+
+untuk ( i = 0 ; i < N ; i ++ )
+{
+menempatkan ( "LaTeX juga bagus untuk pemrogram!" );
+}
+
+kembali 0 ;
+}
+\ end { lstlisting }
+
+\ lstinputlisting [ caption = Scheduler , style = customc ] { halo .  c }
+Bagian C akan dicetak sebagai :
+ \end{verbatim}
+ 
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=0.50\textwidth]{gambar/contoh3}}
+	\caption{Contoh Penggambaran}
+	\label{contoh3}
+\end{figure}
