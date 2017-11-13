@@ -1,11 +1,28 @@
 \sloppy
 \begin{center}{\fontsize{18pt}{18pt}\selectfont Memasukkan Gambar \\}\end{center} \par
+
+
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=0.50\textwidth]{gambar/dapi13.jpg}}
+	\caption{Memasukkan Gambar}
+	\label{Memasukkan Gambar}
+\end{figure}
+
+
+
+
+
+\section {Pengertian }
+\subsection {Memasukkan Gambar}
+
 \noindent 
 \vspace{10pt}
 \noindent 
 {\fontsize{10pt}{10pt}\selectfont  \hspace*{0.64in} Gambar adalah elemen penting dalam sebagian besar dokumen ilmiah. LaTeX menyediakan beberapa pilihan untuk menangani gambar dan membuat tampilannya sesuai dengan kebutuhan Anda. Pada artikel ini dijelaskan bagaimana memasukkan gambar dalam format yang paling umum, cara mengecilkan, memperbesar dan memutarnya, dan bagaimana mereferensikannya di dalam dokumen Anda.} \par
 \vspace{12pt}
 \noindent 
+\begin{verbatim}
+
  $  \setminus  $documentclass $  \{  $article $  \}  $ \par
 \vspace{12pt}
 \noindent 
@@ -37,6 +54,7 @@ There's a picture of a galaxy above \par
 \vspace{12pt}
 \vspace{14pt}
 \noindent 
+\end{verbatim}
  \hspace*{0.5in} Lateks tidak bisa mengatur gambar dengan sendirinya, jadi kita perlu menggunakan paket grafisnya. Untuk menggunakannya, kami menyertakan baris berikut dalam basa-basi:  $  \setminus  $ usepackage  $  \{  $graphicx $  \}  $ Perintah  $  \setminus  $ graphicspath  $  \{  $ $  \{  $images / $  \}  $ $  \}  $ memberitahu LaTeX bahwa gambar disimpan dalam folder bernama gambar di bawah direktori saat ini. Perintah  $  \setminus  $ includegraphics  $  \{  $universe $  \}  $ adalah salah satu yang benar-benar menyertakan gambar dalam dokumen. Disini alam semesta adalah nama file yang berisi gambar tanpa ekstensi, maka alam semesta.PNG menjadi alam semesta. Nama file gambar tidak boleh berisi spasi putih atau beberapa titik. \par
 \vspace{12pt}
 \vspace{12pt}
@@ -45,7 +63,12 @@ Catatan: Ekstensi file diperbolehkan disertakan, tapi sebaiknya hilangkan itu. J
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
-Jalur folder ke gambar \par
+
+\includegraphics[width=10cm,height=7cm]{gambar/dapi14.jpg}
+\begin{equation}Memasukkan Gambar \end{equation}
+
+
+\section {Jalur folder ke gambar }
 \vspace{12pt}
 \noindent 
 Saat mengerjakan dokumen yang berisi beberapa gambar, mungkin menyimpan foto tersebut dalam satu atau beberapa folder terpisah sehingga proyek Anda lebih teratur. Pada contoh di perkenalan perintah  $  \setminus  $ graphicspath  $  \{  $ $  \{  $images / $  \}  $ $  \}  $ memberitahu LaTeX untuk melihat folder gambar. Jalannya relatif terhadap direktori kerja saat ini. Path ke folder bisa relatif (disarankan) jika berada di lokasi yang sama dengan file utama .tex atau di salah satu sub-folder, atau mutlak jika Anda harus menentukan path yang tepat. Sebagai contoh: \par
@@ -80,53 +103,47 @@ Perhatikan bahwa perintah ini membutuhkan garis miring (trailing slash) dan jalu
 Jika tidak ada jalur yang disetel, LaTeX akan mencari gambar di folder tempat file .tex disimpan. \par
 \vspace{18pt}
 \noindent 
-{\fontsize{14pt}{14pt}\selectfont Mengubah ukuran gambar dan memutar gambar \\} \par
-\vspace{12pt}
+\section{ Mengubah ukuran gambar dan memutar gambar }
+
+
+
 \noindent 
 Jika kita ingin menentukan lebih lanjut bagaimana LaTeX memasukkan gambar kita ke dalam dokumen (panjang, tinggi, dll), kita dapat melewati pengaturan tersebut dengan format berikut: \par
 \vspace{16pt}
 \noindent 
-ShareLaTeX is a great professional tool to edit online,  \par
+ShareLaTeX is a great professional tool to edit online,  
 \vspace{12pt}
 \noindent 
-share and backup your  $  \setminus  $LaTeX projects. Also offers a \par
-\noindent 
-  \par
-\noindent 
+share and backup your  $  \setminus  $LaTeX projects. Also offers a 
+ 
 rather large help documentation. \par
-\noindent 
+
  $  $ \par
-\noindent 
+
  $  \setminus  $includegraphics[scale=1.5] $  \{  $lion-logo $  \}  $ \par
 \vspace{16pt}
 \vspace{16pt}
 \noindent 
-Perintah  $  \setminus  $ includegraphics [scale = 1.5]  $  \{  $singa-logo $  \}  $ akan menyertakan gambar singa-logo dalam dokumen, skala parameter tambahan = 1,5 akan melakukan hal itu, skala gambar 1.5 dari ukuran sebenarnya. Anda juga bisa menskalakan gambar dengan lebar dan tinggi tertentu. \par
-\vspace{16pt}
-\noindent 
-Seperti yang mungkin sudah Anda duga, parameter di dalam kurung [width = 3cm, height = 4cm] menentukan lebar dan tinggi gambar. Anda dapat menggunakan unit yang berbeda untuk parameter ini. Jika hanya parameter lebar yang dilewati, tinggi akan diperkecil untuk menjaga rasio aspek. Unit panjang juga bisa relatif terhadap beberapa elemen dalam dokumen. Jika Anda ingin, misalnya, buat gambar dengan lebar yang sama seperti teksnya: \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
-ShareLaTeX is a great professional tool to edit online,  \par
-\vspace{12pt}
-\noindent 
-share and backup your  $  \setminus  $LaTeX projects. Also offers a \par
-\noindent 
-  \par
-\noindent 
-rather large help documentation. \par
-\noindent 
- $  $ \par
-\noindent 
- $  \setminus $includegraphics[width= $  \setminus $textwidth] $  \{  $universe $  \}  $ \par
-\vspace{16pt}
-\vspace{16pt}
-\noindent 
-Alih-alih  $  \setminus $ textwidth Anda dapat menggunakan panjang LaTeX default lainnya:  $  \setminus $ columnsep,  $  \setminus $ linewidht,  $  \setminus $ textheight,  $  \setminus $ paperheight, dll. Lihat panduan referensi untuk penjelasan lebih lanjut tentang unit-unit ini. Ada pilihan lain yang sama saat menyertakan gambar di dalam dokumen Anda, untuk memutarnya. Hal ini dapat dengan mudah dicapai di LaTeX: \par
-\vspace{12pt}
-\vspace{12pt}
-\noindent 
+
+\begin{enumerate}
+	\item Perintah  $  \setminus  $ includegraphics [scale = 1.5]  $  \{  $singa-logo $  \}  $ akan menyertakan gambar singa-logo dalam dokumen, skala parameter tambahan = 1,5 akan melakukan hal itu, skala gambar 1.5 dari ukuran sebenarnya. Anda juga bisa menskalakan gambar dengan lebar dan tinggi tertentu. 
+ 
+\item Seperti yang mungkin sudah Anda duga, parameter di dalam kurung [width = 3cm, height = 4cm] menentukan lebar dan tinggi gambar. Anda dapat menggunakan unit yang berbeda untuk parameter ini. Jika hanya parameter lebar yang dilewati, tinggi akan diperkecil untuk menjaga rasio aspek. Unit panjang juga bisa relatif terhadap beberapa elemen dalam dokumen. Jika Anda ingin, misalnya, buat gambar dengan lebar yang sama seperti teksnya: 
+
+\item ShareLaTeX is a great professional tool to edit online,  
+
+share and backup your  $  \setminus  $LaTeX projects. Also offers a 
+
+rather large help documentation. 
+
+ $  \setminus $includegraphics[width= $  \setminus $textwidth] $  \{  $universe $  \}  $ 
+ 
+\item Alih-alih  $  \setminus $ textwidth Anda dapat menggunakan panjang LaTeX default lainnya:  $  \setminus $ columnsep,  $  \setminus $ linewidht,  $  \setminus $ textheight,  $  \setminus $ paperheight, dll. Lihat panduan referensi untuk penjelasan lebih lanjut tentang unit-unit ini. Ada pilihan lain yang sama saat menyertakan gambar di dalam dokumen Anda, untuk memutarnya. Hal ini dapat dengan mudah dicapai di LaTeX: 
+
+
+
+\end{enumerate}
+
 ShareLaTeX is a great professional tool to edit online, \par
 \noindent 
   \par
@@ -167,33 +184,26 @@ Sudut parameter = 45 memutar gambar 45 derajat berlawanan arah jarum jam. Untuk 
 \vspace{14pt}
 \vspace{18pt}
 \noindent 
-h  \par
-\noindent 
-Tempatkan float di sini, yaitu kira-kira pada titik yang sama terjadi pada teks sumber (namun tidak tepat di tempat) \par
-\vspace{12pt}
-\noindent 
-T \par
-\noindent 
- Posisi di bagian atas halaman. \par
-\vspace{12pt}
-\noindent 
-B \par
-\noindent 
- Posisi di bagian bawah halaman. \par
-\vspace{12pt}
-\noindent 
-p  \par
-\noindent 
-Tuliskan halaman khusus hanya untuk mengapung. ! Menimpa parameter internal yang digunakan LaTeX untuk menentukan posisi float bagus". \par
-\vspace{12pt}
-\noindent 
-H \par
-\noindent 
- Tempatkan pelampung tepat di lokasi kode LaTeX. Membutuhkan paket float. Ini agak setara dengan h ! \par
-\vspace{14pt}
-\vspace{14pt}
-\vspace{18pt}
-\noindent 
+\begin{enumerate}
+
+
+ 
+\item Tempatkan float di sini, yaitu kira-kira pada titik yang sama terjadi pada teks sumber (namun tidak tepat di tempat) 
+
+\item Posisi di bagian atas halaman. 
+
+
+\item Posisi di bagian bawah halaman. 
+ 
+
+
+\item Tuliskan halaman khusus hanya untuk mengapung. ! Menimpa parameter internal yang digunakan LaTeX untuk menentukan posisi float bagus".
+
+
+\item Tempatkan pelampung tepat di lokasi kode LaTeX. Membutuhkan paket float. Ini agak setara dengan h !
+	 
+\end{enumerate}
+
 Pada contoh berikut, Anda dapat melihat gambar di bagian atas dokumen, meskipun telah dinyatakan di bawah teks. \par
 \vspace{14pt}
 \noindent 

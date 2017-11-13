@@ -1,25 +1,49 @@
 \sloppy
+
+
+
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=0.80\textwidth]{gambar/dapi1.jpg}}
+	\caption{Typesetting Math in Latex}
+	\label{Typesetting Math in Latex}
+\end{figure}
+
+
+
+
+
+\section {Pengertian }
+\subsection {Typesetting Math in Latex}
+
+
  \hspace*{0.5in} Latex Adalah Sebuah alat yang sangat kuat untuk typesetting pada umumnya dan untuk typesetting matematika masuk tertentu. Namun, terlepas dari kekuatannya, masih banyak cara untuk menghasilkannya hasil yang lebih baik atau kurang bagus. Panduan ini menawarkan beberapa trik dan petunjuk yang mudah-mudahan akan dilakukan mengarah ke yang pertama Perhatikan bahwa manual ini tidak mengklaim untuk memberikan yang terbaik atau satu-satunya solusi. Tujuannya adalah untuk memberi beberapa aturan yang bisa diikuti dengan mudah dan itu akan memimpin ke tata letak yang baik dari semua persamaan dalam sebuah dokumen. Hal ini diasumsikan bahwa pembaca memiliki sudah menguasai dasar-dasar Latex \par
 \noindent 
-\vspace{12pt}
+\hspace*{0.5in} Struktur dokumen ini adalah sebagai berikut. Kami memperkenalkan persamaan yang paling dasar di Bagian 2; Bagian 3 kemudian menjelaskan beberapa kemungkinan reaksi pertama ketika sebuah persamaan terlalu panjang Bagian terpenting dari manual ini tercantum dalam Bagian 4 dan 5: disana kita perkenalkan yang bertenaga IEEEeqnarray lingkungan yang harus digunakan masuk apapun bukan meluruskan atau eqnarray.Dalam Bagian 6 beberapa masalah yang lebih maju dan solusi yang mungkin dibahas, dan Bagian 7 berisi beberapa petunjuk dan trik tentang editor Emacs. Akhirnya, Bagian 8 membuat beberapa saran tentang beberapa simbol matematika khusus yang tidak dapat dengan mudah dadjustwidthukan di Latex. \par
 \noindent 
 \vspace{12pt}
 \noindent 
-Bagaimana~persamaan typeset di  Sebuah Latex file sumber dari manual ini. \par
-\noindent 
 \vspace{12pt}
 \noindent 
- dot $  \_  $emacs : perintah untuk disertakan dalam file preferensi Emacs (.emacs) \par
-\noindent 
- IEEEtrantools.sty [2015/08/26 V1.5 oleh Michael Shell]: paket yang dibutuhkan untuk IEEEeqnarray-lingkungan Hidup. \par
-\noindent 
- IEEEtran.cls [2015/08/26 V1.8b oleh Michael Shell]: Latex dalam format IEEE. \par
-\noindent 
- IEEEtran $  \_  $HOWTO.pdf [2015/08]: manual resmi dari IEEEtran-kelas. Bagian tentang IEEEeqnarray dadjustwidthukan di Appendix F. Perhatikan itu IEEEtran.cls dan IEEEtrantools.sty disediakan secara otomatis oleh siapapun up-to-date.\
- \par
-\noindent 
-\vspace{12pt}
-\noindent 
+
+
+\subsection{Bagaimana~persamaan typeset di  Sebuah Latex file sumber dari manual ini.}
+
+
+\begin{enumerate}
+
+
+
+\item  dot : perintah untuk disertakan dalam file preferensi Emacs (.emacs) 
+\item IEEEtrantool [2015/08/26 V1.5 oleh Michael Shell]: paket yang dibutuhkan untuk IEEEeqnarray-lingkungan Hidup. 
+\item IEEEtran [2015/08/26 V1.8b oleh Michael Shell]: Latex dalam format IEEE. 
+\item  manual resmi dari IEEEtran-kelas. Bagian tentang IEEEeqnarray dadjustwidthukan di Appendix F. Perhatikan itu IEEEtran.cls dan IEEEtrantools.sty disediakan secara otomatis oleh siapapun up-to-date.\
+
+\end {enumerate}
+
+\includegraphics[width=10cm,height=7cm]{gambar/dapi12.jpg}
+\begin{equation}Typesetting Math in Latex \end{equation}
+
+
  \hspace*{0.5in} Struktur dokumen ini adalah sebagai berikut. Kami memperkenalkan persamaan yang paling dasar di Bagian 2; Bagian 3 kemudian menjelaskan beberapa kemungkinan reaksi pertama ketika sebuah persamaan terlalu panjang Bagian terpenting dari manual ini tercantum dalam Bagian 4 dan 5: disana kita perkenalkan yang bertenaga IEEEeqnarray lingkungan yang harus digunakan masuk apapun bukan meluruskan atau eqnarray.Dalam Bagian 6 beberapa masalah yang lebih maju dan solusi yang mungkin dibahas, dan Bagian 7 berisi beberapa petunjuk dan trik tentang editor Emacs. Akhirnya, Bagian 8 membuat beberapa saran tentang beberapa simbol matematika khusus yang tidak dapat dengan mudah dadjustwidthukan di Latex. \par
 \noindent 
 perintah akan diatur masuk font mesin tik .RHS berdiri untuk sisi kanan, yaitu, semua istilah di sebelah kanan tanda persamaan (atau ketidaks etaraan).Demikian pula,LHS berdiri untuk sisi kiri, yaitu, semua istilah di sebelah kiri tanda persamaan.Untuk menyederhanakan bahasa kita, kita biasanya akan membicarakannya persamaan. Jelas, typesetting tidak berubah jika sebuah ekspresi sebenarnya adalah ketidaksetaraan. Dokumen ini dilengkapi dengan beberapa file tambahan yang mungkin bisa membantu. \par
@@ -66,8 +90,8 @@ Semua kemungkinan lain untuk typesetting persamaan sederhana memiliki kelemahan:
  Perintah seperti  $  \$  $ $  \$  $ ...  $  \$  $ $  \$  $ , $  \setminus  $ [...  $  \setminus  $], dll, memiliki kelemahan tambahan itu kode sumbernya sangat mudah dibaca. Bahkan,  $  \$  $ $  \$  $ ...  $  \$  $ $  \$  $ salah: Jarak vertikal setelah persamaan terlalu besar dalam situasi tertentu. \par
 \vspace{12pt}
 \noindent 
-\textbf{Persamaan Tunggal yang Terlalu Panjang: multline} \par
-\vspace{12pt}
+\section {Persamaan Tunggal yang Terlalu Panjang: multline} 
+
 \noindent 
  \hspace*{0.5in} Jika sebuah persamaan terlalu panjang, kita harus membungkusnya entah bagaimana. Sayangnya, dibungkus equa-Tions biasanya kurang mudah dibaca daripada yang tidak terbungkus. Untuk meningkatkan keterbacaan, Kita harus mengikuti peraturan tertentu tentang bagaimana melakukan pembungkus: \par
 \noindent 
@@ -108,6 +132,8 @@ a + b + c + d + e + f \par
 \vspace{12pt}
 \noindent 
  \hspace*{0.5in} Perbedaannya dengan persamaan lingkungan adalah bahwa break-line sewenang-wenang (atau juga beberapa baris-istirahat) dapat diperkenalkan. Hal ini dilakukan dengan meletakkan a $  \setminus  $ $  \setminus  $ di tempat itu dimana persamaan perlu dibungkus. Demikian pula untuk persamaan* ada juga amultline *-versi untuk mencegah a nomor persamaan Namun, meski mudah digunakan, seringkali IEEEeqnarray lingkungan akan menghasilkan hasil yang lebih baik. Terutama, pertimbangkan situasi umum berikut ini: \par
+ 
+ \begin{verbatim}
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
@@ -123,23 +149,28 @@ a = b + c + d + e + f \par
 + k + l + m + n + o + p \par
 \vspace{12pt}
 \noindent 
- $  \setminus  $label $  \{  $eq:equation $  \_  $too $  \_  $long $  \}  $ \par
+ $  \setminus  $label $  \{  $eq:equation $ 
+  \_  $too $  \_  $long $  \}  $ \par
 \vspace{12pt}
 \noindent 
  $  \setminus  $end $  \{  $equation $  \}  $ \par
 \vspace{12pt}
 \vspace{16pt}
 \noindent 
-Disini RHS terlalu panjang untuk muat di satu baris. Itu Multline - lingkungan sekarang akan menghasilkan pengikut: \par
+Disini RHS terlalu panjang untuk muat di satu baris.
+ Itu Multline - lingkungan sekarang akan
+  menghasilkan pengikut: \par
 \vspace{12pt}
 \noindent 
- $  \setminus  $begin $  \{  $multline $  \}  $ \par
+ $  \setminus  $begin $  \{  $multline $  \}
+   $ \par
 \vspace{12pt}
 \noindent 
 a = b + c + d + e + f \par
 \vspace{12pt}
 \noindent 
-+ g + h + i + j  $  \setminus  $ $  \setminus  $ \par
++ g + h + i + j  $ 
+ \setminus  $ $  \setminus  $ \par
 \vspace{12pt}
 \noindent 
 + k + l + m + n + o + p \par
@@ -149,27 +180,40 @@ a = b + c + d + e + f \par
 \vspace{12pt}
 \vspace{16pt}
 \noindent 
+
+\end{verbatim}
+
  \hspace*{0.5in} Hal ini tentunya jauh lebih baik dari (3), namun memiliki kelemahan yaitu persamaan Tanda kehilangan kepentingannya yang lebih kuat dari operator plus di depan. Lebih baik Solusi disediakan oleh IEEEeqnarray - lingkungan yang akan dibahas secara detail. \par
 \vspace{12pt}
 \noindent 
- $  \setminus  $begin $  \{  $IEEEeqnarray $  \}  $ $  \{  $rCl $  \}  $ \par
+\begin{verbatim}
+
+
+ $  \setminus  $begin $ 
+  \{  $IEEEeqnarray $  \}  $ $ 
+   \{  $rCl $  \}  $ \par
 \vspace{12pt}
 \noindent 
 a  $  \&  $ =  $  \&  $ b + c + d + e + f \par
 \vspace{12pt}
 \noindent 
-+ g + h + i + j  $  \setminus  $nonumber $  \setminus  $ $  \setminus  $ \par
++ g + h + i + j  $  \setminus
+  $nonumber $  \setminus  $ $  \setminus  $ \par
 \vspace{12pt}
 \noindent 
- $  \&  $ $  \&  $ + $  \setminus  $> k + l + m + n + o + p \par
+ $  \&  $ $  \&  $ + $  \setminus 
+  $> k + l + m + n + o + p \par
 \vspace{12pt}
 \noindent 
- $  \setminus  $label $  \{  $eq:dont $  \_  $use $  \_  $multline $  \}  $ \par
+ $  \setminus  $label $  \{  $eq:dont $ 
+  \_  $use $  \_  $multline $  \}  $ \par
 \vspace{12pt}
 \noindent 
- $  \setminus  $end $  \{  $IEEEeqnarray $  \}  $ \par
+ $  \setminus  $end $  \{  $IEEEeqnarray $
+   \}  $ \par
 \vspace{12pt}
 \noindent 
+\end{verbatim}
  \hspace*{0.5in} Dalam hal ini baris kedua secara horizontal sejajar dengan baris pertama: + di depan k aku s tepatnya di bawah b , yaitu, RHS jelas terlihat kontras dengan persamaan LHS. Perhatikan juga itu multline salah memaksakan jarak minimum di sebelah kiri yang pertama garis bahkan jika tidak memiliki cukup ruang di sebelah kanan, menyebabkan persamaan yang tidak tersisip. Ini \par
 \noindent 
 Bahkan bisa mengarah pada tata letak yang sangat jelek dimana baris kedua berisi RHS dari sebuah persamaan sebenarnya ke kiri dari baris pertama yang berisi LHS: \par
@@ -349,7 +393,7 @@ h $  \string^  $ $  \{  $- $  \}  $(X $  \vert  $Y) \par
 \vspace{12pt}
 \vspace{12pt}
 \noindent 
-\textbf{Beberapa Persamaan: IEEEeqnarray} \par
+\section{Beberapa Persamaan: IEEEeqnarray} 
 \noindent 
  \hspace*{0.5in} Dalam situasi yang paling umum, kita memiliki urutan beberapa persamaan yang tidak sesuai ke satu baris Disini kita perlu bekerja dengan kesejajaran horizontal untuk menjaga array persamaan dalam struktur yang bagus dan mudah dibaca. Sebelum kami memberikan saran tentang cara melakukannya, kami mulai dengan beberapa buruk contoh yang menunjukkan kelemahan terbesar dari solusi umum. 4.1 Masalah dengan perintah tradisional Untuk mengelompokkan beberapa persamaan, meluruskan -lingkungan Hidup 4 bisa digunakan : \par
 \vspace{12pt}
@@ -544,7 +588,7 @@ a  $  \&  $ =  $  \&  $ b + c \par
  \hspace*{0.5in} Namun, kita bisa menentukan jumlah kolom yang dibutuhkan. Sebagai contoh,  $  \{  $c $  \}  $ akan memberi saja satu kolom (yang terpusat) atau  $  \{  $rCl "l $  \}  $akan menambahkan kolom keempat yang dibenarkan kiri itu bergeser ke kanan (jaraknya ditentukan oleh "), misalnya untuk spesifikasi tambahan.Apalagi disamping l,c,r,L,C,R untuk entri mode matematika, ada juga s,t,kamu untuk kiri, tengah, dan kanan. Dan spasi tambahan bisa jadi ditambahkan oleh. Dan /dan ? dan "dalam rangka meningkatkan ketertiban. 8 Rincian lebih lanjut tentang penggunaan IEEEeqnarrayakan diberikan di Bagian 5. Perhatikan bahwa berbeda dengan eqnarray ruang di sekitar tanda-tanda persamaan benar. \par
 \vspace{20pt}
 \noindent 
-{\fontsize{14pt}{14pt}\selectfont \textbf{Sebuah komentar tentang konsistensi} \\} \par
+\section {Sebuah komentar tentang konsistensi} 
 \vspace{24pt}
 \noindent 
 Ada tiga isu lagi yang belum disebutkan sejauh ini, tapi itu mungkin penyebabnya ketidakkonsistenan saat ketiga lingkungan tersebut, persamaan, \par
@@ -554,45 +598,88 @@ multline, dan IEEEeqnarray, digunakan secara intermixedly: \par
  multline memungkinkan sebuah persamaan dimulai dari atas halaman, sementara persamaan dan IEEEeqnarray cobalah untuk meletakkan garis teks terlebih dahulu, sebelum persamaan dimulai. Bahkan, jarak sebelum dan sesudah lingkungan tidak persis sama persamaan,multline, dan IEEEeqnarray. \par
 \noindent 
   $ \bullet $persamaan menggunakan mekanisme otomatis untuk memindahkan nomor persamaan keBaris berikutnya jika ungkapannya terlalu panjang. Sementara ini nyaman, terkadang nomor persamaan dipaksa ke baris berikutnya, meski masih ada cukup ruang tersedia di telepon: \par
+  \begin{verbatim}
+  
+ 
 \vspace{20pt}
 \vspace{20pt}
 \noindent 
- $  \setminus  $begin $  \{  $equation $  \}  $ \par
+ $  \setminus  $begin $ 
+  \{  $equation $  \}  $ \par
 \vspace{12pt}
 \noindent 
-a =  $  \setminus  $sum $  \_  $ $  \{  $k=1 $  \}  $ $  \string^  $n $  \setminus  $sum $  \_  $ $  \{  $ $  \setminus  $ell=1 $  \}  $ $  \string^  $n \par
+a =  $  \setminus  $sum $ 
+ \_  $ $  \{  $k=1 $  \}  $ $  
+ \string^  $n $  \setminus  $sum $  
+ \_  $ $  \{  $ $  \setminus  $ell=1 $  \}  $ $  \string^  $n \par
 \vspace{12pt}
 \noindent 
- $  \setminus  $sin  $  \setminus  $bigl(2 $  \setminus  $pi  $  \setminus  $, b $  \_  $k  $  \setminus  $, \par
+ $  \setminus  $sin  $  
+ \setminus  $bigl(2 $  \setminus  $pi  $ 
+  \setminus  $, b $  
+ \_  $k  $  \setminus  $, \par
 \vspace{12pt}
 \noindent 
-c $  \_  $ $  \{  $ $  \setminus  $ell $  \}  $  $  \setminus  $, d $  \_  $k  $  \setminus  $, e $  \_  $ $  \{  $ $  \setminus  $ell $  \}  $  $  \setminus  $, \par
+c $  \_  $ $  \{  $ $ 
+ \setminus  $ell $  \}  $  $ 
+  \setminus  $, d $  \_  $k  $
+
+  \setminus  $, e $  \_  $ $  \{  $ $  \setminus  $ell $ 
+ \}  $  $  \setminus  $, \par
 \vspace{12pt}
 \noindent 
-f $  \_  $k  $  \setminus  $, g $  \_  $ $  \{  $ $  \setminus  $ell $  \}  $  $  \setminus  $, h  $  \setminus  $bigr) \par
+f $  \_  $k  $  \setminus  $, g $
+  \_  $ $  \{  $ $  \setminus  $ell $  \}  $  $  \setminus  $, h  $  \setminus  $bigr) \par
 \vspace{12pt}
 \noindent 
- $  \setminus  $end $  \{  $equation $  \}  $ \par
+ $  \setminus  $end $ 
+  \{  $equation $  \}  $ \par
 \vspace{12pt}
 \noindent 
-Dengan IEEEeqnarray penempatan nomor persamaan sepenuhnya berada di bawah kontrol: \par
+Dengan IEEEeqnarray penempatan nomor
+ persamaan sepenuhnya berada
+  di bawah kontrol: \par
 \vspace{12pt}
 \noindent 
- $  \setminus  $begin $  \{  $IEEEeqnarray $  \}  $ $  \{  $c $  \}  $ \par
+ $  \setminus  $begin $ 
+  \{  $IEEEeqnarray $  \}  $ $ 
+   \{  $c $  \}  $ \par
 \noindent 
-a =  $  \setminus  $sum $  \_  $ $  \{  $k=1 $  \}  $ $  \string^  $n $  \setminus  $sum $  \_  $ $  \{  $ $  \setminus  $ell=1 $  \}  $ $  \string^  $n \par
+a =  $  \setminus  $sum $ 
+ \_  $ $  \{  $k=1 $  \}  $ $ 
+  \string^  $n $  \setminus  $sum $  
+\_  $ $  \{  $ $  \setminus  $ell=1 $ 
+ \}  $ $  \string^  $n \par
 \noindent 
- $  \setminus  $sin  $  \setminus  $bigl(2 $  \setminus  $pi  $  \setminus  $, b $  \_  $k  $  \setminus  $, \par
+ $  \setminus  $sin  $ 
+  \setminus  $bigl(2 $ 
+   \setminus  $pi  $  
+   \setminus  $, b $ 
+  \_  $k  $  \setminus  $, \par
 \noindent 
-c $  \_  $ $  \{  $ $  \setminus  $ell $  \}  $  $  \setminus  $, d $  \_  $k  $  \setminus  $, e $  \_  $ $  \{  $ $  \setminus  $ell $  \}  $  $  \setminus  $, \par
+c $  \_  $ $  \{  $ $  
+\setminus  $ell $  \}  $  $ 
+ \setminus  $, d $  \_  $k  $  
+\setminus  $, e $  \_  $ $ 
+ \{  $ $  \setminus  $ell $ 
+
+
+ \}  $  $  \setminus  $, \par
 \noindent 
-f $  \_  $k  $  \setminus  $, g $  \_  $ $  \{  $ $  \setminus  $ell $  \}  $  $  \setminus  $, h  $  \setminus  $bigr) \par
+f $  \_  $k  $  \setminus  $, g $ 
+ \_  $ $  \{  $ $ 
+  \setminus  $ell $ 
+   \}  $  $
+  \setminus  $, h  $ 
+   \setminus  $bigr) \par
 \noindent 
  $  \setminus  $IEEEeqnarraynumspace \par
 \noindent 
- $  \setminus  $label $  \{  $eq:labelc1 $  \}  $ \par
+ $  \setminus  $label $ 
+  \{  $eq:labelc1 $  \}  $ \par
 \noindent 
- $  \setminus  $end $  \{  $IEEEeqnarray $  \}  $ \par
+ $  \setminus  $end $ 
+  \{  $IEEEeqnarray $  \}  $ \par
 \noindent 
 \vspace{12pt}
 \noindent 
@@ -602,17 +689,36 @@ Atau \par
 \noindent 
 \vspace{12pt}
 \noindent 
- $  \setminus  $begin $  \{  $IEEEeqnarray $  \}  $ $  \{  $c $  \}  $ \par
+ $  \setminus  $begin $  
+ \{  $IEEEeqnarray $  \}  $ $ 
+  \{  $c $  \}  $ \par
 \noindent 
-a =  $  \setminus  $sum $  \_  $ $  \{  $k=1 $  \}  $ $  \string^  $n $  \setminus  $sum $  \_  $ $  \{  $ $  \setminus  $ell=1 $  \}  $ $  \string^  $n \par
+a =  $  \setminus  $sum $ 
+ \_  $ $  \{  $k=1 $  \}  $ $ 
+  \string^  $n $  \setminus  $sum $ 
+   \_  $ $  \{  $ $  
+   \setminus  $ell=1 $ 
+    \}  $ $  \string^  $n \par
 \noindent 
- $  \setminus  $sin  $  \setminus  $bigl(2 $  \setminus  $pi  $  \setminus  $, b $  \_  $k  $  \setminus  $, \par
+ $  \setminus  $sin  $ 
+  \setminus  $bigl(2 $  \setminus 
+   $pi  $  \setminus  $, b $  \_  $k 
+    $  \setminus  $, \par
 \noindent 
-c $  \_  $ $  \{  $ $  \setminus  $ell $  \}  $  $  \setminus  $, d $  \_  $k  $  \setminus  $, e $  \_  $ $  \{  $ $  \setminus  $ell $  \}  $  $  \setminus  $, \par
+c $  \_  $ $  \{  $ $  \setminus 
+ $ell $  \}  $  $  \setminus  $, d $  
+ \_  $k  $  \setminus  $, e $  
+ \_  $ $  \{  $ $ 
+ 
+  \setminus  $ell $  \}  $  $  
+  \setminus  $, \par
 \noindent 
-f $  \_  $k  $  \setminus  $, g $  \_  $ $  \{  $ $  \setminus  $ell $  \}  $  $  \setminus  $, h  $  \setminus  $bigr) \par
+f $  \_  $k  $  \setminus  $, g $  \_  $ $  \{  $ $  \setminus  $ell $ 
+ \}  $  $ 
+ \setminus  $, h  $  \setminus  $bigr) \par
 \noindent 
- $  \setminus  $nonumber $  \setminus  $ $  \setminus  $* \par
+ $  \setminus  $nonumber $ 
+  \setminus  $ $  \setminus  $* \par
 \noindent 
  $  \setminus  $label $  \{  $eq:labelc2 $  \}  $ \par
 \noindent 
@@ -620,6 +726,8 @@ f $  \_  $k  $  \setminus  $, g $  \_  $ $  \{  $ $  \setminus  $ell $  \}  $  $
 \noindent 
 \vspace{12pt}
 \noindent 
+ \end{verbatim}
+
 Jika ini tidak diinginkan, seseorang dapat mengubah perilaku IEEEeqnarray Berperilaku seperti persamaan:  $  \setminus  $ renewcommand  $  \{  $ $  \setminus  $ theequationdis $  \}  $  $  \{  $ $  \{  $ $  \setminus  $ normalfont ( $  \setminus  $ theequation) $  \}  $ $  \}  $  $  \setminus  $ renewcommand  $  \{  $ $  \setminus  $ theIEEEsubequationdis $  \}  $  $  \{  $ $  \{  $ $  \setminus  $ normalfont ( $  \setminus  $ theIEEEsubequation) $  \}  $ $  \}  $ \par
 \vspace{12pt}
 \noindent 
