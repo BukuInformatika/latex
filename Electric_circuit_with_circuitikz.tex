@@ -1,55 +1,74 @@
 \sloppy
 
 
+\section{Electric Circuit with Circuitikz}
 
-\noindent 
-Electric Circuit with Circuitikz
-\par
 
+\begin{verbatim}
+\documentclass{report}
+\usepackage{circuitikz}
+\tikzset{% from https://tex.stackexchange.com/a/134090/117534
+declare function={% in case of CVS which switches the arguments of atan2
+atan3(\a,\b)=ifthenelse(atan2(0,1)==90, atan2(\a,\b), atan2(\b,\a));},
+kinky cross radius/.initial=+.125cm,
+@kinky cross/.initial=+, kinky crosses/.is choice,
+kinky crosses/left/.style={@kinky cross=-},kinky crosses/right/.style={@kinky cross=+},
+kinky cross/.style args={(#1)--(#2)}{
+to path={
+let \p{@kc@}=($(\tikztotarget)-(\tikztostart)$),
+\n{@kc@}={atan3(\p{@kc@})+180} in
+-- ($(intersection of \tikztostart--{\tikztotarget} and #1--#2)!%
+\pgfkeysvalueof{/tikz/kinky cross radius}!(\tikztostart)$)
+arc [ radius     =\pgfkeysvalueof{/tikz/kinky cross radius},
+start angle=\n{@kc@},
+delta angle=\pgfkeysvalueof{/tikz/@kinky cross}180 ]
+-- (\tikztotarget)}}}
+
+\begin{document}
+\begin{circuitikz}
+\draw[color=orange,thick] 
+(-2,1) node[spdt,yscale=-1] (bottom-spdt) {}
+(-2,3) node[spdt,yscale=-1] (top-spdt) {}
+(top-spdt.in)      to (bottom-spdt.in)
+(top-spdt.out 2)   to ++(3,0) 
+to[lamp,/tikz/circuitikz/bipoles/length=1cm] ++(0,-2.5) to ++(0,-1.5)
+to[battery1] ++(-2,0) node(batt-left){}
+|- (bottom-spdt.out 1)
+(top-spdt.out 1)   -| node(intersect){} (batt-left)
+;
+\draw[thick, color=violet!70] 
+(bottom-spdt.out 2)    to[kinky cross=(intersect)--(batt-left)] ++(3,0)
+;
+\end{circuitikz}
+\end{document}
+\end{verbatim}
+
+
+\begin{figure}[ht]
+	\centerline{\includegraphics[width=0.50\textwidth]{gambar/Electric_circuit}}
+	\caption{Contoh Penggambaran}
+	\label{contoh}
+\end{figure}	
+
+\noindent
+Berikut ini adalah gambar dari source code yang diatas.
+\par 
 
 \noindent 
 Sementara Tikz menawarkan banyak fitur dan paket untuk membuat diagram dan segala macam gambar lainnya, namun sayangnya tidak ada paket yang bagus untuk tata letak sirkuit listrik. Dengan menggunakan paket circuitikz kita bisa dengan mudah menyelesaikan masalah ini. Ini meluas menyediakan lingkungan baru circuitikz di mana kita dapat dengan mudah menarik sirkuit kita dalam waktu singkat. Sintaksnya sama persis seperti yang ditunjukkan pada pelajaran sebelumnya, jadi kita bisa langsung memulai dengan contoh kode sederhana:
 \par
 
+\begin{verbatim}
+\ documentclass {article}
+\ usepackage {tikz}
+\ usepackage {circuitikz}
+\ begin {document}
+\ begin {figure} [h!]
+\ begin {center}
+\ begin {circuitikz}
+\ draw (0,0)
 
-\noindent 
-~ $\setminus$ documentclass $ \{ $article$ \} $
-\par
-
-
-\noindent 
- $\setminus$ usepackage $ \{ $tikz$ \} $
-\par
-
-
-\noindent 
- $\setminus$ usepackage $ \{ $circuitikz$ \} $
-\par
-
-
-\noindent 
- $\setminus$ begin $ \{ $document$ \} $
-\par
-
-
-\noindent 
- $\setminus$ begin $ \{ $figure$ \} $ [h!]
-\par
-
-
-\noindent 
- $\setminus$ begin $ \{ $center$ \} $
-\par
-
-
-\noindent 
- $\setminus$ begin $ \{ $circuitikz$ \} $
-\par
-
-
-\noindent 
- $\setminus$ draw (0,0)
-\par
+\end{verbatim}
 
 
 \noindent 
@@ -71,31 +90,14 @@ Sementara Tikz menawarkan banyak fitur dan paket untuk membuat diagram dan segal
  ke [pendek] (0,0);
 \par
 
+\begin{verbatim}
+\ end {circuitikz}
+\ caption {sirkuit pertamaku.}
+\ end {center}
+\ end {figure}
+\ end {document} 
 
-\noindent 
- $\setminus$ end $ \{ $circuitikz$ \} $
-\par
-
-
-\noindent 
- $\setminus$ caption $ \{ $sirkuit pertamaku.$ \} $
-\par
-
-
-\noindent 
- $\setminus$ end $ \{ $center$ \} $
-\par
-
-
-\noindent 
- $\setminus$ end $ \{ $figure$ \} $
-\par
-
-
-\noindent 
- $\setminus$ end $ \{ $document$ \} $ 
-\par
-
+\end{verbatim}
 
 \noindent 
 Sirkuit akan ditarik dengan cara yang sama seperti jalur di tikz, tapi kami menentukan opsi khusus untuk elemen:
@@ -281,10 +283,7 @@ Menambahkan kapasitor di sampingnya, sama sederhananya:
 Manual circuitikz memberikan contoh semua simbol dan fungsi dan juga dapat digunakan untuk referensi lebih lanjut.
 \par
 
-
-\noindent 
-Ringkasan
-\par
+\subsection{Ringkasan}
 
 
 \noindent 
@@ -492,9 +491,7 @@ Untuk kemudian menghubungkannya dengan komponen lain, kita akan menggunakan jang
 \par
 
 
-\noindent 
-Pengantar
-\par
+\subsection{Pengantar}
 
 
 \noindent 
