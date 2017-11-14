@@ -1,6 +1,3 @@
-\sloppy
-
-
 
 \begin{figure}[ht]
 	\centerline{\includegraphics[width=0.80\textwidth]{gambar/dapi1.jpg}}
@@ -9,13 +6,8 @@
 \end{figure}
 
 
-
-
-
 \section {Pengertian }
 \subsection {Typesetting Math in Latex}
-
-
  \hspace*{0.5in} Latex Adalah Sebuah alat yang sangat kuat untuk typesetting pada umumnya dan untuk typesetting matematika masuk tertentu. Namun, terlepas dari kekuatannya, masih banyak cara untuk menghasilkannya hasil yang lebih baik atau kurang bagus. Panduan ini menawarkan beberapa trik dan petunjuk yang mudah-mudahan akan dilakukan mengarah ke yang pertama Perhatikan bahwa manual ini tidak mengklaim untuk memberikan yang terbaik atau satu-satunya solusi. Tujuannya adalah untuk memberi beberapa aturan yang bisa diikuti dengan mudah dan itu akan memimpin ke tata letak yang baik dari semua persamaan dalam sebuah dokumen. Hal ini diasumsikan bahwa pembaca memiliki sudah menguasai dasar-dasar Latex \par
 \noindent 
 \hspace*{0.5in} Struktur dokumen ini adalah sebagai berikut. Kami memperkenalkan persamaan yang paling dasar di Bagian 2; Bagian 3 kemudian menjelaskan beberapa kemungkinan reaksi pertama ketika sebuah persamaan terlalu panjang Bagian terpenting dari manual ini tercantum dalam Bagian 4 dan 5: disana kita perkenalkan yang bertenaga IEEEeqnarray lingkungan yang harus digunakan masuk apapun bukan meluruskan atau eqnarray.Dalam Bagian 6 beberapa masalah yang lebih maju dan solusi yang mungkin dibahas, dan Bagian 7 berisi beberapa petunjuk dan trik tentang editor Emacs. Akhirnya, Bagian 8 membuat beberapa saran tentang beberapa simbol matematika khusus yang tidak dapat dengan mudah dadjustwidthukan di Latex. \par
@@ -391,9 +383,8 @@ h $  \string^  $ $  \{  $- $  \}  $(X $  \vert  $Y) \par
 \noindent 
  $  \setminus  $end $  \{  $IEEEeqnarray $  \}  $ \par
 \vspace{12pt}
-\vspace{12pt}
-\noindent 
-\section{Beberapa Persamaan: IEEEeqnarray} 
+
+\section{Beberapa Persamaan} 
 \noindent 
  \hspace*{0.5in} Dalam situasi yang paling umum, kita memiliki urutan beberapa persamaan yang tidak sesuai ke satu baris Disini kita perlu bekerja dengan kesejajaran horizontal untuk menjaga array persamaan dalam struktur yang bagus dan mudah dibaca. Sebelum kami memberikan saran tentang cara melakukannya, kami mulai dengan beberapa buruk contoh yang menunjukkan kelemahan terbesar dari solusi umum. 4.1 Masalah dengan perintah tradisional Untuk mengelompokkan beberapa persamaan, meluruskan -lingkungan Hidup 4 bisa digunakan : \par
 \vspace{12pt}
@@ -586,11 +577,9 @@ a  $  \&  $ =  $  \&  $ b + c \par
 \vspace{16pt}
 \noindent 
  \hspace*{0.5in} Namun, kita bisa menentukan jumlah kolom yang dibutuhkan. Sebagai contoh,  $  \{  $c $  \}  $ akan memberi saja satu kolom (yang terpusat) atau  $  \{  $rCl "l $  \}  $akan menambahkan kolom keempat yang dibenarkan kiri itu bergeser ke kanan (jaraknya ditentukan oleh "), misalnya untuk spesifikasi tambahan.Apalagi disamping l,c,r,L,C,R untuk entri mode matematika, ada juga s,t,kamu untuk kiri, tengah, dan kanan. Dan spasi tambahan bisa jadi ditambahkan oleh. Dan /dan ? dan "dalam rangka meningkatkan ketertiban. 8 Rincian lebih lanjut tentang penggunaan IEEEeqnarrayakan diberikan di Bagian 5. Perhatikan bahwa berbeda dengan eqnarray ruang di sekitar tanda-tanda persamaan benar. \par
-\vspace{20pt}
+\vspace{12pt}
 \noindent 
 \section {Sebuah komentar tentang konsistensi} 
-\vspace{24pt}
-\noindent 
 Ada tiga isu lagi yang belum disebutkan sejauh ini, tapi itu mungkin penyebabnya ketidakkonsistenan saat ketiga lingkungan tersebut, persamaan, \par
 \noindent 
 multline, dan IEEEeqnarray, digunakan secara intermixedly: \par
