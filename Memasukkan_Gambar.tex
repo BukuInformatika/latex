@@ -9,49 +9,49 @@
 \subsection {Memasukkan Gambar}
 {\fontsize{10pt}{10pt}\selectfont  \hspace*{0.64in} Gambar adalah elemen penting dalam sebagian besar dokumen ilmiah. LaTeX menyediakan beberapa pilihan untuk menangani gambar dan membuat tampilannya sesuai dengan kebutuhan Anda. Pada artikel ini akan dijelaskan tentang  bagaimana memasukkan gambar dalam format yang paling umum, cara mengecilkan, memperbesar dan memutarnya, dan bagaimana mereferensikannya di dalam dokumen Anda.} \par
 \vspace{12pt}
-\noindent 
+\noindent
 \begin{verbatim}
 
  $  \setminus  $documentclass $  \{  $article $  \}  $ \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus  $usepackage $  \{  $graphicx $  \}  $ \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus  $graphicspath $  \{  $  $  \{  $images/ $  \}  $  $  \}  $ \par
-\noindent 
+\noindent
  $  $ \par
-\noindent 
+\noindent
  $  \setminus  $begin $  \{  $document $  \}  $ \par
 \vspace{12pt}
-\noindent 
+\noindent
 The universe is immense and it seems to be homogeneous,  \par
 \vspace{12pt}
-\noindent 
+\noindent
 in a large scale, everywhere we look at. \par
-\noindent 
+\noindent
  $  $ \par
-\noindent 
+\noindent
  $  \setminus  $includegraphics $  \{  $universe $  \}  $ \par
-\noindent 
+\noindent
  $  $ \par
-\noindent 
+\noindent
 There's a picture of a galaxy above \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus  $end $  \{  $document $  \}  $ \par
 \vspace{12pt}
 \vspace{14pt}
-\noindent 
+\noindent
 \end{verbatim}
  \hspace*{0.5in} LateX tidak bisa mengatur gambar dengan sendirinya, jadi kita perlu menggunakan paket grafisnya. Untuk menggunakannya, kami menyertakan baris berikut dalam basa-basi:  $  \setminus  $ usepackage  $  \{  $graphicx $  \}  $ Perintah  $  \setminus  $ graphicspath  $  \{  $ $  \{  $images / $  \}  $ $  \}  $ memberitahu LaTeX bahwa gambar disimpan dalam folder bernama gambar di bawah direktori saat ini. Perintah  $  \setminus  $ includegraphics  $  \{  $universe $  \}  $ adalah salah satu yang benar-benar menyertakan gambar dalam dokumen. Disini alam semesta adalah nama file yang berisi gambar tanpa ekstensi, maka alam semesta.PNG menjadi alam semesta. Nama file gambar tidak boleh berisi spasi putih atau beberapa titik. \par
 \vspace{12pt}l
 \vspace{12pt}
-\noindent 
+\noindent
 Catatan: Ekstensi file diperbolehkan disertakan, tapi sebaiknya hilangkan itu. Jika ekstensi file dihilangkan maka akan meminta LaTeX untuk mencari semua format yang didukung. Untuk lebih jelasnya lihat bagian tentang menghasilkan resolusi tinggi dan gambar beresolusi rendah. \par
 \vspace{12pt}
 \vspace{12pt}
-\noindent 
+\noindent
 
 \includegraphics[width=10cm,height=7cm]{gambar/dapi14.jpg}
 \begin{equation}Memasukkan Gambar \end{equation}
@@ -59,52 +59,52 @@ Catatan: Ekstensi file diperbolehkan disertakan, tapi sebaiknya hilangkan itu. J
 
 \section {Jalur folder ke gambar }
 \vspace{12pt}
-\noindent 
-Saat mengerjakan dokumen yang berisi beberapa gambar, mungkin menyimpan foto tersebut dalam satu atau beberapa folder terpisah sehingga proyek Anda lebih teratur. Pada contoh di perkenalan perintah  $  \setminus  $ graphicspath  $  \{  $ $  \{  $images / $  \}  $ $  \}  $ memberitahu LaTeX untuk melihat folder gambar. Jalannya relatif terhadap direktori kerja saat ini. Path ke folder bisa relatif (disarankan) jika berada di lokasi yang sama dengan file utama .tex atau di salah satu sub-folder, atau mutlak jika Anda harus menentukan path yang tepat. Sebagai contoh: \par
+\noindent
+Saat mengerjakan dokumen yang berisi beberapa gambar, untuk menyimpan foto tersebut dalam satu atau beberapa folder terpisah sehingga proyek Anda lebih teratur. Pada contoh di perkenalan perintah  $  \setminus  $ graphicspath  $  \{  $ $  \{  $images / $  \}  $ $  \}  $ memberitahu LaTeX untuk melihat folder gambar. Jalannya relatif terhadap direktori kerja saat ini. Path ke folder bisa relatif (disarankan) jika berada di lokasi yang sama dengan file utama .tex atau di salah satu sub-folder, atau mutlak jika Anda harus menentukan path yang tepat. Sebagai contoh: \par
 \vspace{12pt}
 \vspace{12pt}
 \vspace{12pt}
 \vspace{12pt}
-\noindent 
+\noindent
  $  \%  $Path in Windows format: \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus  $graphicspath $  \{  $  $  \{  $c:/user/images/ $  \}  $  $  \}  $ \par
-\noindent 
+\noindent
  $  $ \par
-\noindent 
+\noindent
  $  \%  $Path in Unix-like (Linux, OsX) format \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus  $graphicspath $  \{  $  $  \{  $/home/user/images/ $  \}  $  $  \}  $ \par
 \vspace{12pt}
 \vspace{12pt}
 \vspace{12pt}
-\noindent 
+\noindent
 Perhatikan bahwa perintah ini membutuhkan garis miring (trailing slash) dan jalur di antara kawat gigi ganda. Anda juga dapat mengatur beberapa jalur jika gambar disimpan di lebih dari satu folder. Misalnya, jika ada dua folder bernama images1 dan images2, gunakan perintahnya. \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus  $graphicspath $  \{  $  $  \{  $images1/ $  \}  $ $  \{  $images2/ $  \}  $  $  \}  $ \par
-\noindent 
+\noindent
 \vspace{\baselineskip}
 \vspace{12pt}
-\noindent 
+\noindent
 Jika tidak ada jalur yang disetel, LaTeX akan mencari gambar di folder tempat file .tex disimpan. \par
 \vspace{18pt}
-\noindent 
+\noindent
 \section{ Mengubah ukuran gambar dan memutar gambar }
 
 
 
-\noindent 
+\noindent
 Jika kita ingin menentukan lebih lanjut bagaimana LaTeX memasukkan gambar kita ke dalam dokumen (panjang, tinggi, dll), kita dapat melewati pengaturan tersebut dengan format berikut: \par
 \vspace{16pt}
-\noindent 
-ShareLaTeX is a great professional tool to edit online,  
+\noindent
+ShareLaTeX is a great professional tool to edit online,
 \vspace{12pt}
-\noindent 
-share and backup your  $  \setminus  $LaTeX projects. Also offers a 
- 
+\noindent
+share and backup your  $  \setminus  $LaTeX projects. Also offers a
+
 rather large help documentation. \par
 
  $  $ \par
@@ -112,434 +112,434 @@ rather large help documentation. \par
  $  \setminus  $includegraphics[scale=1.5] $  \{  $lion-logo $  \}  $ \par
 \vspace{16pt}
 \vspace{16pt}
-\noindent 
+\noindent
 
 \begin{enumerate}
-	\item Perintah  $  \setminus  $ includegraphics [scale = 1.5]  $  \{  $singa-logo $  \}  $ akan menyertakan gambar singa-logo dalam dokumen, skala parameter tambahan = 1,5 akan melakukan hal itu, skala gambar 1.5 dari ukuran sebenarnya. Anda juga bisa menskalakan gambar dengan lebar dan tinggi tertentu. 
- 
-\item Seperti yang mungkin sudah Anda duga, parameter di dalam kurung [width = 3cm, height = 4cm] menentukan lebar dan tinggi gambar. Anda dapat menggunakan unit yang berbeda untuk parameter ini. Jika hanya parameter lebar yang dilewati, tinggi akan diperkecil untuk menjaga rasio aspek. Unit panjang juga bisa relatif terhadap beberapa elemen dalam dokumen. Jika Anda ingin, misalnya, buat gambar dengan lebar yang sama seperti teksnya: 
+	\item Perintah  $  \setminus  $ includegraphics [scale = 1.5]  $  \{  $singa-logo $  \}  $ akan menyertakan gambar singa-logo dalam dokumen, skala parameter tambahan = 1,5 akan melakukan hal itu, skala gambar 1.5 dari ukuran sebenarnya. Anda juga bisa menskalakan gambar dengan lebar dan tinggi tertentu.
 
-\item ShareLaTeX is a great professional tool to edit online,  
+\item Seperti yang mungkin sudah Anda duga, parameter di dalam kurung [width = 3cm, height = 4cm] menentukan lebar dan tinggi gambar. Anda dapat menggunakan unit yang berbeda untuk parameter ini. Jika hanya parameter lebar yang dilewati, tinggi akan diperkecil untuk menjaga rasio aspek. Unit panjang juga bisa relatif terhadap beberapa elemen dalam dokumen. Jika Anda ingin, misalnya, buat gambar dengan lebar yang sama seperti teksnya:
 
-share and backup your  $  \setminus  $LaTeX projects. Also offers a 
+\item ShareLaTeX is a great professional tool to edit online,
 
-rather large help documentation. 
+share and backup your  $  \setminus  $LaTeX projects. Also offers a
 
- $  \setminus $includegraphics[width= $  \setminus $textwidth] $  \{  $universe $  \}  $ 
- 
-\item Alih-alih  $  \setminus $ textwidth Anda dapat menggunakan panjang LaTeX default lainnya:  $  \setminus $ columnsep,  $  \setminus $ linewidht,  $  \setminus $ textheight,  $  \setminus $ paperheight, dll. Lihat panduan referensi untuk penjelasan lebih lanjut tentang unit-unit ini. Ada pilihan lain yang sama saat menyertakan gambar di dalam dokumen Anda, untuk memutarnya. Hal ini dapat dengan mudah dicapai di LaTeX: 
+rather large help documentation.
+
+ $  \setminus $includegraphics[width= $  \setminus $textwidth] $  \{  $universe $  \}  $
+
+\item Alih-alih  $  \setminus $ textwidth Anda dapat menggunakan panjang LaTeX default lainnya:  $  \setminus $ columnsep,  $  \setminus $ linewidht,  $  \setminus $ textheight,  $  \setminus $ paperheight, dll. Lihat panduan referensi untuk penjelasan lebih lanjut tentang unit-unit ini. Ada pilihan lain yang sama saat menyertakan gambar di dalam dokumen Anda, untuk memutarnya. Hal ini dapat dengan mudah dicapai di LaTeX:
 
 
 
 \end{enumerate}
 
 ShareLaTeX is a great professional tool to edit online, \par
-\noindent 
+\noindent
   \par
-\noindent 
+\noindent
 share and backup your  $  \setminus $LaTeX projects. Also offers a  \par
 \vspace{12pt}
-\noindent 
+\noindent
 rather large help documentation. \par
-\noindent 
+\noindent
  $  $ \par
-\noindent 
+\noindent
  $  \setminus $includegraphics[scale=1.2, angle=45] $  \{  $lion-logo $  \}  $ \par
 \vspace{12pt}
 \vspace{12pt}
-\noindent 
+\noindent
 Sudut parameter = 45 memutar gambar 45 derajat berlawanan arah jarum jam. Untuk memutar gambar searah jarum jam gunakan angka negatif. \par
 \vspace{16pt}
-\noindent 
+\noindent
  \hspace*{0.5in} Pada bagian sebelumnya dijelaskan bagaimana memasukkan gambar dalam dokumen Anda, namun kombinasi teks dan gambar mungkin tidak terlihat seperti yang kita harapkan. Untuk mengubah ini kita perlu mengenalkan lingkungan baru. \par
 \vspace{12pt}
-\noindent 
+\noindent
 {\fontsize{14pt}{14pt}\selectfont In the next example the figure will be positioned  \\} \par
 \vspace{14pt}
-\noindent 
+\noindent
 {\fontsize{14pt}{14pt}\selectfont right below this sentence. \\} \par
-\noindent 
+\noindent
 {\fontsize{14pt}{14pt}\selectfont  $  $ \\} \par
-\noindent 
+\noindent
 {\fontsize{14pt}{14pt}\selectfont  $  \setminus $begin $  \{  $figure $  \}  $[h] \\} \par
 \vspace{14pt}
-\noindent 
+\noindent
 {\fontsize{14pt}{14pt}\selectfont  $  \setminus $includegraphics[width=8cm] $  \{  $Plot $  \}  $ \\} \par
 \vspace{14pt}
-\noindent 
+\noindent
 {\fontsize{14pt}{14pt}\selectfont  $  \setminus $end $  \{  $figure $  \}  $ \\} \par
-\noindent 
+\noindent
  \hspace*{0.5in} Lingkungan gambar digunakan untuk menampilkan gambar sebagai elemen mengambang di dalam dokumen. Ini berarti Anda menyertakan gambar di dalam lingkungan gambar dan Anda tidak perlu khawatir dengan penempatannya, LaTeX akan memposisikannya sedemikian rupa sehingga sesuai dengan alur dokumen. Bagaimanapun, terkadang kita perlu lebih banyak kontrol terhadap cara gambar ditampilkan. Parameter tambahan dapat dilewatkan untuk menentukan posisi gambar. Pada contoh, begin  $  \{  $figure $  \}  $ [h], parameter di dalam kurung mengatur posisi gambar ke sini. Di bawah tabel untuk membuat daftar nilai posisi yang mungkin. \par
 \vspace{14pt}
 \vspace{18pt}
-\noindent 
+\noindent
 \begin{enumerate}
 
 
- 
-\item Tempatkan float di sini, yaitu kira-kira pada titik yang sama terjadi pada teks sumber (namun tidak tepat di tempat) 
 
-\item Posisi di bagian atas halaman. 
+\item Tempatkan float di sini, yaitu kira-kira pada titik yang sama terjadi pada teks sumber (namun tidak tepat di tempat)
+
+\item Posisi di bagian atas halaman.
 
 
-\item Posisi di bagian bawah halaman. 
- 
+\item Posisi di bagian bawah halaman.
+
 
 
 \item Tuliskan halaman khusus hanya untuk mengapung. ! Menimpa parameter internal yang digunakan LaTeX untuk menentukan posisi float bagus".
 
 
 \item Tempatkan pelampung tepat di lokasi kode LaTeX. Membutuhkan paket float. Ini agak setara dengan h !
-	 
+	
 \end{enumerate}
 
 Pada contoh berikut, Anda dapat melihat gambar di bagian atas dokumen, meskipun telah dinyatakan di bawah teks. \par
 \vspace{14pt}
-\noindent 
+\noindent
 In this picture you can see a bar graph that shows \par
 \vspace{12pt}
-\noindent 
+\noindent
 the results of a survey which involved some important \par
 \vspace{12pt}
-\noindent 
+\noindent
 data studied as time passed. \par
-\noindent 
+\noindent
  $  $ \par
-\noindent 
+\noindent
  $  \setminus $begin $  \{  $figure $  \}  $[t] \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $includegraphics[width=8cm] $  \{  $Plot $  \}  $ \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $centering \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $end $  \{  $figure $  \}  $ \par
 \vspace{18pt}
 \vspace{18pt}
-\noindent 
+\noindent
 Perintah tambahan  $  \setminus $ centering akan memusatkan gambar. Penyelarasan standar dibiarkan. \par
-\noindent 
+\noindent
 Mungkin juga membungkus teks di sekitar gambar. Bila dokumen berisi gambar kecil ini membuatnya terlihat lebih baik. \par
 \vspace{22pt}
-\noindent 
+\noindent
 begin $  \{  $wrapfigure $  \}  $ $  \{  $r $  \}  $ $  \{  $0.25 $  \setminus $textwidth $  \}  $  $  \%  $this figure will be at  \par
 \vspace{12pt}
-\noindent 
+\noindent
 the right \par
 \vspace{12pt}
-\noindent 
+\noindent
 ~~~  $  \setminus $centering \par
 \vspace{12pt}
-\noindent 
+\noindent
 ~~~  $  \setminus $includegraphics[width=0.25 $  \setminus $textwidth] $  \{  $mesh $  \}  $ \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $end $  \{  $wrapfigure $  \}  $ \par
-\noindent 
+\noindent
  $  $ \par
-\noindent 
+\noindent
 There are several ways to plot a function of two variables,  \par
-\noindent 
+\noindent
 depending on the information you are interested in. For  \par
-\noindent 
+\noindent
 instance, if you want to see the mesh of a function so it  \par
-\noindent 
+\noindent
 easier to see the derivative you can use a plot like the  \par
-\noindent 
+\noindent
 one on the left. \par
-\noindent 
+\noindent
  $  $ \par
-\noindent 
+\noindent
  $  $ \par
-\noindent 
+\noindent
  $  \setminus $begin $  \{  $wrapfigure $  \}  $ $  \{  $l $  \}  $ $  \{  $0.25 $  \setminus $textwidth $  \}  $ \par
 \vspace{12pt}
-\noindent 
+\noindent
 ~~~  $  \setminus $centering \par
 \vspace{12pt}
-\noindent 
+\noindent
 ~~~  $  \setminus $includegraphics[width=0.25 $  \setminus $textwidth] $  \{  $contour $  \}  $ \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $end $  \{  $wrapfigure $  \}  $ \par
 \vspace{22pt}
-\noindent 
+\noindent
 Di sisi lain, jika Anda hanya tertarik \par
-\noindent 
+\noindent
 nilai tertentu Anda bisa menggunakan plot kontur, Anda \par
-\noindent 
+\noindent
 Bisa menggunakan kontur plot, Anda bisa menggunakan konturnya \par
-\noindent 
+\noindent
 Plot, Anda bisa menggunakan plot kontur, bisa Anda gunakan \par
-\noindent 
+\noindent
 plot kontur, Anda bisa menggunakan plot kontur, \par
-\noindent 
+\noindent
 Anda bisa menggunakan plot kontur, seperti yang ada di sebelah kiri. \par
-\noindent 
+\noindent
  $  $ \par
-\noindent 
+\noindent
 Di sisi lain, jika Anda hanya tertarik \par
-\noindent 
+\noindent
 nilai tertentu Anda bisa menggunakan plot kontur, Anda \par
-\noindent 
+\noindent
 Bisa menggunakan kontur plot, Anda bisa menggunakan konturnya \par
-\noindent 
+\noindent
 plot, Anda bisa menggunakan plot kontur, Anda bisa menggunakan \par
-\noindent 
+\noindent
 plot kontur, Anda bisa menggunakan plot kontur, \par
-\noindent 
+\noindent
 Anda bisa menggunakan plot kontur, \par
 \vspace{22pt}
-\noindent 
+\noindent
 Untuk perintah di contoh kerja, Anda harus mengimpor paket wrapfig. Tambahkan ke pembukaan basa  $  \setminus $ usepackage  $  \{  $wrapfig $  \}  $. Sekarang Anda dapat menentukan lingkungan wrapfigure dengan menggunakan perintah  $  \setminus $ begin  $  \{  $wrapfigure $  \}  $  $  \{  $l $  \}  $  $  \{  $0.25  $  \setminus $ textwidth $  \}  $  $  \setminus $ end  $  \{  $wrapfigure $  \}  $. Perhatikan bahwa lingkungan memiliki dua parameter tambahan yang disertakan dalam kawat gigi. Di bawah kode ini dijelaskan dengan lebih detail: \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \{  $l $  \}  $ \par
-\noindent 
+\noindent
  $  $ $  $ $  $ $  $Ini mendefinisikan kesejajaran gambar. Atur l untuk kiri dan kanan. Selanjutnya, jika Anda menggunakan buku atau format yang serupa, gunakan sebagai gantinya untuk tepi luar dan saya untuk tepi bagian dalam halaman. \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \{  $0.25  $  \setminus $ textwidth $  \}  $ \par
-\noindent 
+\noindent
  $  $ $  $ $  $ $  $Ini adalah lebar kotak gambar. Ini bukan lebar gambar itu sendiri, itu harus diatur dalam perintah includegraphics. Perhatikan bahwa panjangnya relatif terhadap lebar teks, tapi unit normal juga bisa digunakan (cm, mm, mm, dll). Lihat panduan referensi untuk daftar unit. \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $ centering \par
-\noindent 
+\noindent
  $  $ $  $ $  $ $  $Ini sudah dijelaskan, namun dalam contoh ini gambar akan dipusatkan dengan menggunakan wadahnya sebagai referensi, bukan keseluruhan teks. \par
 \vspace{12pt}
 \vspace{12pt}
 \vspace{16pt}
-\noindent 
+\noindent
 Captioning, labeling dan referensiing \par
 \vspace{12pt}
-\noindent 
+\noindent
 Gambar captioning untuk menambahkan deskripsi singkat dan memberi label untuk referensi lebih lanjut adalah dua alat penting saat mengerjakan teks panjang. Keterangan Mari kita mulai dengan contoh caption \par
 \vspace{36pt}
-\noindent 
+\noindent
  $  \setminus $begin $  \{  $figure $  \}  $[h] \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $caption $  \{  $Example of a parametric plot ( $  \$  $ $  \setminus $sin (x),  $  \setminus $cos(x), \par
 \vspace{12pt}
-\noindent 
+\noindent
  x $  \$  $) $  \}  $ \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $centering \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $includegraphics[width=0.5 $  \setminus $textwidth] $  \{  $spiral $  \}  $ \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $end $  \{  $figure $  \}  $ \par
 \vspace{12pt}
 \vspace{16pt}
-\noindent 
+\noindent
  \hspace*{0.5in} Ini sangat mudah, cukup tambahkan  $  \setminus $ caption  $  \{  $Some caption $  \}  $ dan di dalam kawat gigi tulis teks yang akan ditampilkan. Penempatan keterangan bergantung pada tempat Anda menempatkan komando; Jika itu di atas kata-kata yang di bawah itu maka judulnya akan di atasnya, jika di bawah maka judul juga akan ditetapkan di bawah gambar.Teks juga bisa ditempatkan tepat setelah gambar. Paket sidecap menggunakan kode yang mirip dengan yang ada pada contoh sebelumnya untuk mencapai hal ini. \par
 \vspace{16pt}
 \vspace{16pt}
-\noindent 
+\noindent
  $  \setminus $documentclass $  \{  $article $  \}  $ \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $usepackage[rightcaption] $  \{  $sidecap $  \}  $ \par
-\noindent 
+\noindent
  $  $ \par
-\noindent 
+\noindent
  $  \setminus $usepackage $  \{  $graphicx $  \}  $  $  \%  $package to manage images \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $graphicspath $  \{  $  $  \{  $images/ $  \}  $  $  \}  $ \par
-\noindent 
+\noindent
  $  $ \par
-\noindent 
+\noindent
  $  \setminus $begin $  \{  $SCfigure $  \}  $[0.5][h] \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $caption $  \{  $Example of a parametric plot. \par
-\noindent 
+\noindent
   \par
-\noindent 
+\noindent
 ~~~~~~~~ This caption will be on the right $  \}  $ \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $includegraphics[width=0.6 $  \setminus $textwidth] $  \{  $spiral $  \}  $ \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $end $  \{  $SCfigure $  \}  $ \par
 \vspace{16pt}
 \vspace{16pt}
-\noindent 
+\noindent
 Ada dua perintah baru \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $ usepackage [rightcaption]  $  \{  $sidepap $  \}  $ \par
-\noindent 
+\noindent
 Seperti yang mungkin Anda harapkan, baris ini akan mengimpor paket yang dinamai sidepap, namun ada parameter tambahan: rightcaption. Parameter ini menetapkan penempatan judul di sebelah kanan gambar, Anda juga dapat menggunakan leftcaption. Dalam dokumen seperti outercaption dan innercaption juga tersedia. Nama-nama ini bersifat deskriptif. \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $ begin  $  \{  $SCfigure $  \}  $ [0.5] [h]  $  \setminus $ end  $  \{  $SCfigure $  \}  $ \par
-\noindent 
+\noindent
 Mendefinisikan sebuah lingkungan yang mirip dengan gambar. Parameter pertama adalah lebar keterangan relatif terhadap ukuran gambar, seperti yang dideklarasikan di dalam dokumen. Parameter kedua h bekerja sama persis seperti pada lingkungan gambar. Lihat bagian penempatan untuk informasi lebih lanjut. \par
 \vspace{12pt}
-\noindent 
+\noindent
 Anda bisa melakukan pengelolaan format caption yang lebih canggih. Periksa bagian bacaan lebih lanjut untuk referensi. Label dan referensi silang \par
 \vspace{12pt}
-\noindent 
+\noindent
 Angka, sama seperti elemen lainnya dalam dokumen LaTeX (persamaan, tabel, plot, dll) dapat dirujuk dalam teks. Ini sangat mudah, cukup tambahkan label ke gambar atau lingkungan SCfigure, kemudian gunakan label itu untuk merujuk gambarnya. \par
 \vspace{20pt}
 \vspace{24pt}
-\noindent 
+\noindent
  $  \setminus $begin $  \{  $figure $  \}  $[h] \par
 \vspace{12pt}
-\noindent 
+\noindent
 ~~~  $  \setminus $centering \par
 \vspace{12pt}
-\noindent 
+\noindent
 ~~~  $  \setminus $includegraphics[width=0.25 $  \setminus $textwidth] $  \{  $mesh $  \}  $ \par
 \vspace{12pt}
-\noindent 
+\noindent
 ~~~  $  \setminus $caption $  \{  $a nice plot $  \}  $ \par
 \vspace{12pt}
-\noindent 
+\noindent
 ~~~  $  \setminus $label $  \{  $fig:mesh1 $  \}  $ \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $end $  \{  $figure $  \}  $ \par
-\noindent 
+\noindent
  $  $ \par
-\noindent 
+\noindent
 As you can see in the figure  $  \setminus $ref $  \{  $fig:mesh1 $  \}  $, the  \par
 \vspace{12pt}
-\noindent 
+\noindent
 function grows near 0. Also, in the page  $  \setminus $pageref $  \{  $fig:mesh1 $  \}  $  \par
 \vspace{12pt}
-\noindent 
+\noindent
 is the same example. \par
 \vspace{12pt}
 \vspace{12pt}
 \vspace{12pt}
 \vspace{12pt}
 \vspace{12pt}
-\noindent 
+\noindent
 Ada tiga perintah yang menghasilkan rujukan silang dalam contoh ini. \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $ label  $  \{  $fig: mesh1 $  \}  $ \par
-\noindent 
+\noindent
 Ini akan menetapkan label untuk gambar ini. Karena label dapat digunakan dalam beberapa jenis elemen di dalam dokumen, sebaiknya gunakan awalan, seperti ara: pada contoh. \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $ ref  $  \{  $fig: mesh1 $  \}  $ \par
-\noindent 
+\noindent
 Perintah ini akan memasukkan nomor yang ditugaskan ke gambar. Ini otomatis dihasilkan dan akan diperbarui jika memasukkan beberapa gambar lain sebelum yang direferensikan. \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $ pageref  $  \{  $fig: mesh1 $  \}  $ \par
-\noindent 
+\noindent
 Ini akan mencetak nomor halaman dimana gambar yang direferensikan akan muncul. \par
 \vspace{12pt}
-\noindent 
+\noindent
 Keterangan adalah wajib untuk referensi gambar. \par
 \vspace{12pt}
-\noindent 
+\noindent
 Karakteristik hebat lainnya dalam dokumen LaTeX adalah kemampuan untuk menghasilkan daftar angka secara otomatis. Ini sangat mudah. \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  \setminus $Daftar Gambar \par
 \vspace{12pt}
 \vspace{16pt}
-\noindent 
+\noindent
 Perintah ini hanya bekerja pada gambar teks, karena menggunakan judul di tabel. Contoh di atas mencantumkan gambar di artikel ini. Catatan Penting: Bila menggunakan referensi silang, proyek LaTeX Anda harus dikompilasi dua kali, jika tidak, rujukan, rujukan halaman dan tabel angka tidak akan berfungsi. \par
 \vspace{16pt}
-\noindent 
+\noindent
 Membangkitkan citra beresolusi tinggi dan resolusi rendah \par
 \vspace{12pt}
-\noindent 
+\noindent
  \hspace*{0.5in} Sejauh ini saat menentukan nama file gambar di perintah  $  \setminus $ includegraphics, kami telah menghapus ekstensi file. Namun, itu tidak perlu, meski sering berguna. Jika ekstensi file dihilangkan, LaTeX akan mencari format gambar yang didukung di direktori tersebut, dan akan mencari berbagai ekstensi dalam urutan default (yang dapat dimodifikasi). Hal ini berguna untuk beralih antara lingkungan pengembangan dan produksi. Dalam lingkungan pengembangan (saat artikel / laporan / buku masih dalam proses), sebaiknya gunakan gambar dengan resolusi rendah (biasanya dalam format .png) untuk penyusunan preview dengan cepat. Di lingkungan produksi (saat versi final artikel / laporan / buku diproduksi), sebaiknya sertakan gambar dengan resolusi tinggi. \par
 \vspace{12pt}
-\noindent 
+\noindent
 Hal ini dilakukan oleh \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  $ $  $ $  $ $  $Tidak menentukan ekstensi file dalam perintah  $  \setminus $ includegraphics, dan \par
-\noindent 
+\noindent
  $  $ $  $ $  $ $  $Menentukan ekstensi yang diinginkan dalam basa-basi. \par
 \vspace{12pt}
-\noindent 
+\noindent
 Jadi, jika kita memiliki dua versi gambar, venndiagram.pdf (resolusi tinggi) dan venndiagram.png (resolusi rendah), maka kita bisa memasukkan baris berikut dalam pembukaan untuk menggunakan versi .png saat mengembangkan laporan - \par
 \vspace{28pt}
-\noindent 
+\noindent
 ~  $  \setminus $DeclareGraphicsExtensions $  \{  $.png,.pdf $  \}  $ \par
-\noindent 
+\noindent
 Perintah di atas akan memastikan bahwa jika dua file ditemukan dengan nama dasar yang sama namun ekstensi yang berbeda (misalnya venndiagram.pdf dan venndiagram.png), maka versi .png akan digunakan terlebih dahulu, dan dalam ketiadaan versi .pdf akan digunakan, ini juga merupakan ide bagus jika beberapa versi resolusi rendah tidak tersedia. \par
 \vspace{12pt}
-\noindent 
+\noindent
 Begitu laporan telah dikembangkan, untuk menggunakan versi resolusi tinggi .pdf, kita dapat mengubah baris dalam basa-basi yang menentukan urutan pencarian ekstensi ke \par
 \vspace{12pt}
 \vspace{16pt}
-\noindent 
+\noindent
 ~  $  \setminus $DeclareGraphicsExtensions $  \{  $.pdf,.png $  \}  $ \par
 \vspace{12pt}
 \vspace{12pt}
 \vspace{16pt}
-\noindent 
+\noindent
 Memperbaiki teknik yang dijelaskan pada paragraf sebelumnya, kita juga dapat menginstruksikan LaTeX untuk menghasilkan versi resolusi rendah .png gambar dengan cepat saat menyusun dokumen jika ada PDF yang belum dikonversi ke PNG. Untuk mencapainya, kita bisa memasukkan yang berikut dalam basa-basi setelah  $  \setminus $ usepackage  $  \{  $graphicx $  \}  $ \par
 \vspace{16pt}
-\noindent 
+\noindent
 ~  $  \setminus $usepackage $  \{  $epstopdf $  \}  $ \par
 \vspace{12pt}
-\noindent 
+\noindent
 ~  $  \setminus $epstopdfDeclareGraphicsRule $  \{  $.pdf $  \}  $ $  \{  $png $  \}  $ $  \{  $.png $  \}  $ $  \{  $convert \par
 \vspace{12pt}
-\noindent 
+\noindent
   $  \#  $1  $  \setminus $OutputFile $  \}  $ \par
 \vspace{12pt}
-\noindent 
+\noindent
 ~  $  \setminus $DeclareGraphicsExtensions $  \{  $.png,.pdf $  \}  $ \par
 \vspace{16pt}
 \vspace{16pt}
-\noindent 
+\noindent
  \hspace*{0.5in} Jika venndiagram2.pdf ada tapi tidak venndiagram2.png, file venndiagram2-pdf-convert-to.png akan dibuat dan dimuat di tempatnya. Perintah yang mengonversi  $  \#  $ 1 bertanggung jawab atas konversi dan parameter tambahan dapat dilewatkan antara konversi dan  $  \#  $ 1. Misalnya - convert -density 100  $  \#  $ 1. Ada beberapa hal penting yang perlu diingat: \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  $ $  $ $  $ $  $Agar konversi otomatis berhasil, kita perlu memanggil pdflatex dengan opsi --shell-escape. \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  $ $  $ $  $ $  $Untuk versi produksi terakhir, kita harus memberi komentar pada  $  \setminus $  \par
 \vspace{12pt}
-\noindent 
+\noindent
 epstopdfDeclareGraphicsRule, sehingga hanya file PDF beresolusi tinggi yang dimuat. Kita juga perlu mengubah urutan prioritas. \par
 \vspace{20pt}
 \vspace{20pt}
 \vspace{20pt}
-\noindent 
+\noindent
 Tentang tipe gambar di LaTeX \par
 \vspace{12pt}
-\noindent 
+\noindent
 Getah \par
 \vspace{12pt}
-\noindent 
+\noindent
  $  $ $  $ $  $ $  $Saat kompilasi dengan lateks, kita hanya bisa menggunakan gambar EPS, yaitu format vektor. pdflatex $  $Jika kita kompilasi menggunakan "pdflatex" untuk menghasilkan PDF, maka kita bisa menggunakan sejumlah format gambar - \par
 \vspace{12pt}
-\noindent 
+\noindent
 JPG: Pilihan terbaik jika kita ingin menyisipkan foto \par
-\noindent 
+\noindent
 PNG: Pilihan terbaik jika kita ingin memasukkan diagram (jika versi vektor tidak dapat dihasilkan) dan tangkapan layar \par
-\noindent 
+\noindent
 PDF: Meskipun kita terbiasa melihat dokumen PDF, PDF juga bisa menyimpan gambar \par
-\noindent 
+\noindent
 EPS: Citra EPS bisa diikutkan menggunakan paket epstopdf (kita hanya perlu menginstal  \par
 \vspace{12pt}
-\noindent 
+\noindent
 paketnya, kita $  $tidak perlu menggunakan  $  \setminus $ usepackage  $  \{  $ $  \}  $ untuk memasukkannya ke dalam dokumen kami.) \par
 \vspace{12pt}
-\noindent 
+\noindent
 Format vektor atau format Bit-map? \par
-\noindent 
+\noindent
  $  $ $  $ $  $ $  $Gambar bisa berupa format vektor format bit-map. Umumnya kita tidak perlu khawatir tentang hal itu, tapi jika kita memang mengetahui format gambarnya, kita bisa menggunakan informasi itu untuk memilih format gambar yang sesuai untuk disertakan dalam dokumen lateks kita. Jika kita memiliki gambar dalam format vektor, kita harus mencari PDF atau EPS. Jika kita memilikinya dalam format bit-map, kita harus memilih JPG atau PNG, karena menyimpan gambar bit-map dalam PDF atau EPS membutuhkan banyak ruang disk. \par
 \vspace{20pt}
 

@@ -1,11 +1,21 @@
-\hspace{0,5in}Latex merupakan system pengaturan cara pengetikan dokumen. Latex adalah perangkat lunak yang dapat di download tanpa harus membayar. Sejarahnya, Donald Knuth (Standford University) mulai mengembangkan sistem pemrosesan dokumen yang disebut "\,Tex dan Metafont" pada tahun 1977. Knut mengungkapkan bahwa Tex merupakan sistem pengetikan dengan tujuan 
+\hspace{0,5in}Latex merupakan system pengaturan cara pengetikan dokumen. Latex adalah perangkat lunak yang dapat di download tanpa harus membayar. Sejarahnya, Donald Knuth (Standford University) mulai mengembangkan sistem pemrosesan dokumen yang disebut "\,Tex dan Metafont" pada tahun 1977. Knut mengungkapkan bahwa Tex merupakan sistem pengetikan dengan tujuan
 untuk membuat buku yang "\,cantik" , khususnya yang terdiri atas formula-formula matematis. Hingga sekarang, Latex telah berkembang dan project saat ini adalah Latex3.\par \vspace{12pt}
+
+LaTeX merupakan word processor (pengolah kata, pembuat dokumen) mirip Microsoft Word. LaTeX lebih cocok digunakan untuk membuat dokumen yang panjang, bukan yang pendek. Dengan begitu, keampuhan LaTeX dapat ditampilkan. LaTeX juga lebih dapat menampilkan kecanggihannya ketika kita menulis scientific document.
+Kelebihan menggunakan latex antara lain :
+1.  Hasil tampilan dokumennya profesional sekali dengan kata lain mirip buku teks.
+2.  Ketika kita ngetik, kita tidak peduli tampilan dan layout. Layout nanti diatur oleh file utama (misal: main.tex).
+3.  LaTeX itu free of charge atau gratis.
+4.  Rumus-rumus matematika dapat diatur dengan mudah.
+5.  Tidak pernah crash (adanya error karena salah memasukkan command atau karena software tidak updated)
+6.  File-nya relatif kecil.
+8.  Tutorial dan command untuk symbol banyak tersedia di internet
 
 \hspace{0,3in}Biasanya Latex digunakan untuk mengetik dokumen yang berisi formula-formula matematis. Jenis dokumen yang dihasilkan dapat berupa artikel, buku, tesis, disertasi, hingga surat bisnis maupun surat pribadi. Dokumen yang hasilkan oleh latex berbeda antara input dengan output dari MS Word atau Libre Office. Misalnya di MS Word kita mengetik "\,\$a\$" maka yang muncul di dokumen hasil adalah "\,\$a\$", sedangkan dengan input yang sama, Latex memberikan output "\,a". Karena ide dari Latex adalah membiarkan penulis menulis dokumen dan menyerahkan desain dokumen ke "\,document designer", maka hasil dari dokumen Latex akan terlihat lebih "\,cantik".\par \vspace{12pt}
 
 \section{Instalasi LaTeX}\par \vspace{8pt}
 
-Ada banyak editor untuk latex dan tidak semua editor sesuai dengan setiap pengguna. Semua itu tergantung pada selera masing-masing. Karena alasan ini, akan saya tunjukan bagaimana dasar-dasar latex berjalan. Banyak pengguna memilih MikTeX untuk Windows karena MikTeX sudah mempunyai semuanya yang diperlukan untuk menjalankan program latex. 
+Ada banyak editor untuk latex dan tidak semua editor sesuai dengan setiap pengguna. Semua itu tergantung pada selera masing-masing. Karena alasan ini, akan saya tunjukan bagaimana dasar-dasar latex berjalan. Banyak pengguna memilih MikTeX untuk Windows karena MikTeX sudah mempunyai semuanya yang diperlukan untuk menjalankan program latex.
 \par \vspace{12pt}
 \subsection{Linux}
 \par \vspace{8pt}
@@ -17,8 +27,8 @@ Langkah pertama untuk pengguna windows yaitu :
 
 \newcounter{numberedCntC}
 \begin{enumerate}
-\item Install tex compiler. Tex compiler yang sering digunakan yaitu Miktex dan Texlive. Kedua perangkat lunak ini merupakan software yang paling banyak digunakan meskipun banyak perangkat lunak yang lain. Miktex yang diinstall pertama kali hanya memiliki paket dasar saja. Kemudian paket-paket tambahan lainnya dapat diinstall sesuai kebutuhan. Berbeda dengan Texlive, saat menginstall Texlive maka semua paket yang 
-ada akan diinstal meskipun belum tentu kita butuhkan. Sehingga instalasi Texlive lebih lama (kurang lebih 20 menit pada komputer dengan processor pentium i3 dan RAM 6 GB) daripada Miktex. Pilihan Miktex atau Texlive tergantung dari ruang hardisk yang ada, jika ruang hardisk masih banyak tidak ada salahnya menginstall Texlive. Saat ini saya menggunakan Miktex 
+\item Install tex compiler. Tex compiler yang sering digunakan yaitu Miktex dan Texlive. Kedua perangkat lunak ini merupakan software yang paling banyak digunakan meskipun banyak perangkat lunak yang lain. Miktex yang diinstall pertama kali hanya memiliki paket dasar saja. Kemudian paket-paket tambahan lainnya dapat diinstall sesuai kebutuhan. Berbeda dengan Texlive, saat menginstall Texlive maka semua paket yang
+ada akan diinstal meskipun belum tentu kita butuhkan. Sehingga instalasi Texlive lebih lama (kurang lebih 20 menit pada komputer dengan processor pentium i3 dan RAM 6 GB) daripada Miktex. Pilihan Miktex atau Texlive tergantung dari ruang hardisk yang ada, jika ruang hardisk masih banyak tidak ada salahnya menginstall Texlive. Saat ini saya menggunakan Miktex
 (OS Windows) dan Texlive (Unix). Keduanya dapat didownload di Miktex website dan Texlive website (pilih salah satu).
 \item Install Tex Editor. Tex editor yang tidak berbayar juga banyak. Baik di windows maupun unix, bisa menggunakan texmaker sebagai tex editor. Perangkat lunak tersebut bisa di download melalui websitenya. Didalam texmaker inilah nantinya untuk menulis dokumen latex.
 \item Langkah terakhir yaitu memulai menggunakan latex. Buka texmaker, pilih file kemudian pilih new, kemudian tulis seperti contoh dibawah ini:
@@ -76,7 +86,7 @@ $\setminus$include} mudah dikompilasikan dengan \textit{C-c C-c} pada berkas yan
 Fitur AUCTeX \textit{preview-latex} adalah pratayang WYSIWYG untuk rumus-rumus. Fitur-fitur terkemuka Emacs:
 
 \begin{itemize}
-\item Menggunakan table-insert bersama dengan fungsi 
+\item Menggunakan table-insert bersama dengan fungsi
 table-generate-source dan table-recognize-* untuk membuat tabel-tabel dengan mudah.
 \item Banyak sekali shortcut key tersedia
 \item Terdokumentasi dengan baik, baik Emacs itu sendiri melalui manual Emacs dan manual AUCTex Texinfo, maupun melalui banyak buku dalam beberapa bahasa.
@@ -104,9 +114,9 @@ table-generate-source dan table-recognize-* untuk membuat tabel-tabel dengan mud
 \includegraphics[width=15.57cm,height=10.66cm]{gambar/image4.jpg}
 \end{figure}
 
-Anda dapat melakukan word/command completion melalui 
+Anda dapat melakukan word/command completion melalui
 \begin{equation}
-<C-P> dan <C-N>, 
+<C-P> dan <C-N>,
 \end{equation}untuk memilih saran sebelumnya atau sesudahnya.
 
 Ada versi Vim dengan menu-menu grafis, yang bernama gVim. Jika ia digunakan dengan Latex-suite, maka banyak perintah TeX ditampilkan di menubar untuk mempercepat penyuntingan.
@@ -183,7 +193,7 @@ EFI = environment gambar (figure)
 \begin{itemize}
 \item OS: Linux, Windows1 (XP, Vista, 7)
 \item LIsensi: GNU GPL 2
-\item Bahasa: 
+\item Bahasa:
 \begin{verbatim}bg, bs, ca, cs, da, de, el, en\_GB, eo, es, et, fi, fr, ga, gl, hi, hne, hu, it, ja, kk, lt, mai, ms, nb, nds, nl, nn, pl, pt, pt\_BR, ro, ru, sk, sv, tr, ug, uk, zh\_CN, zh\_TW
 \end{verbatim}
 \item Unicode: Ya
@@ -254,7 +264,7 @@ Fitur-fitur lainnya:
 \begin{itemize}
 \item Lisensi: Open Source
 \item Sangat intuitif dan ramah pengguna, dan bisa impor/ekspor ke LaTeX.
-\item Terlalu banyak ftur untuk disebutkan, paling bagus: Jika Anda ingin menulis rumus matematika "\,2-dimensional", LyX cocok untuk itu. 
+\item Terlalu banyak ftur untuk disebutkan, paling bagus: Jika Anda ingin menulis rumus matematika "\,2-dimensional", LyX cocok untuk itu.
 \end{itemize}
 \end{itemize}
 \includegraphics[width=14.10cm,height=11.48cm]{gambar/image8.jpg}
@@ -316,7 +326,7 @@ Ada plugin penampil PDF untuk Eclipse bernama Pdf4Eclipse dengan dukungan SyncTe
 \end{itemize}
 
 
-Emacs bagus, tetapi yang seringkali saya pakai adalah Gummi. Ia memiliki panel pratayang yang sangat berguna untuk mengetahui kesalahan sintaks dan kesalahan format sesegera mungkin. Plus, ketika Anda menyimpan dokumen LaTeX ia akan menyimpan PDF secara otomatis. Fitur lainnya termasuk peralatan bantuan penulisan matriks, memasukkan gambar, dan 
+Emacs bagus, tetapi yang seringkali saya pakai adalah Gummi. Ia memiliki panel pratayang yang sangat berguna untuk mengetahui kesalahan sintaks dan kesalahan format sesegera mungkin. Plus, ketika Anda menyimpan dokumen LaTeX ia akan menyimpan PDF secara otomatis. Fitur lainnya termasuk peralatan bantuan penulisan matriks, memasukkan gambar, dan
 sitasi (citation).
 \par \vspace{12pt}
 
