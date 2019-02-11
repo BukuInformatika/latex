@@ -1,7 +1,9 @@
 \section {Pengertian Latex}\par
 
-\vspace{12pt}
+
+
 TEX merupakan perangkat lunak pengolah dokumen yang terutama ditujukan menghasilkan dokumen yang berisi simbol-simbol matematik. TEX diciptakan oleh Donald E. Knuth (Mei1977) sebaga ibahasa pembentuk dokumen (document formatting language). LaTeX adalah sistem typesetting yang dapat digunakan untuk membuat artikel, buku, surat, dan publikasi lain berkualitas tinggi. LaTeX berbasiskan pada TeX, bahasa typesetting aras bawah yang didesain oleh Donald E. Knuth. LaTeX tidak bekerja seperti pengolah kata WYSIWYG (what you see is what you get), jenis persiapan dokumen yang sudah banyak dipakai oleh banyak orang. Dengan LaTeX, Anda tidak harus perduli dengan pemformatan dokumen dan tidak perlu mengatur rapi untuk penulisan teks sendiri, hanya tentang penulisan dokumen.
+
 
 \ref{latex.jpg}:
 \begin{figure}[ht]
@@ -10,10 +12,10 @@ TEX merupakan perangkat lunak pengolah dokumen yang terutama ditujukan menghasil
 	\label{latex.jpg}
 \end{figure}
 
-Perangkat lunak TEX memiliki kemampuan yang baik untuk mengolah dokumen-dokumen yang berkualitas tinggi. Kelemahannya, perintah perintahnya sulit digunakan untuk menuliskan dokumen terstruktur yang terdiri dari unsure unsure bab, sub-bab, paragraph, table dan gambar bernomor, dsb.\par 
+Perangkat lunak TEX memiliki kemampuan yang baik untuk mengolah dokumen-dokumen yang berkualitas tinggi. Kelemahannya, perintah perintahnya sulit digunakan untuk menuliskan dokumen terstruktur yang terdiri dari unsur-unsur bab, sub-bab, paragraph, table dan gambar bernomor, dsb.\par 
 \vspace{12pt}
 
-Versi LATEX yang sudah baku ini memiliki beberapa kekuatan, diantaranya:
+Versi LATEX yang sudah baku ini memiliki beberapa kekuatan, diantaranya adalah:
 
 \begin{itemize}
 \item Standard yang sangat baik untuk menyiapkan tulisan teks,formula 
@@ -28,6 +30,7 @@ teknis, dan tabel-tabel
 \hspace{0,5in}Sebuah dokumen LATEX memiliki struktur yang dicirikan dengan blok yang diapit oleh pasangan perintah $\setminus$begin dan $\setminus$end. 
 Untuk menyatakan jenis dokumen yang akan diolah, setiap dokumen harus dimulai dengan perintah:\par \vspace{12pt} $\setminus$documentclass\{\ldots \}\par \vspace{12pt}
 
+
 Membuat dokumen dengan latex sangat sederhana. Anda bisa memulai membuat dokumen latex dengan mengetikan kode latex lalu ditambah dengan konten yang sederhana yaitu teks. Latex menggunakan kode-kode perintah yang terkontrol yang nantinya akan menentukan seperti apa hasil akhir dari dokumen yang anda buat. Setelah anda mengetikan kode-kode perintah latex, maka compiler dari editor latex dapat mengkompilasinya menjadi file .pdf. \par \vspace{12pt} 
 
 
@@ -38,9 +41,9 @@ Membuat dokumen dengan latex sangat sederhana. Anda bisa memulai membuat dokumen
 		\hline
 		No&Kelebihan&Kekurangan&\\
 		\hline
-		.1&Cocok untuk programmer&tidak user friendly seperti ms word&\\
-		.2&Filenya relatif kecil&Harus hafal command&\\
-		.3&Hasil tampilan dokumen profesional& Cocok untuk data skala besar&\\
+		1.&Cocok untuk programmer&tidak user friendly seperti ms word&\\
+		2.&Filenya relatif kecil&Harus hafal command&\\
+		3.&Hasil tampilan dokumen profesional& Cocok untuk data skala besar&\\
 		\hline
 	\end{tabular}
 \end{table}
@@ -49,8 +52,8 @@ Membuat dokumen dengan latex sangat sederhana. Anda bisa memulai membuat dokumen
 \vspace{12pt}
 Jenis dokumen yang akan diolah ditentukan oleh perintah pertama dalam bentuk: \par \vspace{12pt} $\setminus$documentclass$[$option$]$\{class\}\par \vspace{12pt}
 
-Dalam perintah diatas,"\,class"dapat diganti oleh article, report, book,atau slides untuk menuliskan artikel,laporan,buku,atau transparansi untuk seminar. Sedangkan pada bagian"\,option" dapat dituliskan satu 
-atau beberapa pilihan berikut:10pt, 11pt, 12pt untuk menyatakan ukuran font utama yang digunakan didalam dokumen a4paper, letterpaper menyatakan ukuran kertas yang digunakan titlepage, notitlepage untuk menyatakan apakah halaman judul akan dibuat terpisah dari badan dokumen atau tidak twocolumn untuk menampilkan dokumen dalam bentuk dua kolom twoside, oneside untuk menyatakan apakah dokumen akan dicetak pada satu 
+Dalam perintah diatas,"\,class"dapat diganti oleh article, report, book, atau slides untuk menuliskan artikel, laporan, buku, atau transparansi untuk seminar. Sedangkan pada bagian"\,option" dapat dituliskan satu 
+atau beberapa pilihan berikut : 10pt, 11pt, 12pt untuk menyatakan ukuran font utama yang digunakan didalam dokumen A4 paper, letterpaper menyatakan ukuran kertas yang digunakan titlepage, notitlepage untuk menyatakan apakah halaman judul akan dibuat terpisah dari badan dokumen atau tidak twocolumn untuk menampilkan dokumen dalam bentuk dua kolom twoside, oneside untuk menyatakan apakah dokumen akan dicetak pada satu 
 sisi atau dua sisi dari kertas. contoh dasar menggunakan kode perintah dalam latex yaitu:\par \vspace{12pt}
 
 $\setminus$documentclass\{article\}\par \vspace{12pt}
@@ -100,7 +103,7 @@ Jadi, secara umum aturan yang dapat dipakai adalah akhiri paragraf dengan tanda 
 \item \textbf{Alignment dalam Latex}
 \setcounter{numberedCntB}{\theenumi}
 \end{enumerate}
-\hspace{0,5in}Alignment/perataan baris pada Latex adalah rata kiri, rata kanan, atau rata tengah. Semua dokumen dalam Latex secara default diatur memiliki perataan justified (rata kanan kiri).
+\hspace{0,5in}Alignment/perataan baris pada Latex merupakan fitur untuk mengatur perataan teks yang terbagi menjadi rata kiri, rata kanan, atau rata tengah. Semua dokumen dalam Latex secara default diatur memiliki perataan justified (rata kanan kiri).
 
 \begin{itemize}
 \item Jika ingin mengatur dokumen rata kiri digunakan perintah sebagai berikut :
@@ -156,7 +159,7 @@ $\setminus$end\{document\}
 \item \textbf{Keterangan dalam Latex}
 \setcounter{numberedCntB}{\theenumi}
 \end{enumerate}
-\hspace{0,5in}Jika ingin menambahkan keterangan pada file yang tidak ingin tercetak, caranya dengan menambahkan tanda \% diawal setiap baaris keterangan. Contoh :\par \vspace{12pt}
+\hspace{0,5in}Jika Anda ingin menambahkan keterangan pada file yang tidak ingin tercetak, caranya adalah dengan menambahkan tanda \% diawal setiap baris keterangan. Contoh :\par \vspace{12pt}
 
 $\setminus$dokumenclass \{a4paper, 12pt\}\{report\}\par \vspace{12pt}
 
@@ -222,7 +225,7 @@ Ada 4 bentuk font dalam Latex :
 Ukuran Font
 
 Ada beberapa macam ukuran font dalam Latex. Untuk menggunakan 
-ukuran-ukuran itu caranya sebagai berikut :
+ukuran-ukuran tersebut, cara yang dapat digunakan adalah sebagai berikut :
 
 \begin{itemize}
 \item Tiny
@@ -281,7 +284,7 @@ ukuran-ukuran itu caranya sebagai berikut :
 \end{enumerate}
 \subsection {Document Class}\par \vspace{12pt}
 
-Document class dalam Latex berguna untuk menentukan layout halaman, jenis heading, dan bebagai perintah dan environment yang digunakan untuk mengatur style dokumen. Cara mendeklarasikannya sebagai berikut :\par \vspace{12pt}
+Document class dalam Latex berguna untuk menentukan layout halaman, jenis heading, dan bebagai perintah juga environment yang digunakan untuk mengatur style dokumen. Cara mendeklarasikannya adalah sebagai berikut :\par \vspace{12pt}
 
 $\setminus$dokumentclass \{class\}\par \vspace{12pt}
 
@@ -392,7 +395,7 @@ Struktur $\setminus$begin . . . . $\setminus$end inilah yang disebut dengan envi
 \subsection {Penulisan Judul}\par \vspace{12pt}
 
 Judul dalam sebuah dokumen Latex diletakan pada awal document 
-environment. Cara penulisannya sebagai berikut :\par \vspace{12pt}
+environment. Cara penulisannya adalah sebagai berikut :\par \vspace{12pt}
 
 $\setminus$documentclass $[$ a4paper, 12pt $]$ \{report\}\par \vspace{12pt}
 
@@ -417,7 +420,7 @@ $\setminus$end\{document\}\par \vspace{12pt}
 \subsection {Abstrak}\par \vspace{12pt}
 
 Pada dokumen kelas article dan report umumnya memiliki 
-abstrak/ringkasan. Latex memiliki cara khusus untuk menuliskan abstrak. Penulisannya sebagai berikut :\par \vspace{12pt}
+abstrak/ringkasan. Latex memiliki cara khusus untuk menuliskan abstrak. Penulisannya adalah sebagai berikut :\par \vspace{12pt}
 
 $\setminus$documentclass $[$ a4paper, 12pt $]$ \{report\}\par \vspace{12pt}
 
@@ -462,7 +465,7 @@ Sepeda\par \vspace{12pt}
 
 Bus\par \vspace{12pt}
 
-Cara penulisannya dalam Latex sebagai berikut :\par \vspace{12pt}
+Cara penulisannya dalam Latex adalah sebagai berikut :\par \vspace{12pt}
 
 $\setminus$begin\{itemize\}\par \vspace{12pt}
 
@@ -533,7 +536,7 @@ $\setminus$end\{figure\}
 Ada beberapa hal yang perlu diketahui dalam format perintah diatas :
 
 \begin{itemize}
-\item Panjang dan lebar dari gambar yang akan ditampilkan dapat ditentukan sesuai keinginan. Isi dari width dapat diisi dengan lebar gambar dan isi dari height dapat diisi dengan tinggi gambar itu; 
+\item Panjang dan lebar dari gambar yang akan ditampilkan dapat ditentukan sesuai keinginan. Isi dari width dapat diisi dengan lebar gambar dan isi dari height dapat diisi dengan tinggi gambar tersebut; 
 keduanya harus dilengkapi dengan dimensi dari ukuran panjang yang digunakan.
 \item File gambar yang ingin dimasukkan dalam dokumen, harus diletakkan pada direktori yang sama dengan direktori file dokumen (*.tex).
 \end{itemize}
@@ -552,7 +555,7 @@ $\backslash$begin\{center\} dan juga $\backslash$end\{center\} dapat menentukan 
 \end{itemize}
 \end{itemize}
 \end{itemize}
-Saat menggunakan h, Latex akan otomatis menempatkan gambar dihalaman baru jika tidak ada cukup ruang untuk gambar tersebut ditempat perintah gambar dituliskan.\par \vspace{12pt}
+Saat menggunakan pengaturan h, Latex akan otomatis menempatkan gambar dihalaman baru jika tidak ada cukup ruang untuk gambar tersebut ditempat perintah gambar dituliskan.\par \vspace{12pt}
 
 Format gambar standar Latex adalah *.eps. Tetapi gambar dengan format *.jpg juga bisa digunakan.\par \vspace{12pt}
 
