@@ -1,4 +1,5 @@
 Perintah dasar untuk memasukkan gambar kedalam Latex adalah:
+
 \begin{lstlisting}{figure}[ht]
 \centerline{\includegraphics[width=1\textwidth]{figures/namagambar.JPG "\,caption ini marpakan nama file gambar yang ingin Anda masukkan"}}
 \caption "\,caption ini merupakan penjelasan atau keterangan dari gambar yang ingin Anda masukkan"
@@ -17,16 +18,20 @@ Perintah dasar untuk memasukkan gambar kedalam Latex adalah:
 {\fontsize{10pt}{10pt}\selectfont  \hspace*{0.64in} Gambar adalah elemen penting dalam sebagian besar dokumen ilmiah. LaTeX menyediakan beberapa pilihan untuk menangani gambar dan membuat tampilannya sesuai dengan kebutuhan Anda. Pada artikel ini akan dijelaskan tentang  bagaimana memasukkan gambar dalam format yang paling umum, cara mengecilkan, memperbesar dan memutarnya, dan bagaimana mereferensikannya di dalam dokumen Anda.} \par
 
 \subsection {Beberapa fungsi yang harus diketahui dalam format penulisan :}
-\item Hbtp : Fungsi h untuk membuat gambar berada tepat di perintah dokumen itu dituliskan.
+
+\begin{itemize}
+\item Hbtp : Fungsi h untuk membuat gambar berada tepat di perintah dokumen itu dituliskan. 
+
 \item Perintah atau centering : digunakan untuk mengatur posisi gambar agar berada ditengah.
 \item File Gambar harus berada pada direktori yang sama dengan file source code
 \item label digunakan untuk menandai letak gambar tersebut.
-\begin {figure}[!htbp]
-\centering
-\includegraphics [width=3cm, height=3cm]{nama file gambar}
-\caption {Nama Gambar}
-\label {penanda}
-\end {figure}
+\end{itemize}
+%\begin {figure}[!htbp]
+%\centering
+%\includegraphics [width=3cm, height=3cm]{nama file gambar}
+%\caption {Nama Gambar}
+%\label {penanda}
+%\end {figure}
 
 \vspace{12pt}
 \noindent
