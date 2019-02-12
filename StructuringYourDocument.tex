@@ -1,6 +1,6 @@
 \section{Structuring Your Document}
 
-\hspace{0.50in} Membuat dokumen yang sangat mendasar dalam pelajaran sebelumnya, namun saat menulis makalah, perlu menyusun konten ke dalam unit logika. Untuk mencapai hal ini, LaTeX menawarkan kepada perintah untuk menghasilkan judul bagian dan mencatatnya secara otomatis. Perintah untuk membuat judul bagian sangat mudah: \par
+\hspace{0.50in} Membuat dokumen yang sangat mendasar telah kita pelajari dalam materi sebelumnya, namun saat menulis makalah Anda perlu menyusun konten ke dalam unit logika. Untuk mencapai hal ini, LaTeX menawarkan perintah untuk menghasilkan judul bagian dan mencatatnya secara otomatis. Perintah untuk membuat judul bagian sangat mudah: \par
 {\fontsize{10pt}{10pt}\selectfont  $  \setminus  $section $  \{  $ $  \}  $}
  \par
 {\fontsize{10pt}{10pt}\selectfont  $  \setminus  $subsection $  \{  $ $  \}  $}
@@ -38,7 +38,7 @@ Hasil \ref{dokumen} Dokumen:
 {\fontsize{10pt}{10pt}\selectfont  $  \setminus  $backmatter}
  \par
 \vspace{12pt}
-\hspace{0.50in} Argumen yang diberikan pada perintah-perintah ini adalah nama bab, subbab, dll. Dalam naskah buku yang dituliskan dengan kelas dokumen book, fronmatter digunakan untuk menandai halaman judul, daftar isi, kata pengantar, daftar gambar, dsb.), mainmatter untuk menandai bagian tulisan utama, dan backmatter untuk menandai daftar pustaka, indeks, daftar istilah, dsb. Perintah  $  \setminus  $chapter,  $  \setminus  $section,  $  \setminus  $subsection, dan  $  \setminus  $subsubsection secara otomatis memberikan nomor pada nama bagian, bab, dsb. Jika nomor ini tidak diinginkan, perintah yang ekivalen adalah  $  \setminus  $chapter*,  $  \setminus  $section*,  $  \setminus  $subsection*, dan  $  \setminus  $subsubsection*.
+\hspace{0.50in} Argumen yang diberikan pada perintah-perintah ini adalah nama bab, subbab, dll. Dalam naskah buku yang dituliskan dengan kelas dokumen book, fronmatter digunakan untuk menandai halaman judul, daftar isi, kata pengantar, daftar gambar, dsb. Sedangkan mainmatter digunakan untuk menandai bagian tulisan utama, dan backmatter untuk menandai daftar pustaka, indeks, daftar istilah, dsb. Perintah  $  \setminus  $chapter,  $  \setminus  $section,  $  \setminus  $subsection, dan  $  \setminus  $subsubsection secara otomatis memberikan nomor pada nama bagian, bab, dsb. Jika nomor ini tidak diinginkan, perintah yang ekivalen adalah  $  \setminus  $chapter*,  $  \setminus  $section*,  $  \setminus  $subsection*, dan  $  \setminus  $subsubsection*.
  \par
 \vspace{12pt}
 \hspace{0.50in} Perintah bagian diberi nomor dan akan muncul dalam daftar isi dokumen. Paragraf tidak diberi nomor dan tidak akan ditampilkan dalam daftar isi. Berikut contoh output menggunakan bagian:
@@ -52,7 +52,7 @@ Hasil \ref{dokumen} Dokumen:
 ~~~~~~~~~~~~ Structuring a document is easy
  \par
 \vspace{12pt}
-\hspace{0.50in} Untuk mendapatkan hasil ini, kami hanya perlu menambahkan beberapa baris ke program kami dari pelajaran 1:
+\hspace{0.50in} Untuk mendapatkan hasil ini, Anda hanya perlu menambahkan beberapa baris ke program kami dari pelajaran 1:
  \par
  $  \setminus  $documentclass $  \{  $article $  \}  $
  \par
@@ -188,7 +188,7 @@ Contoh struktur dokumen berkelas article dan book :
 {\fontsize{10pt}{10pt}\selectfont  $  \setminus  $end $  \{  $document $  \}  $}
  \par
 \vspace{12pt}
-\hspace{0.50in} Sangat mudah untuk menyusun dokumen menjadi beberapa bagian menggunakan LaTeX. di LaTeX sangat mudah untuk memiliki format yang konsisten di seluruh kertas. Berikut perintah-perintah latex, seperti:
+\hspace{0.50in} LaTeX dapat menyusun dokumen menjadi beberapa bagian dengan sangat mudah. Hal ini karena LaTeX memiliki format yang konsisten di seluruh kertas. Berikut perintah-perintah latex, seperti:
  \begin{itemize}
 \item part \par
 \textit{part} berfungsi untuk membuat pembagian bab, biasanya dibuat dalam halaman yang terpisah. Adapun penggunaannya adalah sebagai berikut:
@@ -251,7 +251,7 @@ Contoh struktur dokumen berikut ini:
 \vspace{10pt}
 \subsection{Komentar}
  \par
-\hspace{0.50in} Fungsi dari komentar adalah untuk menampilkan catatan dari naskah yang kita buat, namun tidak ditampilkan pada saat file dicetak. Contoh penggunaan nya adalah sebagai berikut:
+\hspace{0.50in} Fungsi dari komentar adalah untuk menampilkan catatan dari naskah yang telah Anda buat, namun tidak ditampilkan pada saat file dicetak. Contoh penggunaan nya adalah sebagai berikut:
  \par
 {\fontsize{10pt}{10pt}\selectfont  $  \setminus  $documentclass[12pt,a4paper,oneside,bahasa,dvips] $  \{  $book $  \}  $}
  \par
